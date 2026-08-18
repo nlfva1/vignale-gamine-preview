@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignale Gamine Homepage</title>
+<meta name="description" content="The Vignale Gamine: a 2 seater convertible built by Carozzeria Vignale">
+<meta name="keywords" content="vignale, gamine, vignale gamine, carrozzeria vignale, fiat, 500, fiat 500, convertible, spyder, speedster, torino, turin, virtual vignale gamine club, carclub, martin wildeboer, mixe com, ferrari, maserati, lancia, opel, opel kadett, triumph, AMX, tatra">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 62ch; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="#top" aria-current="page" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Club</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_world.html" data-i18n="nav_world">WorldWide</a></li>
+          <li><a href="gamine_art.html" data-i18n="nav_art">Art ?</a></li>
+          <li><a href="gamine_4_sale.html" data-i18n="nav_market">Market</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="masthead">
+    <div class="wrap masthead-inner">
+      <div class="masthead-stat">
+        <strong class="masthead-years">1967&ndash;<span id="gamineYearEnd">2026</span></strong>
+        <span class="masthead-count"><span id="gamineAgeBadge">59</span> <span data-i18n="masthead_gamine_suffix">Years Gamine!</span></span>
+      </div>
+      <div class="masthead-logo">
+        <img src="logo_vignale_text_klein.gif" width="200" height="39" alt="Vignale">
+        <span class="masthead-gamine-word">GAMINE</span>
+      </div>
+      <div class="masthead-stat">
+        <strong class="masthead-years">1997&ndash;<span id="siteYearEnd">2026</span></strong>
+        <span class="masthead-count"><span id="siteAgeBadge">29</span> <span data-i18n="masthead_site_suffix">Years Gamine Site!</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow" data-i18n="hero_eyebrow">Carrozzeria Vignale &middot; Torino, 1967&ndash;1971</p>
+      <h1>Gamine</h1>
+      <p class="lead" data-i18n="hero_lead">Tracking down every remaining Vignale Gamine still out there &mdash; one story, one chassis number at a time.</p>
+
+      <figure class="plate">
+        <img src="index2_bestanden/image002-verscherpt.jpg" width="1744" height="608" alt="Vignale Gamine, classic two-seater convertible">
+        <figcaption class="plate-caption" data-i18n="fig1_caption">Fig. 1 &mdash; Two-seater convertible, Fiat 500 chassis</figcaption>
+      </figure>
+
+      <dl class="spec-strip">
+        <div><dt data-i18n="spec_coachbuilder">Coachbuilder</dt><dd>Vignale</dd></div>
+        <div><dt data-i18n="spec_chassis">Chassis</dt><dd>Fiat 500</dd></div>
+        <div><dt data-i18n="spec_production">Production</dt><dd>1967&ndash;1971 &middot; <span id="gamineAge">59</span> <span data-i18n="age_suffix">yrs old</span></dd></div>
+        <div><dt data-i18n="spec_weight">Weight</dt><dd>480 kg</dd></div>
+        <div><dt data-i18n="spec_length">Length</dt><dd>&asymp; 3.0 m</dd></div>
+        <div><dt data-i18n="spec_site_since">Site online since</dt><dd>1997 (<span id="siteAge">29</span> <span data-i18n="yrs_suffix">yrs</span>)</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap story-grid">
+      <div class="story-text">
+        <h2 data-i18n="story_h2">The story</h2>
+        <p data-i18n="story_p1" data-i18n-html>Many people link the name <a href="carrozzeria_vignale.html">Vignale</a> to earlier models from e.g. Ferrari and Maserati. Few people know that Alfredo actually built cars under his own name as well. For the <a href="gamine_meaning.html">Gamine</a>, Vignale used a Fiat 500 chassis as a base. It was in production from 1967 until 1971. With 480kg and just over 3 metres long, it is most probably the tiniest convertible Vignale designed! Until now, the exact number of Gamines produced remains unknown. Hopefully, one day all remaining Gamines will be united at this website...</p>
+        <p data-i18n="story_p2" data-i18n-html>Enjoy these pages &amp; please don&#39;t hesitate to <a href="mailto:gamine@vignalegamine.net">email</a> any Vignale related material!</p>
+      </div>
+      <figure class="plate dimensions-figure">
+        <img src="gamine_afmetingen2a.jpg" width="316" height="276" alt="Gamine dimensions">
+        <figcaption class="plate-caption" data-i18n="fig2_caption">Fig. 2 &mdash; Gamine dimensions</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="book-text">
+        <h2 data-i18n="book_h2">The Vignale Gamine book</h2>
+        <p data-i18n="book_p">Published by Guus Beli&euml;n in 2024, it tells the complete history. Dutch + English translation.</p>
+        <a class="btn" href="gamine_book.html" data-i18n="book_btn">More about the book</a>
+      </div>
+      <div class="book-spread">
+        <figure class="plate">
+          <img src="index2_bestanden/image007-groter.jpg" width="245" height="340" alt="Vignale Gamine book, rear cover">
+          <figcaption class="plate-caption" data-i18n="fig4_caption">Fig. 4 &mdash; Rear</figcaption>
+        </figure>
+        <figure class="plate">
+          <img src="index2_bestanden/image008-groter.jpg" width="244" height="340" alt="Vignale Gamine book, front cover">
+          <figcaption class="plate-caption" data-i18n="fig3_caption">Fig. 3 &mdash; Front</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="community-grid">
+        <div class="community-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.86c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/>
+          </svg>
+          <h3 data-i18n="community1_h3">Facebook group</h3>
+          <p>I proprietari di Vignale Gamine (110F Spider)</p>
+          <a class="btn" href="https://www.facebook.com/groups/gaminevignale" data-i18n="community1_btn">View the group</a>
+        </div>
+        <div class="community-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M3 6.75A2.25 2.25 0 0 1 5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 17.25V6.75Z"/>
+            <path d="m3.5 7 8.5 6 8.5-6"/>
+          </svg>
+          <h3 data-i18n="community2_h3">Got Vignale related material?</h3>
+          <p data-i18n="community2_p">Photos, stories, documents &mdash; anything Gamine related is welcome.</p>
+          <a class="btn" href="mailto:gamine@vignalegamine.net" data-i18n="community2_btn">Email the webmaster</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised September 2024.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+      &middot;
+      <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fwww.vignalegamine.net" data-i18n="footer_translate">Translate these pages</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var GAMINE_YEAR = 1967;
+  var SITE_YEAR = 1997;
+
+  function updateAges() {
+    var now = new Date().getFullYear();
+    var gamineAge = now - GAMINE_YEAR;
+    var siteAge = now - SITE_YEAR;
+
+    var gamineEl = document.getElementById('gamineAge');
+    var siteEl = document.getElementById('siteAge');
+    if (gamineEl) gamineEl.textContent = gamineAge;
+    if (siteEl) siteEl.textContent = siteAge;
+
+    var gamineYearEnd = document.getElementById('gamineYearEnd');
+    var siteYearEnd = document.getElementById('siteYearEnd');
+    if (gamineYearEnd) gamineYearEnd.textContent = now;
+    if (siteYearEnd) siteYearEnd.textContent = now;
+
+    var gamineAgeBadge = document.getElementById('gamineAgeBadge');
+    var siteAgeBadge = document.getElementById('siteAgeBadge');
+    if (gamineAgeBadge) gamineAgeBadge.textContent = gamineAge;
+    if (siteAgeBadge) siteAgeBadge.textContent = siteAge;
+  }
+
+  var translations = {
+    en: {
+      skip_link: "Skip to content",
+      lang_switch_label: "Language",
+      nav_aria_toggle: "Open menu",
+      nav_aria_main: "Main navigation",
+      nav_home: "Home", nav_vignale: "Vignale", nav_club: "Club", nav_stories: "Stories",
+      nav_data: "Data", nav_marketing: "Marketing", nav_world: "WorldWide", nav_art: "Art ?",
+      nav_market: "Market", nav_links: "Links", nav_new: "New",
+      hero_eyebrow: "Carrozzeria Vignale · Torino, 1967–1971",
+      hero_lead: "Tracking down every remaining Vignale Gamine still out there — one story, one chassis number at a time.",
+      fig1_caption: "Fig. 1 — Two-seater convertible, Fiat 500 chassis",
+      spec_coachbuilder: "Coachbuilder", spec_chassis: "Chassis", spec_production: "Production",
+      spec_weight: "Weight", spec_length: "Length", spec_site_since: "Site online since",
+      age_suffix: "yrs old", yrs_suffix: "yrs",
+      masthead_gamine_suffix: "Years Gamine!", masthead_site_suffix: "Years Gamine Site!",
+      story_h2: "The story",
+      story_p1: "Many people link the name <a href=\"carrozzeria_vignale.html\">Vignale</a> to earlier models from e.g. Ferrari and Maserati. Few people know that Alfredo actually built cars under his own name as well. For the <a href=\"gamine_meaning.html\">Gamine</a>, Vignale used a Fiat 500 chassis as a base. It was in production from 1967 until 1971. With 480kg and just over 3 metres long, it is most probably the tiniest convertible Vignale designed! Until now, the exact number of Gamines produced remains unknown. Hopefully, one day all remaining Gamines will be united at this website...",
+      story_p2: "Enjoy these pages &amp; please don't hesitate to <a href=\"mailto:gamine@vignalegamine.net\">email</a> any Vignale related material!",
+      fig2_caption: "Fig. 2 — Gamine dimensions",
+      book_h2: "The Vignale Gamine book",
+      book_p: "Published by Guus Beliën in 2024, it tells the complete history. Dutch + English translation.",
+      book_btn: "More about the book",
+      fig3_caption: "Fig. 3 — Front", fig4_caption: "Fig. 4 — Rear",
+      community1_h3: "Facebook group", community1_btn: "View the group",
+      community2_h3: "Got Vignale related material?",
+      community2_p: "Photos, stories, documents — anything Gamine related is welcome.",
+      community2_btn: "Email the webmaster",
+      footer_credit: "Site built and maintained by Martin Wildeboer. Revised September 2024.",
+      footer_webmaster: "Webmaster", footer_translate: "Translate these pages",
+      title: "Vignale Gamine Homepage",
+      meta_description: "The Vignale Gamine: a 2 seater convertible built by Carrozzeria Vignale"
+    },
+    nl: {
+      skip_link: "Direct naar inhoud",
+      lang_switch_label: "Taal",
+      nav_aria_toggle: "Menu openen",
+      nav_aria_main: "Hoofdnavigatie",
+      nav_home: "Home", nav_vignale: "Vignale", nav_club: "Club", nav_stories: "Verhalen",
+      nav_data: "Data", nav_marketing: "Marketing", nav_world: "Wereldwijd", nav_art: "Kunst ?",
+      nav_market: "Markt", nav_links: "Links", nav_new: "Nieuw",
+      hero_eyebrow: "Carrozzeria Vignale · Turijn, 1967–1971",
+      hero_lead: "Op zoek naar elke overgebleven Vignale Gamine die er nog is — verhaal voor verhaal, chassisnummer voor chassisnummer.",
+      fig1_caption: "Afb. 1 — Tweezits cabriolet, Fiat 500-chassis",
+      spec_coachbuilder: "Carrosseriebouwer", spec_chassis: "Chassis", spec_production: "Productie",
+      spec_weight: "Gewicht", spec_length: "Lengte", spec_site_since: "Site online sinds",
+      age_suffix: "jaar oud", yrs_suffix: "jaar",
+      masthead_gamine_suffix: "jaar Gamine!", masthead_site_suffix: "jaar Gamine-site!",
+      story_h2: "Het verhaal",
+      story_p1: "Veel mensen koppelen de naam <a href=\"carrozzeria_vignale.html\">Vignale</a> aan eerdere modellen van bijvoorbeeld Ferrari en Maserati. Weinig mensen weten dat Alfredo ook auto's onder zijn eigen naam bouwde. Voor de <a href=\"gamine_meaning.html\">Gamine</a> gebruikte Vignale een Fiat 500-chassis als basis. De auto werd geproduceerd van 1967 tot 1971. Met 480 kg en iets meer dan 3 meter lengte is het waarschijnlijk de kleinste cabriolet die Vignale ooit ontwierp! Tot op heden is het exacte aantal geproduceerde Gamines onbekend. Hopelijk worden ooit alle overgebleven Gamines op deze site samengebracht...",
+      story_p2: "Veel plezier op deze pagina's &amp; stuur gerust een <a href=\"mailto:gamine@vignalegamine.net\">e-mail</a> met Vignale-gerelateerd materiaal!",
+      fig2_caption: "Afb. 2 — Afmetingen Gamine",
+      book_h2: "Het Vignale Gamine boek",
+      book_p: "Uitgegeven door Guus Beliën in 2024, vertelt het de complete geschiedenis. Nederlandse + Engelse vertaling.",
+      book_btn: "Meer over het boek",
+      fig3_caption: "Afb. 3 — Voorkant", fig4_caption: "Afb. 4 — Achterkant",
+      community1_h3: "Facebook-groep", community1_btn: "Bekijk de groep",
+      community2_h3: "Vignale-gerelateerd materiaal?",
+      community2_p: "Foto's, verhalen, documenten — alles wat met de Gamine te maken heeft is welkom.",
+      community2_btn: "Mail de webmaster",
+      footer_credit: "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt september 2024.",
+      footer_webmaster: "Webmaster", footer_translate: "Vertaal deze pagina's",
+      title: "Vignale Gamine Homepage",
+      meta_description: "De Vignale Gamine: een tweezits cabriolet gebouwd door Carrozzeria Vignale"
+    },
+    it: {
+      skip_link: "Vai al contenuto",
+      lang_switch_label: "Lingua",
+      nav_aria_toggle: "Apri il menu",
+      nav_aria_main: "Navigazione principale",
+      nav_home: "Home", nav_vignale: "Vignale", nav_club: "Club", nav_stories: "Storie",
+      nav_data: "Dati", nav_marketing: "Marketing", nav_world: "Nel mondo", nav_art: "Arte ?",
+      nav_market: "Mercato", nav_links: "Link", nav_new: "Novità",
+      hero_eyebrow: "Carrozzeria Vignale · Torino, 1967–1971",
+      hero_lead: "Alla ricerca di ogni Vignale Gamine ancora esistente — una storia, un numero di telaio alla volta.",
+      fig1_caption: "Fig. 1 — Spider due posti, telaio Fiat 500",
+      spec_coachbuilder: "Carrozzeria", spec_chassis: "Telaio", spec_production: "Produzione",
+      spec_weight: "Peso", spec_length: "Lunghezza", spec_site_since: "Sito online dal",
+      age_suffix: "anni", yrs_suffix: "anni",
+      masthead_gamine_suffix: "anni di Gamine!", masthead_site_suffix: "anni di sito Gamine!",
+      story_h2: "La storia",
+      story_p1: "Molti associano il nome <a href=\"carrozzeria_vignale.html\">Vignale</a> ai modelli realizzati in precedenza per, ad esempio, Ferrari e Maserati. Pochi sanno che Alfredo costruì anche automobili a proprio nome. Per la <a href=\"gamine_meaning.html\">Gamine</a>, Vignale utilizzò come base il telaio della Fiat 500. Fu prodotta dal 1967 al 1971. Con 480 kg di peso e poco più di 3 metri di lunghezza, è probabilmente la spider più piccola mai disegnata da Vignale! Ad oggi, il numero esatto di Gamine prodotte resta sconosciuto. Si spera che un giorno tutte le Gamine rimaste possano essere riunite su questo sito...",
+      story_p2: "Buona navigazione &amp; non esitate a <a href=\"mailto:gamine@vignalegamine.net\">scrivere</a> per qualsiasi materiale relativo a Vignale!",
+      fig2_caption: "Fig. 2 — Dimensioni della Gamine",
+      book_h2: "Il libro sulla Vignale Gamine",
+      book_p: "Pubblicato da Guus Beliën nel 2024, racconta la storia completa. Traduzione in olandese e inglese.",
+      book_btn: "Scopri di più sul libro",
+      fig3_caption: "Fig. 3 — Anteriore", fig4_caption: "Fig. 4 — Posteriore",
+      community1_h3: "Gruppo Facebook", community1_btn: "Vai al gruppo",
+      community2_h3: "Materiale relativo alla Vignale?",
+      community2_p: "Foto, storie, documenti — tutto ciò che riguarda la Gamine è benvenuto.",
+      community2_btn: "Scrivi al webmaster",
+      footer_credit: "Sito realizzato e curato da Martin Wildeboer. Aggiornato a settembre 2024.",
+      footer_webmaster: "Webmaster", footer_translate: "Traduci queste pagine",
+      title: "Vignale Gamine — Homepage",
+      meta_description: "La Vignale Gamine: una spider a due posti costruita da Carrozzeria Vignale"
+    }
+  };
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    updateAges();
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>

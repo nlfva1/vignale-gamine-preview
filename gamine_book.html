@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignale Gamine &ndash; Complete Historie (the book) &mdash; Vignale Gamine</title>
+<meta name="description" content="The Vignale Gamine book by Guus Beliën: the complete history of Alfredo Vignale and the Gamine, with an English appendix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 62ch; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+
+  .prose { max-width: 68ch; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="nieuwe-homepage.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Club</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_world.html" data-i18n="nav_world">WorldWide</a></li>
+          <li><a href="gamine_art.html" data-i18n="nav_art">Art ?</a></li>
+          <li><a href="gamine_4_sale.html" data-i18n="nav_market">Market</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="bk_eyebrow">by Guus Beli&euml;n &middot; ISBN 9789090387543</p>
+      <h1 data-i18n="bk_h1">Vignale Gamine &ndash; Complete Historie</h1>
+      <p class="lead" data-i18n="bk_lead">Newest edition, with an English-language appendix &mdash; the complete story of Alfredo Vignale, his coachbuilding factory, and more than twenty Gamines still driving in the Low Countries.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap story-grid">
+      <div class="story-text prose" data-i18n-html data-i18n="bk_body">
+<p>The 140-plus page book on the Vignale Gamine first provides an insight into the history of the person Alfredo Vignale and his body and car factory. Next comes the unprecedented history of the Vignale Gamine. However, we still do not know the exact number that Vignale once ticked off when the last Gamine rolled off the assembly line &ndash; even after contacting a Vignale family member &ndash; but we are getting close. Of course, we can read about how the cars ended up in the Netherlands. We found out that the Brussels importer of Vignale persuaded a Dutchman to set up the Vignale import for the Netherlands.</p>
+<p>I got a lot of information through the help of Frans de Feijter, the son of the former Dutch importer of the brand in Zeeuws Vlaanderen. At the same time, it also becomes clearer how and why the Gamine was introduced in some other countries.</p>
+<p>Very special is the story of Gamine sales in Germany. Based on a Gamine owned by a Flemish club member of the Fiat Club Belgio, this history could be illustrated.</p>
+<p>Thanks to the careful fact-checking by Gamine drivers Theo van Stokkum and Martin Wildeboer, and Archivio Vignale by Alfredo Zanellato, a good picture can be painted which makes the stories behind more than twenty Vignale Gamines driving in the Low Countries more complete.</p>
+<h3>Summary in English</h3>
+<p>As in the 1960s with Vignale&rsquo;s own information brochure, which included a translation into English after the Italian text at the back, this second edition of the Gamine Book includes an English-language appendix to reach an international audience. For this I am especially indebted to my wife Marly, who in daily life teaches that language.</p>
+<h3>Numerous illustrations in full colour</h3>
+<p>In addition to a Vignale history, the new edition is also a book of Gamine drivers. All owners of the cars described in the book I am particularly grateful for the many colour photos and especially their special stories. Some of these have also led to appendices in the back of the edition.</p>
+<p>One copy of the book was initially printed for every driving Vignale Gamine in the Low Countries. By 2024, more than 23 Gamines are drivable in Belgium and the Netherlands. This second printing is no longer made just for them but for &agrave;ll enthusiasts.</p>
+<p>At the time, only seven new Gamines from Vignale seem to have been recorded in the Dutch RDW register. 7 is considered a lucky number. Any owner of this wonderful open Vignale will agree: luck, this is what it feels like to drive a Vignale Gamine. But the reader of this book is also lucky to see a driving Gamine.</p>
+</div>
+      <div>
+        <div class="book-spread">
+          <figure class="plate">
+            <img src="index2_bestanden/image007-groter.jpg" width="245" height="340" alt="Vignale Gamine book, rear cover">
+            <figcaption class="plate-caption" data-i18n="bk_fig_rear">Rear cover</figcaption>
+          </figure>
+          <figure class="plate">
+            <img src="index2_bestanden/image008-groter.jpg" width="244" height="340" alt="Vignale Gamine book, front cover">
+            <figcaption class="plate-caption" data-i18n="bk_fig_front">Front cover</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2 data-i18n="bk_contact_h2">Price &amp; availability</h2>
+      <p class="prose" data-i18n="bk_contact_p">Contact the author, Guus Beli&euml;n, for price and availability:</p>
+      <p><a class="btn" href="mailto:g.belien500@gmail.com?subject=Webaanvraag:%20Vignale%20Gamine%20-%20Complete%20historie" data-i18n="bk_contact_btn">Email the author</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised September 2024.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+      &middot;
+      <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fwww.vignalegamine.net" data-i18n="footer_translate">Translate these pages</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "WorldWide",
+        "nav_art": "Art ?",
+        "nav_market": "Market",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised September 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Translate these pages",
+        "bk_eyebrow": "by Guus Beliën · ISBN 9789090387543",
+        "bk_h1": "Vignale Gamine – Complete Historie",
+        "bk_lead": "Newest edition, with an English-language appendix — the complete story of Alfredo Vignale, his coachbuilding factory, and more than twenty Gamines still driving in the Low Countries.",
+        "bk_body": "\n<p>The 140-plus page book on the Vignale Gamine first provides an insight into the history of the person Alfredo Vignale and his body and car factory. Next comes the unprecedented history of the Vignale Gamine. However, we still do not know the exact number that Vignale once ticked off when the last Gamine rolled off the assembly line – even after contacting a Vignale family member – but we are getting close. Of course, we can read about how the cars ended up in the Netherlands. We found out that the Brussels importer of Vignale persuaded a Dutchman to set up the Vignale import for the Netherlands.</p>\n<p>I got a lot of information through the help of Frans de Feijter, the son of the former Dutch importer of the brand in Zeeuws Vlaanderen. At the same time, it also becomes clearer how and why the Gamine was introduced in some other countries.</p>\n<p>Very special is the story of Gamine sales in Germany. Based on a Gamine owned by a Flemish club member of the Fiat Club Belgio, this history could be illustrated.</p>\n<p>Thanks to the careful fact-checking by Gamine drivers Theo van Stokkum and Martin Wildeboer, and Archivio Vignale by Alfredo Zanellato, a good picture can be painted which makes the stories behind more than twenty Vignale Gamines driving in the Low Countries more complete.</p>\n<h3>Summary in English</h3>\n<p>As in the 1960s with Vignale’s own information brochure, which included a translation into English after the Italian text at the back, this second edition of the Gamine Book includes an English-language appendix to reach an international audience. For this I am especially indebted to my wife Marly, who in daily life teaches that language.</p>\n<h3>Numerous illustrations in full colour</h3>\n<p>In addition to a Vignale history, the new edition is also a book of Gamine drivers. All owners of the cars described in the book I am particularly grateful for the many colour photos and especially their special stories. Some of these have also led to appendices in the back of the edition.</p>\n<p>One copy of the book was initially printed for every driving Vignale Gamine in the Low Countries. By 2024, more than 23 Gamines are drivable in Belgium and the Netherlands. This second printing is no longer made just for them but for àll enthusiasts.</p>\n<p>At the time, only seven new Gamines from Vignale seem to have been recorded in the Dutch RDW register. 7 is considered a lucky number. Any owner of this wonderful open Vignale will agree: luck, this is what it feels like to drive a Vignale Gamine. But the reader of this book is also lucky to see a driving Gamine.</p>\n",
+        "bk_fig_rear": "Rear cover",
+        "bk_fig_front": "Front cover",
+        "bk_contact_h2": "Price & availability",
+        "bk_contact_p": "Contact the author, Guus Beliën, for price and availability:",
+        "bk_contact_btn": "Email the author",
+        "title": "Vignale Gamine – Complete Historie (the book) — Vignale Gamine",
+        "meta_description": "The Vignale Gamine book by Guus Beliën: the complete history of Alfredo Vignale and the Gamine, with an English appendix."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "Wereldwijd",
+        "nav_art": "Kunst ?",
+        "nav_market": "Markt",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt september 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Vertaal deze pagina's",
+        "bk_eyebrow": "door Guus Beliën · ISBN 9789090387543",
+        "bk_h1": "Vignale Gamine – Complete Historie",
+        "bk_lead": "Nieuwste editie, met een Engelstalige bijlage — het complete verhaal van Alfredo Vignale, zijn carrosseriefabriek, en meer dan twintig nog rijdende Gamines in de Lage Landen.",
+        "bk_body": "\n<p>Het ruim 140 pagina's tellende boek over de Vignale Gamine geeft allereerst inzage in de historie van de persoon Alfredo Vignale en zijn carrosserie- en autofabriek. Vervolgens komt de niet eerder zo uitgeplozen geschiedenis van de Vignale Gamine voorbij. Het getal dat Vignale echter ooit aftikte toen de laatste Gamine van de band rolde weten we – zelfs na contacten met een familielid van Vignale – nog steeds niet exact, maar we komen in de buurt. Uiteraard is te lezen hoe de wagens in Nederland terecht kwamen. We ontdekten dat de Brusselse importeur van Vignale een Nederlander overhaalde om de Vignale-import voor Nederland op te zetten.</p>\n<p>Veel informatie kreeg ik door de hulp van Frans de Feijter, de zoon van de voormalige Nederlandse importeur van het merk in Zeeuws-Vlaanderen. Tegelijk wordt ook duidelijker hoe en waarom de Gamine in enkele andere landen werd ingevoerd.</p>\n<p>Heel bijzonder is het verhaal van de verkoop van Gamines in Duitsland. Aan de hand van een Gamine van een Vlaams clublid van de Fiat Club Belgio kon deze geschiedenis geïllustreerd worden.</p>\n<p>Dankzij een zorgvuldige controle van feiten door de Gamine-rijders Theo van Stokkum en Martin Wildeboer, en Archivio Vignale van Alfredo Zanellato, kan een goed beeld geschetst worden waardoor de verhalen achter meer dan twintig in de Lage Landen rijdende Vignale Gamines completer worden.</p>\n<h3>Samenvatting in het Engels</h3>\n<p>Net als in de jaren zestig bij de informatiebrochure van Vignale zelf, waar na de Italiaanse tekst achterin onder meer een vertaling in het Engels stond, is in deze tweede editie van het Gamineboek een Engelstalige bijlage opgenomen om een internationaal publiek te bereiken. Hiervoor ben ik vooral mijn echtgenote Marly, die in het dagelijkse leven die taal doceert, dank verschuldigd.</p>\n<h3>Veel illustraties in full colour</h3>\n<p>Naast een Vignale-historie is de nieuwe uitgave tevens een boek van Gamine-rijders. Alle eigenaren van de in het boek beschreven auto's ben ik bijzonder dankbaar voor de vele kleurenfoto's en vooral hun bijzondere verhalen. Enkele hiervan hebben bovendien geleid tot bijlagen achterin de uitgave.</p>\n<p>Voor elke rijdende Vignale Gamine in de Lage Landen is aanvankelijk één exemplaar van het boek gedrukt. In 2024 zijn er meer dan 23 Gamines in België en Nederland rijdbaar. Deze tweede druk wordt niet meer alleen voor hen maar voor àlle liefhebbers gemaakt.</p>\n<p>In het Nederlandse RDW-register lijken destijds maar zeven nieuwe Gamines van Vignale opgenomen te zijn. 7 wordt als geluksgetal beschouwd. Elke eigenaar van deze wonderschone open Vignale zal het beamen: geluk, zo voelt het om een Vignale Gamine te mogen rijden. Maar ook de lezer van dit boek heeft geluk bij het zien van een rijdende Gamine.</p>\n",
+        "bk_fig_rear": "Achterkant",
+        "bk_fig_front": "Voorkant",
+        "bk_contact_h2": "Prijs & beschikbaarheid",
+        "bk_contact_p": "Neem contact op met de auteur, Guus Beliën, voor prijs en beschikbaarheid:",
+        "bk_contact_btn": "Mail de auteur",
+        "title": "Vignale Gamine – Complete Historie (het boek) — Vignale Gamine",
+        "meta_description": "Het Vignale Gamine-boek van Guus Beliën: de complete geschiedenis van Alfredo Vignale en de Gamine, met Engelse bijlage."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_world": "Nel mondo",
+        "nav_art": "Arte ?",
+        "nav_market": "Mercato",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato a settembre 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Traduci queste pagine",
+        "bk_eyebrow": "di Guus Beliën · ISBN 9789090387543",
+        "bk_h1": "Vignale Gamine – Complete Historie",
+        "bk_lead": "Edizione più recente, con appendice in inglese — la storia completa di Alfredo Vignale, della sua carrozzeria, e di oltre venti Gamine ancora circolanti nei Paesi Bassi e in Belgio.",
+        "bk_body": "\n<p>Il libro di oltre 140 pagine sulla Vignale Gamine (in lingua olandese) offre innanzitutto una panoramica sulla storia di Alfredo Vignale e della sua carrozzeria e fabbrica di automobili. Poi viene la storia mai esplorata prima della Vignale Gamine. Tuttavia, anche dopo aver contattato un membro della famiglia Vignale, non sappiamo ancora quale sia il numero esatto di Gamine uscite dalla catena di montaggio, ma ci stiamo avvicinando. Naturalmente, possiamo leggere come le auto siano finite nei Paesi Bassi. Abbiamo scoperto che l'importatore di Bruxelles di Vignale ha convinto un olandese a creare l'importazione di Vignale nei Paesi Bassi.</p>\n<p>Ho ottenuto molte informazioni grazie all'aiuto di Frans de Feijter, il figlio dell'ex importatore olandese del marchio a Zeeuws Vlaanderen. Allo stesso tempo, diventa anche più chiaro come e perché la Gamine sia stata introdotta in altri Paesi.</p>\n<p>Molto particolare è la storia delle vendite di Gamine in Germania. Sulla base di una Gamine di proprietà di un membro fiammingo del Fiat Club Belgio, è stato possibile illustrare questa storia.</p>\n<p>Grazie a un'attenta verifica da parte dei piloti di Gamine Theo van Stokkum e Martin Wildeboer e dell'Archivio Vignale di Alfredo Zanellato, è stato possibile tracciare un buon quadro, rendendo più completa la storia di oltre venti Gamine Vignale in circolazione nei Paesi Bassi.</p>\n<h3>Riassunto in inglese</h3>\n<p>Come negli anni '60 con l'opuscolo informativo di Vignale, che includeva una traduzione in inglese dopo il testo italiano sul retro, questa seconda edizione del libro Gamine include un'appendice in inglese per raggiungere un pubblico internazionale. Per questo sono particolarmente grato a mia moglie Marly, che insegna questa lingua nella vita quotidiana.</p>\n<h3>Più di 200 illustrazioni a colori</h3>\n<p>Oltre a una storia di Vignale, la nuova edizione è anche un libro di piloti Gamine. Sono particolarmente grato a tutti i proprietari delle auto descritte nel libro per le numerose foto a colori e soprattutto per le loro storie speciali. Alcune di queste sono state inserite in appendici sul retro dell'edizione.</p>\n<p>Inizialmente è stata stampata una copia del libro per ogni Vignale Gamine in circolazione nei Paesi Bassi. Entro il 2024, più di 23 Gamine saranno guidabili in Belgio e nei Paesi Bassi. Questa seconda edizione non è più realizzata solo per loro, ma per tutti gli appassionati.</p>\n<p>All'epoca, sembra che solo sette nuove Gamine di Vignale siano state registrate nel registro olandese RDW. Il 7 è considerato un numero fortunato. Qualsiasi proprietario di questa splendida Vignale aperta sarà d'accordo: fortunato, ecco cosa si prova a guidare una Vignale Gamine. Ma i lettori di questo libro sono anche fortunati a vedere una Gamine alla guida.</p>\n",
+        "bk_fig_rear": "Retro di copertina",
+        "bk_fig_front": "Copertina",
+        "bk_contact_h2": "Prezzo e disponibilità",
+        "bk_contact_p": "Contatta l'autore, Guus Beliën, per prezzo e disponibilità:",
+        "bk_contact_btn": "Scrivi all'autore",
+        "title": "Vignale Gamine – Complete Historie (il libro) — Vignale Gamine",
+        "meta_description": "Il libro Vignale Gamine di Guus Beliën: la storia completa di Alfredo Vignale e della Gamine, con appendice in inglese."
+    }
+};
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>

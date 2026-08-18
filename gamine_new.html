@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is New ? &mdash; Vignale Gamine</title>
+<meta name="description" content="A chronological log of updates to the Vignale Gamine site since 1997: new Gamines, brochures, stories and finds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 62ch; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+
+  .prose { max-width: 68ch; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="nieuwe-homepage.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Club</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_world.html" data-i18n="nav_world">WorldWide</a></li>
+          <li><a href="gamine_art.html" data-i18n="nav_art">Art ?</a></li>
+          <li><a href="gamine_4_sale.html" data-i18n="nav_market">Market</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" aria-current="page" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="n_eyebrow">What is New at this Site ?</p>
+      <h1 data-i18n="n_h1">What is New at this Site ?</h1>
+      <p class="lead" data-i18n="n_lead">A running log of updates since the site began in 1997 &mdash; new Gamines, brochures, stories and finds, newest first.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div data-i18n-html data-i18n="n_timeline"><ul class="timeline"><li><span class="t-date">August 2024</span><p>Vignale Gamine book by Guus C.M. Beli&euml;n. &middot; Link to the Facebook group &lsquo;I proprietari di Vignale Gamine (110F Spider)&rsquo;.</p></li><li><span class="t-date">April 2021 (updated August 2024)</span><p>Sorry Gamine and Vignale enthusiasts: nothing much new on the site since over a decade&hellip; BUT: with help from owners in the UK, France, Netherlands, Germany, Italy and Switzerland, we were able to find 540 Gamines in 29 countries! Of course, when Gamines get exported, they might be double in the Register &mdash; so we DO need your help: please fill out the PDF of the Register, include your chassis number, and send it to us. So far, we have 245 chassis numbers already! <strong>Update 08-2024: 761 Gamines in 34 countries + 441 unique VINs!</strong></p></li><li><span class="t-date">February 2000</span><p>New French Gamine.</p></li><li><span class="t-date">February 1999</span><p>Italian Vignale brochure &mdash; and eleven Vignale brochures in total!</p></li><li><span class="t-date">January 1999</span><p>German brochure from the Hermes Post Shop, a catalogue sales company! Also thanks to Christian Schmitt!</p></li><li><span class="t-date">December 1998</span><p>Over 30 Gamines from Germany! Many thanks to Christian Schmitt from the German Fiat 500 &amp; Gamine IG.</p></li><li><span class="t-date">August 1998</span><p>New Dutch Gamine, imported from Italy by Marcel Voet.</p></li><li><span class="t-date">July 1998</span><p>Gamine painting at &lsquo;Parkeerbeheer Rotterdam&rsquo;.</p></li><li><span class="t-date">June 1998</span><p>Red Austrian Gamine &mdash; for sale! &middot; &lsquo;The Gamine, the gambling king and the tank&rsquo;, story by Andrew Adamides, Cyprus Mail. &middot; Recently restored German Gamine. &middot; Red German Gamine at the Vehikel-Sammlung Eppelheim. &middot; Red Italian Gamine.</p></li><li><span class="t-date">May 1998</span><p>A Java applet to search the Gamine pages!</p></li><li><span class="t-date">April 1998</span><p>Greek Gamine for sale! &middot; 1970 Coral Orange Gamine, owned by Neil McCabe (UK).</p></li><li><span class="t-date">March 1998</span><p>Dutch Vignale booklet: Gamine page + last page. More to follow!</p></li><li><span class="t-date">February 1998</span><p>Gamine miniature (thanks to Pascal De Bruycker) &middot; 39 more cars built/designed by Vignale (mainly contributed by Albrecht Heinrici) &middot; pictures of, and a roadmap to, Carrozzeria Vignale (thanks to Rainer Wieler).</p></li><li><span class="t-date">January 1998</span><p>New logo &middot; 46 different cars built/designed by Vignale!</p></li><li><span class="t-date">12 December 1997</span><p>First two USA Gamines! (thanks to Will Kerbo)</p></li><li><span class="t-date">9 December 1997</span><p>Two more Gamines from France, both owned by J&eacute;r&ocirc;me Roug&eacute; of the &lsquo;Club Fiat 500 de Perpignan&rsquo;.</p></li><li><span class="t-date">22 November 1997</span><p>Italian newspaper articles from 1968 about the Gamine (+ hard top!).</p></li><li><span class="t-date">9 November 1997</span><p>First Austrian Gamine on the Net! Thanks to Erik from the Erster Oesterreichischer Kleinwagen Club (EOKC). &middot; A French Gamine, built in 1968; new owner will import it to Holland.</p></li><li><span class="t-date">1 November 1997</span><p>Short story and pictures of the Route des Vosges &ndash; Plombi&egrave;res-les-Bains, France. The Gamine even won a trophy!</p></li><li><span class="t-date">28 October 1997</span><p>More Gamines in Switzerland! (pictures by Cees van der Zee, thanks!)</p></li><li><span class="t-date">12 September 1997</span><p>Danish Gamine for sale: from 1968, only two owners, driven 85,000 km, the only one in Denmark, very good condition, red with black top and interior.</p></li><li><span class="t-date">25 July 1997</span><p>Gamines Varia postcard (try to count them all!) &middot; five more Gamines at the 4-5 July 1997 Fiat 500 Anniversary at Garlenda, Italy (thank you Claudio!).</p></li><li><span class="t-date">21 July 1997</span><p>Gamines at Garlenda 1997: two Gamines during the 4-5 July Fiat 500 Anniversary at Garlenda, Italy (again, thank you Bruno!).</p></li><li><span class="t-date">18 July 1997</span><p>&lsquo;Club Class&rsquo; &mdash; London nightclub owner Peter Stringfellow has owned many exotic cars. Michael Harvey was amazed at his latest purchase.</p></li><li><span class="t-date">17 July 1997</span><p>&lsquo;Autonotizie Vignale&rsquo; &mdash; a factory tour at Carrozzeria Vignale, with pictures!</p></li><li><span class="t-date">7 July 1997</span><p>New LPage guestbook facilities.</p></li><li><span class="t-date">30 June 1997</span><p>First Swiss owner on the web &mdash; admire Claudio&rsquo;s Gamine.</p></li><li><span class="t-date">5 May 1997</span><p>&lsquo;Other cars by Carrozzeria Vignale&rsquo; &mdash; at the Turin factory of Vignale, not only Gamines saw the daylight. &middot; Two new German Gamines: one another museum car, the other from a 1968 article!</p></li><li><span class="t-date">18 April 1997</span><p>Another French Gamine! (thanks to Pierre Lanoix)</p></li><li><span class="t-date">12 April 1997</span><p>New French Gamines &mdash; four more, thank you so much Bruno Lacoste!</p></li><li><span class="t-date">25 March 1997</span><p>English history: &lsquo;The Great Noddy Car Gamble&rsquo; &mdash; in the Sixties there was an unsuccessful attempt to sell Vignale-Fiats in the UK. Cris Rees tells the bizarre tale.</p></li></ul></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised September 2024.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+      &middot;
+      <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fwww.vignalegamine.net" data-i18n="footer_translate">Translate these pages</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "WorldWide",
+        "nav_art": "Art ?",
+        "nav_market": "Market",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised September 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Translate these pages",
+        "n_eyebrow": "What is New at this Site ?",
+        "n_h1": "What is New at this Site ?",
+        "n_lead": "A running log of updates since the site began in 1997 — new Gamines, brochures, stories and finds, newest first.",
+        "n_timeline": "<ul class=\"timeline\"><li><span class=\"t-date\">August 2024</span><p>Vignale Gamine book by Guus C.M. Beliën. · Link to the Facebook group ‘I proprietari di Vignale Gamine (110F Spider)’.</p></li><li><span class=\"t-date\">April 2021 (updated August 2024)</span><p>Sorry Gamine and Vignale enthusiasts: nothing much new on the site since over a decade… BUT: with help from owners in the UK, France, Netherlands, Germany, Italy and Switzerland, we were able to find 540 Gamines in 29 countries! Of course, when Gamines get exported, they might be double in the Register — so we DO need your help: please fill out the PDF of the Register, include your chassis number, and send it to us. So far, we have 245 chassis numbers already! <strong>Update 08-2024: 761 Gamines in 34 countries + 441 unique VINs!</strong></p></li><li><span class=\"t-date\">February 2000</span><p>New French Gamine.</p></li><li><span class=\"t-date\">February 1999</span><p>Italian Vignale brochure — and eleven Vignale brochures in total!</p></li><li><span class=\"t-date\">January 1999</span><p>German brochure from the Hermes Post Shop, a catalogue sales company! Also thanks to Christian Schmitt!</p></li><li><span class=\"t-date\">December 1998</span><p>Over 30 Gamines from Germany! Many thanks to Christian Schmitt from the German Fiat 500 & Gamine IG.</p></li><li><span class=\"t-date\">August 1998</span><p>New Dutch Gamine, imported from Italy by Marcel Voet.</p></li><li><span class=\"t-date\">July 1998</span><p>Gamine painting at ‘Parkeerbeheer Rotterdam’.</p></li><li><span class=\"t-date\">June 1998</span><p>Red Austrian Gamine — for sale! · ‘The Gamine, the gambling king and the tank’, story by Andrew Adamides, Cyprus Mail. · Recently restored German Gamine. · Red German Gamine at the Vehikel-Sammlung Eppelheim. · Red Italian Gamine.</p></li><li><span class=\"t-date\">May 1998</span><p>A Java applet to search the Gamine pages!</p></li><li><span class=\"t-date\">April 1998</span><p>Greek Gamine for sale! · 1970 Coral Orange Gamine, owned by Neil McCabe (UK).</p></li><li><span class=\"t-date\">March 1998</span><p>Dutch Vignale booklet: Gamine page + last page. More to follow!</p></li><li><span class=\"t-date\">February 1998</span><p>Gamine miniature (thanks to Pascal De Bruycker) · 39 more cars built/designed by Vignale (mainly contributed by Albrecht Heinrici) · pictures of, and a roadmap to, Carrozzeria Vignale (thanks to Rainer Wieler).</p></li><li><span class=\"t-date\">January 1998</span><p>New logo · 46 different cars built/designed by Vignale!</p></li><li><span class=\"t-date\">12 December 1997</span><p>First two USA Gamines! (thanks to Will Kerbo)</p></li><li><span class=\"t-date\">9 December 1997</span><p>Two more Gamines from France, both owned by Jérôme Rougé of the ‘Club Fiat 500 de Perpignan’.</p></li><li><span class=\"t-date\">22 November 1997</span><p>Italian newspaper articles from 1968 about the Gamine (+ hard top!).</p></li><li><span class=\"t-date\">9 November 1997</span><p>First Austrian Gamine on the Net! Thanks to Erik from the Erster Oesterreichischer Kleinwagen Club (EOKC). · A French Gamine, built in 1968; new owner will import it to Holland.</p></li><li><span class=\"t-date\">1 November 1997</span><p>Short story and pictures of the Route des Vosges – Plombières-les-Bains, France. The Gamine even won a trophy!</p></li><li><span class=\"t-date\">28 October 1997</span><p>More Gamines in Switzerland! (pictures by Cees van der Zee, thanks!)</p></li><li><span class=\"t-date\">12 September 1997</span><p>Danish Gamine for sale: from 1968, only two owners, driven 85,000 km, the only one in Denmark, very good condition, red with black top and interior.</p></li><li><span class=\"t-date\">25 July 1997</span><p>Gamines Varia postcard (try to count them all!) · five more Gamines at the 4-5 July 1997 Fiat 500 Anniversary at Garlenda, Italy (thank you Claudio!).</p></li><li><span class=\"t-date\">21 July 1997</span><p>Gamines at Garlenda 1997: two Gamines during the 4-5 July Fiat 500 Anniversary at Garlenda, Italy (again, thank you Bruno!).</p></li><li><span class=\"t-date\">18 July 1997</span><p>‘Club Class’ — London nightclub owner Peter Stringfellow has owned many exotic cars. Michael Harvey was amazed at his latest purchase.</p></li><li><span class=\"t-date\">17 July 1997</span><p>‘Autonotizie Vignale’ — a factory tour at Carrozzeria Vignale, with pictures!</p></li><li><span class=\"t-date\">7 July 1997</span><p>New LPage guestbook facilities.</p></li><li><span class=\"t-date\">30 June 1997</span><p>First Swiss owner on the web — admire Claudio’s Gamine.</p></li><li><span class=\"t-date\">5 May 1997</span><p>‘Other cars by Carrozzeria Vignale’ — at the Turin factory of Vignale, not only Gamines saw the daylight. · Two new German Gamines: one another museum car, the other from a 1968 article!</p></li><li><span class=\"t-date\">18 April 1997</span><p>Another French Gamine! (thanks to Pierre Lanoix)</p></li><li><span class=\"t-date\">12 April 1997</span><p>New French Gamines — four more, thank you so much Bruno Lacoste!</p></li><li><span class=\"t-date\">25 March 1997</span><p>English history: ‘The Great Noddy Car Gamble’ — in the Sixties there was an unsuccessful attempt to sell Vignale-Fiats in the UK. Cris Rees tells the bizarre tale.</p></li></ul>",
+        "title": "What is New ? — Vignale Gamine",
+        "meta_description": "A chronological log of updates to the Vignale Gamine site since 1997: new Gamines, brochures, stories and finds."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "Wereldwijd",
+        "nav_art": "Kunst ?",
+        "nav_market": "Markt",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt september 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Vertaal deze pagina's",
+        "n_eyebrow": "Wat is er nieuw op deze site ?",
+        "n_h1": "Wat is er nieuw op deze site ?",
+        "n_lead": "Een doorlopend logboek van updates sinds de start van de site in 1997 — nieuwe Gamines, brochures, verhalen en vondsten, nieuwste eerst.",
+        "n_timeline": "<ul class=\"timeline\"><li><span class=\"t-date\">Augustus 2024</span><p>Vignale Gamine-boek van Guus C.M. Beliën. · Link naar de Facebookgroep ‘I proprietari di Vignale Gamine (110F Spider)’.</p></li><li><span class=\"t-date\">April 2021 (bijgewerkt augustus 2024)</span><p>Sorry Gamine- en Vignale-liefhebbers: al meer dan tien jaar niet veel nieuws op de site… MAAR: met hulp van eigenaren in het VK, Frankrijk, Nederland, Duitsland, Italië en Zwitserland vonden we 540 Gamines in 29 landen! Geëxporteerde Gamines kunnen natuurlijk dubbel in het Register staan — dus we hebben jouw hulp nodig: vul de PDF van het Register in, vermeld je chassisnummer en stuur hem naar ons op. Tot nu toe hebben we al 245 chassisnummers! <strong>Update 08-2024: 761 Gamines in 34 landen + 441 unieke VIN's!</strong></p></li><li><span class=\"t-date\">Februari 2000</span><p>Nieuwe Franse Gamine.</p></li><li><span class=\"t-date\">Februari 1999</span><p>Italiaanse Vignale-brochure — en elf Vignale-brochures in totaal!</p></li><li><span class=\"t-date\">Januari 1999</span><p>Duitse brochure van de Hermes Post Shop, een postorderbedrijf! Ook dank aan Christian Schmitt!</p></li><li><span class=\"t-date\">December 1998</span><p>Meer dan 30 Gamines uit Duitsland! Veel dank aan Christian Schmitt van de Duitse Fiat 500 & Gamine IG.</p></li><li><span class=\"t-date\">Augustus 1998</span><p>Nieuwe Nederlandse Gamine, geïmporteerd uit Italië door Marcel Voet.</p></li><li><span class=\"t-date\">Juli 1998</span><p>Gamine-schildering bij ‘Parkeerbeheer Rotterdam’.</p></li><li><span class=\"t-date\">Juni 1998</span><p>Rode Oostenrijkse Gamine — te koop! · ‘The Gamine, the gambling king and the tank’, verhaal van Andrew Adamides, Cyprus Mail. · Recent gerestaureerde Duitse Gamine. · Rode Duitse Gamine bij de Vehikel-Sammlung Eppelheim. · Rode Italiaanse Gamine.</p></li><li><span class=\"t-date\">Mei 1998</span><p>Een Java-applet om de Gamine-pagina's te doorzoeken!</p></li><li><span class=\"t-date\">April 1998</span><p>Griekse Gamine te koop! · 1970 koraaloranje Gamine, eigendom van Neil McCabe (VK).</p></li><li><span class=\"t-date\">Maart 1998</span><p>Nederlands Vignale-boekje: Gamine-pagina + laatste pagina. Meer volgt!</p></li><li><span class=\"t-date\">Februari 1998</span><p>Gamine-miniatuur (dank aan Pascal De Bruycker) · 39 extra door Vignale gebouwde/ontworpen auto's (voornamelijk aangeleverd door Albrecht Heinrici) · foto's van, en routebeschrijving naar, Carrozzeria Vignale (dank aan Rainer Wieler).</p></li><li><span class=\"t-date\">Januari 1998</span><p>Nieuw logo · 46 verschillende door Vignale gebouwde/ontworpen auto's!</p></li><li><span class=\"t-date\">12 december 1997</span><p>Eerste twee Amerikaanse Gamines! (dank aan Will Kerbo)</p></li><li><span class=\"t-date\">9 december 1997</span><p>Twee extra Gamines uit Frankrijk, beide eigendom van Jérôme Rougé van de ‘Club Fiat 500 de Perpignan’.</p></li><li><span class=\"t-date\">22 november 1997</span><p>Italiaanse krantenartikelen uit 1968 over de Gamine (+ hardtop!).</p></li><li><span class=\"t-date\">9 november 1997</span><p>Eerste Oostenrijkse Gamine op het net! Dank aan Erik van de Erster Oesterreichischer Kleinwagen Club (EOKC). · Een Franse Gamine, gebouwd in 1968; nieuwe eigenaar importeert hem naar Nederland.</p></li><li><span class=\"t-date\">1 november 1997</span><p>Kort verhaal en foto's van de Route des Vosges – Plombières-les-Bains, Frankrijk. De Gamine won zelfs een trofee!</p></li><li><span class=\"t-date\">28 oktober 1997</span><p>Meer Gamines in Zwitserland! (foto's van Cees van der Zee, dank!)</p></li><li><span class=\"t-date\">12 september 1997</span><p>Deense Gamine te koop: uit 1968, slechts twee eigenaren, 85.000 km gereden, de enige in Denemarken, zeer goede staat, rood met zwarte kap en interieur.</p></li><li><span class=\"t-date\">25 juli 1997</span><p>Gamines Varia-ansichtkaart (probeer ze allemaal te tellen!) · vijf extra Gamines op het Fiat 500-jubileum van 4-5 juli 1997 in Garlenda, Italië (dank je wel Claudio!).</p></li><li><span class=\"t-date\">21 juli 1997</span><p>Gamines in Garlenda 1997: twee Gamines tijdens het Fiat 500-jubileum van 4-5 juli in Garlenda, Italië (nogmaals dank je wel Bruno!).</p></li><li><span class=\"t-date\">18 juli 1997</span><p>‘Club Class’ — Londense nachtclubeigenaar Peter Stringfellow bezat vele exotische auto's. Michael Harvey stond versteld van zijn nieuwste aankoop.</p></li><li><span class=\"t-date\">17 juli 1997</span><p>‘Autonotizie Vignale’ — een fabrieksrondleiding bij Carrozzeria Vignale, met foto's!</p></li><li><span class=\"t-date\">7 juli 1997</span><p>Nieuwe LPage-gastenboekfaciliteiten.</p></li><li><span class=\"t-date\">30 juni 1997</span><p>Eerste Zwitserse eigenaar op het web — bewonder Claudio's Gamine.</p></li><li><span class=\"t-date\">5 mei 1997</span><p>‘Andere auto's van Carrozzeria Vignale’ — in de Turijnse fabriek van Vignale zagen niet alleen Gamines het levenslicht. · Twee nieuwe Duitse Gamines: de ene weer een museumauto, de andere uit een artikel uit 1968!</p></li><li><span class=\"t-date\">18 april 1997</span><p>Nog een Franse Gamine! (dank aan Pierre Lanoix)</p></li><li><span class=\"t-date\">12 april 1997</span><p>Nieuwe Franse Gamines — vier extra, hartelijk dank Bruno Lacoste!</p></li><li><span class=\"t-date\">25 maart 1997</span><p>Engelse geschiedenis: ‘The Great Noddy Car Gamble’ — in de jaren zestig was er een mislukte poging om Vignale-Fiats in het VK te verkopen. Cris Rees vertelt het bizarre verhaal.</p></li></ul>",
+        "title": "Wat is er nieuw ? — Vignale Gamine",
+        "meta_description": "Een chronologisch logboek van updates op de Vignale Gamine-site sinds 1997: nieuwe Gamines, brochures, verhalen en vondsten."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_world": "Nel mondo",
+        "nav_art": "Arte ?",
+        "nav_market": "Mercato",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato a settembre 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Traduci queste pagine",
+        "n_eyebrow": "Cosa c'è di nuovo su questo sito ?",
+        "n_h1": "Cosa c'è di nuovo su questo sito ?",
+        "n_lead": "Un registro cronologico degli aggiornamenti dal 1997 — nuove Gamine, brochure, racconti e scoperte, dal più recente.",
+        "n_timeline": "<ul class=\"timeline\"><li><span class=\"t-date\">Agosto 2024</span><p>Libro sulla Vignale Gamine di Guus C.M. Beliën. · Link al gruppo Facebook ‘I proprietari di Vignale Gamine (110F Spider)’.</p></li><li><span class=\"t-date\">Aprile 2021 (aggiornato agosto 2024)</span><p>Ci dispiace, appassionati di Gamine e Vignale: non ci sono state grandi novità sul sito da oltre un decennio… PERÒ: con l'aiuto di proprietari nel Regno Unito, in Francia, nei Paesi Bassi, in Germania, in Italia e in Svizzera, siamo riusciti a trovare 540 Gamine in 29 paesi! Naturalmente, le Gamine esportate potrebbero comparire due volte nel Registro — per questo abbiamo bisogno del tuo aiuto: compila il PDF del Registro, indica il tuo numero di telaio e inviacelo. Finora abbiamo già 245 numeri di telaio! <strong>Aggiornamento 08-2024: 761 Gamine in 34 paesi + 441 VIN univoci!</strong></p></li><li><span class=\"t-date\">Febbraio 2000</span><p>Nuova Gamine francese.</p></li><li><span class=\"t-date\">Febbraio 1999</span><p>Brochure Vignale italiana — e undici brochure Vignale in totale!</p></li><li><span class=\"t-date\">Gennaio 1999</span><p>Brochure tedesca dell'Hermes Post Shop, una società di vendita per corrispondenza! Grazie anche a Christian Schmitt!</p></li><li><span class=\"t-date\">Dicembre 1998</span><p>Oltre 30 Gamine dalla Germania! Grazie mille a Christian Schmitt del Fiat 500 & Gamine IG tedesco.</p></li><li><span class=\"t-date\">Agosto 1998</span><p>Nuova Gamine olandese, importata dall'Italia da Marcel Voet.</p></li><li><span class=\"t-date\">Luglio 1998</span><p>Murale della Gamine a ‘Parkeerbeheer Rotterdam’.</p></li><li><span class=\"t-date\">Giugno 1998</span><p>Gamine austriaca rossa — in vendita! · ‘The Gamine, the gambling king and the tank’, racconto di Andrew Adamides, Cyprus Mail. · Gamine tedesca restaurata di recente. · Gamine tedesca rossa alla Vehikel-Sammlung Eppelheim. · Gamine italiana rossa.</p></li><li><span class=\"t-date\">Maggio 1998</span><p>Un applet Java per cercare tra le pagine della Gamine!</p></li><li><span class=\"t-date\">Aprile 1998</span><p>Gamine greca in vendita! · Gamine color arancio corallo del 1970, di proprietà di Neil McCabe (Regno Unito).</p></li><li><span class=\"t-date\">Marzo 1998</span><p>Libretto Vignale olandese: pagina Gamine + ultima pagina. Altro in arrivo!</p></li><li><span class=\"t-date\">Febbraio 1998</span><p>Miniatura della Gamine (grazie a Pascal De Bruycker) · altre 39 auto costruite/disegnate da Vignale (contributo principale di Albrecht Heinrici) · foto e indicazioni stradali per la Carrozzeria Vignale (grazie a Rainer Wieler).</p></li><li><span class=\"t-date\">Gennaio 1998</span><p>Nuovo logo · 46 diverse auto costruite/disegnate da Vignale!</p></li><li><span class=\"t-date\">12 dicembre 1997</span><p>Prime due Gamine negli USA! (grazie a Will Kerbo)</p></li><li><span class=\"t-date\">9 dicembre 1997</span><p>Altre due Gamine dalla Francia, entrambe di proprietà di Jérôme Rougé del ‘Club Fiat 500 de Perpignan’.</p></li><li><span class=\"t-date\">22 novembre 1997</span><p>Articoli di giornale italiani del 1968 sulla Gamine (+ hard top!).</p></li><li><span class=\"t-date\">9 novembre 1997</span><p>Prima Gamine austriaca online! Grazie a Erik dell'Erster Oesterreichischer Kleinwagen Club (EOKC). · Una Gamine francese, costruita nel 1968; il nuovo proprietario la importerà in Olanda.</p></li><li><span class=\"t-date\">1 novembre 1997</span><p>Breve racconto e foto della Route des Vosges – Plombières-les-Bains, Francia. La Gamine ha persino vinto un trofeo!</p></li><li><span class=\"t-date\">28 ottobre 1997</span><p>Altre Gamine in Svizzera! (foto di Cees van der Zee, grazie!)</p></li><li><span class=\"t-date\">12 settembre 1997</span><p>Gamine danese in vendita: del 1968, solo due proprietari, 85.000 km percorsi, l'unica in Danimarca, ottime condizioni, rossa con capote e interni neri.</p></li><li><span class=\"t-date\">25 luglio 1997</span><p>Cartolina Gamines Varia (prova a contarle tutte!) · altre cinque Gamine al raduno del 4-5 luglio 1997 per l'anniversario Fiat 500 a Garlenda, Italia (grazie Claudio!).</p></li><li><span class=\"t-date\">21 luglio 1997</span><p>Gamine a Garlenda 1997: due Gamine durante il raduno del 4-5 luglio per l'anniversario Fiat 500 a Garlenda, Italia (di nuovo grazie Bruno!).</p></li><li><span class=\"t-date\">18 luglio 1997</span><p>‘Club Class’ — il gestore del locale notturno londinese Peter Stringfellow possedeva molte auto esotiche. Michael Harvey rimase stupito dal suo ultimo acquisto.</p></li><li><span class=\"t-date\">17 luglio 1997</span><p>‘Autonotizie Vignale’ — una visita allo stabilimento della Carrozzeria Vignale, con foto!</p></li><li><span class=\"t-date\">7 luglio 1997</span><p>Nuove funzionalità per il guestbook LPage.</p></li><li><span class=\"t-date\">30 giugno 1997</span><p>Primo proprietario svizzero sul web — ammira la Gamine di Claudio.</p></li><li><span class=\"t-date\">5 maggio 1997</span><p>‘Altre auto della Carrozzeria Vignale’ — nello stabilimento torinese di Vignale non nacquero solo Gamine. · Due nuove Gamine tedesche: una è di nuovo un'auto da museo, l'altra proviene da un articolo del 1968!</p></li><li><span class=\"t-date\">18 aprile 1997</span><p>Un'altra Gamine francese! (grazie a Pierre Lanoix)</p></li><li><span class=\"t-date\">12 aprile 1997</span><p>Nuove Gamine francesi — altre quattro, grazie mille Bruno Lacoste!</p></li><li><span class=\"t-date\">25 marzo 1997</span><p>Storia inglese: ‘The Great Noddy Car Gamble’ — negli anni Sessanta ci fu un tentativo fallito di vendere le Vignale-Fiat nel Regno Unito. Cris Rees racconta la bizzarra storia.</p></li></ul>",
+        "title": "Cosa c'è di nuovo ? — Vignale Gamine",
+        "meta_description": "Un registro cronologico degli aggiornamenti del sito Vignale Gamine dal 1997: nuove Gamine, brochure, racconti e scoperte."
+    }
+};
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>

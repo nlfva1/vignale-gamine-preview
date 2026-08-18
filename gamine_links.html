@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Links &mdash; Vignale Gamine</title>
+<meta name="description" content="Vignale & Gamine resources, FIAT 500 clubs worldwide and other classic-car links, built up since the 1990s.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 62ch; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+
+  .prose { max-width: 68ch; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="nieuwe-homepage.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Club</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_world.html" data-i18n="nav_world">WorldWide</a></li>
+          <li><a href="gamine_art.html" data-i18n="nav_art">Art ?</a></li>
+          <li><a href="gamine_4_sale.html" data-i18n="nav_market">Market</a></li>
+          <li><a href="gamine_links.html" aria-current="page" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="l_eyebrow">Interesting Links and Useful Addresses</p>
+      <h1 data-i18n="l_h1">Interesting Links and Useful Addresses</h1>
+      <p class="lead" data-i18n="l_lead">A directory built up since the 1990s: Vignale &amp; Gamine resources, FIAT 500 clubs worldwide, related FIAT sites and other classic-car destinations. Many entries are historical &mdash; addresses and phone numbers are reproduced as originally published and may no longer be current.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div data-i18n-html data-i18n="l_directory"><div class="directory"><h3>Vignale &amp; Gamine</h3><ul><li><a href="carrozzeria_vignale.html">About Carrozzeria Vignale</a> <span class="addr">extensive information (rebuilt on this site)</span></li><li><a href="gamine_club_form.html">Virtual Vignale Gamine Club</a></li><li><a href="http://www.vignale.org/" target="_blank" rel="noopener">Registro Vignale</a></li><li>Fiat 500 &amp; Vignale Gamine IG Saar<span class="addr">Christian Schmitt, Lautenbacher Str. 50, D-66916 Breitenbach, Tel./Fax +49-6386-7345</span></li><li><a href="http://www.vtr.org/" target="_blank" rel="noopener">The Vintage Triumph Register</a> <span class="addr">incl. the Vignale-bodied Triumph Italia</span></li><li><a href="http://vintagetriumphregister.org/italia/" target="_blank" rel="noopener">Vintage Triumph Register &mdash; Triumph Italia</a></li></ul><h3>FIAT 500 clubs, sites &amp; forums</h3><ul><li><a href="http://www.fiat500club.nl/" target="_blank" rel="noopener">FIAT 500 CLUB NEDERLAND</a></li><li><a href="http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=1" target="_blank" rel="noopener">WebForum FIAT 500 &ndash; general</a></li><li><a href="http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=4" target="_blank" rel="noopener">WebForum FIAT 500 &ndash; events</a></li><li><a href="http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=2" target="_blank" rel="noopener">WebForum FIAT 500 &ndash; technical (Dutch)</a></li><li><a href="http://fiat500club.org.uk/" target="_blank" rel="noopener">FIAT 500 Club (UK)</a></li><li><a href="http://www.fiat500.ch/" target="_blank" rel="noopener">fiat500.ch</a></li><li><a href="http://www.500clubitalia.it/" target="_blank" rel="noopener">FIAT 500 &ndash; CLUB ITALIA</a> <span class="addr">Via Roma 90, 17033 Garlenda (SV), Italy &middot; tel. +39 0182 582282</span></li><li><a href="http://www.500torinoclubitalia.it/" target="_blank" rel="noopener">500torinoclubitalia.it</a></li><li><a href="http://www.club-fiat-500.com/" target="_blank" rel="noopener">CLUB FIAT 500 et D&eacute;riv&eacute;es</a></li><li><a href="http://www.clubfiat500.com/" target="_blank" rel="noopener">Club Fiat 500 Rh&ocirc;ne Alpes</a></li><li><a href="http://www.chez.com/fiat500/" target="_blank" rel="noopener">Formula Fiat 500</a> <span class="addr">email: aiannone@nicematin.fr</span></li><li><a href="http://fiat500.alienor.fr/" target="_blank" rel="noopener">La Fiat 500 est &laquo;un petit joujou &agrave; quatre roues&raquo;</a></li><li>Club Fiat 500 de Perpignan<span class="addr">102 Bd Nungesser et Coli, 66000 Perpignan, France &middot; tel./fax +33 4 68 54 15 03</span></li><li>Fiat 500 Club Canada<span class="addr">PO Box 56600, 93c Woodbridge Ave., Woodbridge L4L 8V3, Ontario, Canada &middot; tel. +1 905 856 7237 &middot; email: fiat500@interlog.com</span></li><li><a href="http://www.geocities.com/MotorCity/Downs/5440/" target="_blank" rel="noopener">Fiat 500 Club Luxembourg</a></li><li><a href="http://www.fiat500.de/" target="_blank" rel="noopener">fiat500.de</a></li><li><a href="http://home.t-online.de/home/jan.wunderlich/igrm.htm" target="_blank" rel="noopener">FIAT 500 IG Rhein-Main</a></li><li><a href="http://www.dillingen.baynet.de/~gsaam/fiat500.htm" target="_blank" rel="noopener">FIAT 500 pages by Gregor Saam (German)</a></li><li><a href="http://www.fiat500.com/" target="_blank" rel="noopener">Fiat 500 in the Web</a></li><li>Panini Radente e.V. Fiat 500 Berlin<span class="addr">Meinekestr. 7, 10719 Berlin &middot; tel. 030/8813430 &middot; fax 030/8852089</span></li><li>Fiat 500 Exclusiv Club Kiel<span class="addr">Anja Welzbacher, Am Museum 6, 24113 Molfsee &middot; tel. 0431/650106 &middot; fax 04533/61898</span></li><li>Fiat 500 Amici Knesebeck<span class="addr">Angela Reichelt, Im Rietendorf 18, D-29379 Knesebeck &middot; tel. 05834/6834</span></li><li>Fiat 500 Club Aachen &lsquo;Wahn und Weite&rsquo;<span class="addr">Michael Schwartz, Katzensteinweg 1, D-52078 Aachen &middot; tel. 0241/522518</span></li><li>Fiat 500-Club am Harz<span class="addr">Edgar Dreilich, Alte Siedlung 4, D-37589 Kalefeld &middot; tel./fax 05553/4679</span></li><li>Fiat 500 Club Frankenwald<span class="addr">Edmund Hoh, St. Kunigundenstr. 2, D-96317 Kronach/Glosberg &middot; tel. 09261/1443</span></li><li>Fiat 500 Freunde Nordbayern<span class="addr">Gerlinde Schwarz, Niedermirsbergerstr. 12, D-91320 Ebermannstadt &middot; tel. 09194/4940</span></li><li>Fiat 500 IG Lippe<span class="addr">J&ouml;rg Kerkhof, Osterfeldweg 10, D-32791 Lage &middot; tel. 05232/67301</span></li><li>Fiat 500 IG M&uuml;nchen<span class="addr">Roland Schlitt, Postfach 43 03 28, D-80733 M&uuml;nchen &middot; tel./fax 089/2724936</span></li><li>Fiat 500 IG Lahn-Dill-Kreis<span class="addr">Michael &amp; Andrea Kabbeck, Lindenweg 5, D-35638 Leun &middot; tel. 06473/931935</span></li><li>Fiat 500 IG N&uuml;rnberg<span class="addr">Dirk Klein, Bucher Stra&szlig;e 20a, D-90522 Oberasbach &middot; tel. 0911/6999923</span></li><li>Fiat 500 Microben-Club Bergisch Gladbach<span class="addr">Eichholzer Weg 21, D-51519 Odenthal &middot; tel. 02207/1064 or 02207/5917</span></li><li>Topolino Freunde Deutschland, IG f&uuml;r Fiat 500 A, B, C<span class="addr">Wolfgang Hildebrand, Isardamm 3, D-82538 Geretsried &middot; tel. 08171/8418</span></li><li><a href="http://www.geocities.com/MotorCity/9726/500.html" target="_blank" rel="noopener">FIAT Topolino/500/Derivates</a> <span class="addr">by Marc Kloosterman</span></li><li><a href="http://www.csg-net.it/bianchinaclub" target="_blank" rel="noopener">Bianchina Club</a></li><li><a href="http://unet.univie.ac.at/~a8801765/eokc.html" target="_blank" rel="noopener">Erster Oesterreichischer Kleinwagen Club</a></li><li><a href="http://ns.cti.co.jp/~mmk7013/index.html" target="_blank" rel="noopener">Fiat 500 Home Page &mdash; Japan</a></li><li><a href="http://www.asahi-net.or.jp/~MJ6T-ISHR/500-1.html" target="_blank" rel="noopener">Cafe de 500 &mdash; Japan</a></li><li><a href="http://www7.big.or.jp/~canta/fiat500/" target="_blank" rel="noopener">Fiat 500 &mdash; Japan</a></li><li><a href="http://www.arthouse.co.jp/ontario/" target="_blank" rel="noopener">Fiat 500 Ontario &mdash; Japan</a></li><li><a href="http://www.na.rim.or.jp/~doshir/auto/f500/f500.html" target="_blank" rel="noopener">Cinq&#39;s Nest by Doshir &mdash; Japan</a></li><li><a href="http://selene.kfunigraz.ac.at/~.peroutka.p.user.kfug/" target="_blank" rel="noopener">Steyr-Puch-Homepage (&Ouml;sterreich/Austria)</a></li><li><a href="http://www.sp650.nu/" target="_blank" rel="noopener">Steyr Puch 650 TR II site</a> <span class="addr">email: Jakob, webmaster@sp650.nu</span></li><li><a href="http://www.iht.com/IHT/BJ/96/bj040296a.html" target="_blank" rel="noopener">Dante Giacosa (creator of the Fiat 500) &mdash; obituary</a> <span class="addr">by Barry James, International Herald Tribune</span></li><li><a href="http://www.eternalflame.com/dgiacosa.htm" target="_blank" rel="noopener">eternalflame.com &mdash; Dante Giacosa</a></li><li>Fiat 500 Club Praha<span class="addr">Jablonecka 414, 19000 Praha-9, Czech Republic &middot; tel. +42-2-881230 &middot; open to all models 1960-1975, contact: Jakub Novotny</span></li><li>Fiat 500 Club Hungary<span class="addr">M&oacute;zner G&eacute;za (president), 8360 Keszthely, Vaszary u. 23/b., Hungary &middot; tel. ++36-83-310-410</span></li><li>Fiat 500 Association<span class="addr">Horogh Zsolt, 4031 Debrecen, Egressy B&eacute;ni t&eacute;r 12. III/7, Hungary &middot; tel. ++36-52-446-029</span></li><li>Fiat 500 Car Club<span class="addr">contact: Graeme Banks, 9 Marlborough Ave, Glenfield, Auckland 10, New Zealand</span></li><li>Fiat Bambina Club<span class="addr">contact: Michael Bell, 5 St Martins Rd, Christchurch, New Zealand</span></li><li>Topolino Club Livorno<span class="addr">Giuseppe Giovannetti, Via Crispi 32 &middot; tel. 0586-890018/895233 &middot; fax 0586-895233; Comune di Livorno &ndash; Assessorato alla Cultura, tel. 0586/820516</span></li><li>Topolino Parts<span class="addr">Ezio Casagrande, Feldmattstrasse 10, CH-6032 Emmen-Waldibr&uuml;cke &middot; tel. +41 41 260 45 06 &middot; fax +41 41 260 45 10 &middot; email: casagrande@topolino-parts.c</span></li><li><a href="https://www.fiat500vdlaan.nl/webshop.php" target="_blank" rel="noopener">Van der Laan Fiat 500 onderdelen</a></li><li><a href="http://www.dino.nl/vintage/dealers/tencate/tencate.html" target="_blank" rel="noopener">Ten Cate Fiat 500 Import</a></li></ul><h3>FIAT-related clubs &amp; sites</h3><ul><li><a href="http://members.tripod.lycos.nl/Fiat600/" target="_blank" rel="noopener">De FIAT 600 pagina</a></li><li><a href="http://home.wxs.nl/~ham00033/" target="_blank" rel="noopener">FIAT 126 CLUB NEDERLAND</a></li><li><a href="http://www.fiatbarchetta.com/" target="_blank" rel="noopener">The world of the Fiat barchetta</a></li><li><a href="http://www.geocities.com/MotorCity/9726/" target="_blank" rel="noopener">The Fiat Links Collection</a> <span class="addr">by Marc Kloosterman</span></li><li><a href="http://www-personal.umich.edu/~hgranito/FLU/index.htm" target="_blank" rel="noopener">The club for the discriminating Fiat and Lancia owner</a></li><li><a href="http://www.fiatabarth.com/" target="_blank" rel="noopener">fiatabarth.com</a></li><li><a href="https://fiatclubamerica.com/" target="_blank" rel="noopener">FIAT Club America</a></li><li><a href="http://www.fiat.com/" target="_blank" rel="noopener">fiat.com</a></li><li><a href="http://fiatclub.mpx.com.au/" target="_blank" rel="noopener">Fiat Club of NSW Inc.</a></li><li><a href="http://www.eleceng.adelaide.edu.au/Personal/abeaumon/flcc.html" target="_blank" rel="noopener">FIAT-Lancia Car Club of South Australia</a></li><li>Fiat Car Club of Victoria Inc.<span class="addr">contact: Jon Carroll, GPO Box 4A, Melbourne 3001, Australia</span></li><li><a href="http://www.pcug.org.au/~mstreet/autoitalia.htm" target="_blank" rel="noopener">Auto Italia!</a> <span class="addr">FIAT club of the ACT &amp; Canberra chapter of the Alfa Romeo Owners Club of Australia</span></li><li><a href="http://home.sprynet.com/sprynet/olympusdrive/fiat.htm" target="_blank" rel="noopener">Fiat Internet Connection</a></li><li><a href="http://www.autocar.com/faqs/fiat/fiat_faq.html" target="_blank" rel="noopener">Frequently Asked Questions About Fiats</a></li><li><a href="http://web.inter.nl.net/users/C.J.Sibon/index.html" target="_blank" rel="noopener">Fiat Cinquecento Sporting Homepage (English)</a></li><li><a href="http://www.geocities.com/~greek-fiat/cinquecento/abart2.htm" target="_blank" rel="noopener">Fiat Cinquecento Sporting Homepage (Greek)</a></li><li><a href="http://www.car-list.com/carclub/ccfiat.html" target="_blank" rel="noopener">Fiat Car Clubs</a></li></ul><h3>Other interesting car sites</h3><ul><li><a href="http://www.noob.nl/" target="_blank" rel="noopener">Nederlands Oldtimer en Occasion Bureau</a></li><li><a href="http://www.mclellansautomotive.com/" target="_blank" rel="noopener">McLellan&#39;s Automotive History</a> <span class="addr">9111 Longstaff Drive, Houston, TX 77031-2711 &middot; tel. +1 713 772 3285 &middot; fax +1 713 772 3287</span></li><li><a href="http://www.amklassiek.nl/" target="_blank" rel="noopener">Auto Motor Klassiek (Dutch)</a></li><li><a href="http://www.iaehv.nl/users/hgt/dwac/" target="_blank" rel="noopener">Nederlandse Dwergautoclub</a></li><li><a href="http://www.ram.rwth-aachen.de/~glasclub" target="_blank" rel="noopener">GLAS-Automobilclub International e.V.</a> <span class="addr">incl. the Goggomobil</span></li><li><a href="http://www.multiweb.net/~dwf/" target="_blank" rel="noopener">Dirks Dutch Microcar Page</a></li><li><a href="http://klassiekers.com/" target="_blank" rel="noopener">De Nederlandse website over klassieke automobielen</a></li><li><a href="http://surf.to/patron" target="_blank" rel="noopener">Classic car site (English pages)</a></li><li><a href="http://surf.to/lomax" target="_blank" rel="noopener">Classic car site (Nederlandse pagina&#39;s)</a></li><li><a href="http://www.autovisie.nl/" target="_blank" rel="noopener">Dutch AUTOVISIE online</a></li><li><a href="http://www.classic-avenue.nl/" target="_blank" rel="noopener">Classic Avenue</a></li><li><a href="http://ruoteclassiche.edidomus.it/" target="_blank" rel="noopener">RuoteClassiche Online (Italian)</a></li><li><a href="http://www.autototaal.nl/" target="_blank" rel="noopener">Dutch AutoTotaal online</a></li><li><a href="http://www.cjnetworks.com/~msabat/index.html" target="_blank" rel="noopener">BMW Isetta and other little cars</a></li><li><a href="http://www.theautochannel.com/" target="_blank" rel="noopener">The Auto Channel</a></li><li><a href="http://www.gopema.nl/oldtimers/" target="_blank" rel="noopener">GoPeMa &lsquo;Oldtimers &amp; Classic Cars&rsquo;</a> <span class="addr">Dutch site &mdash; clubs, restorers, dealers, sales, events</span></li><li><a href="http://www.masadsign.nl/gpf1" target="_blank" rel="noopener">Your start on your www search for F1 and other automobile sites...</a></li><li><a href="http://www.classicar.com/" target="_blank" rel="noopener">Classicar.com</a> <span class="addr">worldwide access to classic cars, trucks, motorcycles, automobilia and parts</span></li><li><a href="http://www.toyshop.com.au/" target="_blank" rel="noopener">The Toy Shop &mdash; Prestige Cars</a> <span class="addr">Ground Floor, Cnr Mount &amp; Arthur Streets, North Sydney NSW 2060, Australia &middot; tel. +61 2 9922 3444</span></li><li><a href="http://www.vpm.de/oldtimer-markt/" target="_blank" rel="noopener">Oldtimer-Markt</a> <span class="addr">Europe&#39;s largest classic car &amp; motorcycle magazine online</span></li><li><a href="http://www.autoonramp.com/" target="_blank" rel="noopener">&lsquo;Where the automotive world begins!&rsquo;</a></li><li><a href="http://www.antima.com/chauffeur/" target="_blank" rel="noopener">The CyberHUB of Automotive Enthusiasts</a></li><li><a href="http://www.dino.nl/vintage/index2.html" target="_blank" rel="noopener">Vintage Web &mdash; the one &amp; only Dutch Classic Car Website!</a></li><li><a href="http://www.montclair.edu/pages/finearts/faculty/luttropp/mmwww/mm.html" target="_blank" rel="noopener">The Microcar and Minicar Club</a> <span class="addr">PO Box 43137, Upper Montclair, NJ 07043 &middot; Kaz Wysocki, (201) 342-3685</span></li><li><a href="http://www.rose-hulman.edu/~carrlr/index.html" target="_blank" rel="noopener">Lisa Carr&#39;s Small Car Home Page</a></li><li><a href="http://www.cs.tut.fi/~pasi/autot.html" target="_blank" rel="noopener">Pasi Isotalus&#39;s Vehicle Bookmarks</a></li><li><a href="http://www.digest.net/italian-cars/" target="_blank" rel="noopener">Italian Cars Digest</a></li><li><a href="http://www.car-list.com/carclub.html" target="_blank" rel="noopener">Car clubs from around the world</a></li></ul></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised September 2024.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+      &middot;
+      <a href="https://translate.google.com/translate?sl=en&amp;u=https%3A%2F%2Fwww.vignalegamine.net" data-i18n="footer_translate">Translate these pages</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "WorldWide",
+        "nav_art": "Art ?",
+        "nav_market": "Market",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised September 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Translate these pages",
+        "l_eyebrow": "Interesting Links and Useful Addresses",
+        "l_h1": "Interesting Links and Useful Addresses",
+        "l_lead": "A directory built up since the 1990s: Vignale & Gamine resources, FIAT 500 clubs worldwide, related FIAT sites and other classic-car destinations. Many entries are historical — addresses and phone numbers are reproduced as originally published and may no longer be current.",
+        "l_directory": "<div class=\"directory\"><h3>Vignale & Gamine</h3><ul><li><a href=\"carrozzeria_vignale.html\">About Carrozzeria Vignale</a> <span class=\"addr\">extensive information (rebuilt on this site)</span></li><li><a href=\"gamine_club_form.html\">Virtual Vignale Gamine Club</a></li><li><a href=\"http://www.vignale.org/\" target=\"_blank\" rel=\"noopener\">Registro Vignale</a></li><li>Fiat 500 & Vignale Gamine IG Saar<span class=\"addr\">Christian Schmitt, Lautenbacher Str. 50, D-66916 Breitenbach, Tel./Fax +49-6386-7345</span></li><li><a href=\"http://www.vtr.org/\" target=\"_blank\" rel=\"noopener\">The Vintage Triumph Register</a> <span class=\"addr\">incl. the Vignale-bodied Triumph Italia</span></li><li><a href=\"http://vintagetriumphregister.org/italia/\" target=\"_blank\" rel=\"noopener\">Vintage Triumph Register — Triumph Italia</a></li></ul><h3>FIAT 500 clubs, sites & forums</h3><ul><li><a href=\"http://www.fiat500club.nl/\" target=\"_blank\" rel=\"noopener\">FIAT 500 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=1\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – general</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=4\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – events</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=2\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – technical (Dutch)</a></li><li><a href=\"http://fiat500club.org.uk/\" target=\"_blank\" rel=\"noopener\">FIAT 500 Club (UK)</a></li><li><a href=\"http://www.fiat500.ch/\" target=\"_blank\" rel=\"noopener\">fiat500.ch</a></li><li><a href=\"http://www.500clubitalia.it/\" target=\"_blank\" rel=\"noopener\">FIAT 500 – CLUB ITALIA</a> <span class=\"addr\">Via Roma 90, 17033 Garlenda (SV), Italy · tel. +39 0182 582282</span></li><li><a href=\"http://www.500torinoclubitalia.it/\" target=\"_blank\" rel=\"noopener\">500torinoclubitalia.it</a></li><li><a href=\"http://www.club-fiat-500.com/\" target=\"_blank\" rel=\"noopener\">CLUB FIAT 500 et Dérivées</a></li><li><a href=\"http://www.clubfiat500.com/\" target=\"_blank\" rel=\"noopener\">Club Fiat 500 Rhône Alpes</a></li><li><a href=\"http://www.chez.com/fiat500/\" target=\"_blank\" rel=\"noopener\">Formula Fiat 500</a> <span class=\"addr\">email: aiannone@nicematin.fr</span></li><li><a href=\"http://fiat500.alienor.fr/\" target=\"_blank\" rel=\"noopener\">La Fiat 500 est «un petit joujou à quatre roues»</a></li><li>Club Fiat 500 de Perpignan<span class=\"addr\">102 Bd Nungesser et Coli, 66000 Perpignan, France · tel./fax +33 4 68 54 15 03</span></li><li>Fiat 500 Club Canada<span class=\"addr\">PO Box 56600, 93c Woodbridge Ave., Woodbridge L4L 8V3, Ontario, Canada · tel. +1 905 856 7237 · email: fiat500@interlog.com</span></li><li><a href=\"http://www.geocities.com/MotorCity/Downs/5440/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Club Luxembourg</a></li><li><a href=\"http://www.fiat500.de/\" target=\"_blank\" rel=\"noopener\">fiat500.de</a></li><li><a href=\"http://home.t-online.de/home/jan.wunderlich/igrm.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 IG Rhein-Main</a></li><li><a href=\"http://www.dillingen.baynet.de/~gsaam/fiat500.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 pages by Gregor Saam (German)</a></li><li><a href=\"http://www.fiat500.com/\" target=\"_blank\" rel=\"noopener\">Fiat 500 in the Web</a></li><li>Panini Radente e.V. Fiat 500 Berlin<span class=\"addr\">Meinekestr. 7, 10719 Berlin · tel. 030/8813430 · fax 030/8852089</span></li><li>Fiat 500 Exclusiv Club Kiel<span class=\"addr\">Anja Welzbacher, Am Museum 6, 24113 Molfsee · tel. 0431/650106 · fax 04533/61898</span></li><li>Fiat 500 Amici Knesebeck<span class=\"addr\">Angela Reichelt, Im Rietendorf 18, D-29379 Knesebeck · tel. 05834/6834</span></li><li>Fiat 500 Club Aachen ‘Wahn und Weite’<span class=\"addr\">Michael Schwartz, Katzensteinweg 1, D-52078 Aachen · tel. 0241/522518</span></li><li>Fiat 500-Club am Harz<span class=\"addr\">Edgar Dreilich, Alte Siedlung 4, D-37589 Kalefeld · tel./fax 05553/4679</span></li><li>Fiat 500 Club Frankenwald<span class=\"addr\">Edmund Hoh, St. Kunigundenstr. 2, D-96317 Kronach/Glosberg · tel. 09261/1443</span></li><li>Fiat 500 Freunde Nordbayern<span class=\"addr\">Gerlinde Schwarz, Niedermirsbergerstr. 12, D-91320 Ebermannstadt · tel. 09194/4940</span></li><li>Fiat 500 IG Lippe<span class=\"addr\">Jörg Kerkhof, Osterfeldweg 10, D-32791 Lage · tel. 05232/67301</span></li><li>Fiat 500 IG München<span class=\"addr\">Roland Schlitt, Postfach 43 03 28, D-80733 München · tel./fax 089/2724936</span></li><li>Fiat 500 IG Lahn-Dill-Kreis<span class=\"addr\">Michael & Andrea Kabbeck, Lindenweg 5, D-35638 Leun · tel. 06473/931935</span></li><li>Fiat 500 IG Nürnberg<span class=\"addr\">Dirk Klein, Bucher Straße 20a, D-90522 Oberasbach · tel. 0911/6999923</span></li><li>Fiat 500 Microben-Club Bergisch Gladbach<span class=\"addr\">Eichholzer Weg 21, D-51519 Odenthal · tel. 02207/1064 or 02207/5917</span></li><li>Topolino Freunde Deutschland, IG für Fiat 500 A, B, C<span class=\"addr\">Wolfgang Hildebrand, Isardamm 3, D-82538 Geretsried · tel. 08171/8418</span></li><li><a href=\"http://www.geocities.com/MotorCity/9726/500.html\" target=\"_blank\" rel=\"noopener\">FIAT Topolino/500/Derivates</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www.csg-net.it/bianchinaclub\" target=\"_blank\" rel=\"noopener\">Bianchina Club</a></li><li><a href=\"http://unet.univie.ac.at/~a8801765/eokc.html\" target=\"_blank\" rel=\"noopener\">Erster Oesterreichischer Kleinwagen Club</a></li><li><a href=\"http://ns.cti.co.jp/~mmk7013/index.html\" target=\"_blank\" rel=\"noopener\">Fiat 500 Home Page — Japan</a></li><li><a href=\"http://www.asahi-net.or.jp/~MJ6T-ISHR/500-1.html\" target=\"_blank\" rel=\"noopener\">Cafe de 500 — Japan</a></li><li><a href=\"http://www7.big.or.jp/~canta/fiat500/\" target=\"_blank\" rel=\"noopener\">Fiat 500 — Japan</a></li><li><a href=\"http://www.arthouse.co.jp/ontario/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Ontario — Japan</a></li><li><a href=\"http://www.na.rim.or.jp/~doshir/auto/f500/f500.html\" target=\"_blank\" rel=\"noopener\">Cinq's Nest by Doshir — Japan</a></li><li><a href=\"http://selene.kfunigraz.ac.at/~.peroutka.p.user.kfug/\" target=\"_blank\" rel=\"noopener\">Steyr-Puch-Homepage (Österreich/Austria)</a></li><li><a href=\"http://www.sp650.nu/\" target=\"_blank\" rel=\"noopener\">Steyr Puch 650 TR II site</a> <span class=\"addr\">email: Jakob, webmaster@sp650.nu</span></li><li><a href=\"http://www.iht.com/IHT/BJ/96/bj040296a.html\" target=\"_blank\" rel=\"noopener\">Dante Giacosa (creator of the Fiat 500) — obituary</a> <span class=\"addr\">by Barry James, International Herald Tribune</span></li><li><a href=\"http://www.eternalflame.com/dgiacosa.htm\" target=\"_blank\" rel=\"noopener\">eternalflame.com — Dante Giacosa</a></li><li>Fiat 500 Club Praha<span class=\"addr\">Jablonecka 414, 19000 Praha-9, Czech Republic · tel. +42-2-881230 · open to all models 1960-1975, contact: Jakub Novotny</span></li><li>Fiat 500 Club Hungary<span class=\"addr\">Mózner Géza (president), 8360 Keszthely, Vaszary u. 23/b., Hungary · tel. ++36-83-310-410</span></li><li>Fiat 500 Association<span class=\"addr\">Horogh Zsolt, 4031 Debrecen, Egressy Béni tér 12. III/7, Hungary · tel. ++36-52-446-029</span></li><li>Fiat 500 Car Club<span class=\"addr\">contact: Graeme Banks, 9 Marlborough Ave, Glenfield, Auckland 10, New Zealand</span></li><li>Fiat Bambina Club<span class=\"addr\">contact: Michael Bell, 5 St Martins Rd, Christchurch, New Zealand</span></li><li>Topolino Club Livorno<span class=\"addr\">Giuseppe Giovannetti, Via Crispi 32 · tel. 0586-890018/895233 · fax 0586-895233; Comune di Livorno – Assessorato alla Cultura, tel. 0586/820516</span></li><li>Topolino Parts<span class=\"addr\">Ezio Casagrande, Feldmattstrasse 10, CH-6032 Emmen-Waldibrücke · tel. +41 41 260 45 06 · fax +41 41 260 45 10 · email: casagrande@topolino-parts.c</span></li><li><a href=\"https://www.fiat500vdlaan.nl/webshop.php\" target=\"_blank\" rel=\"noopener\">Van der Laan Fiat 500 onderdelen</a></li><li><a href=\"http://www.dino.nl/vintage/dealers/tencate/tencate.html\" target=\"_blank\" rel=\"noopener\">Ten Cate Fiat 500 Import</a></li></ul><h3>FIAT-related clubs & sites</h3><ul><li><a href=\"http://members.tripod.lycos.nl/Fiat600/\" target=\"_blank\" rel=\"noopener\">De FIAT 600 pagina</a></li><li><a href=\"http://home.wxs.nl/~ham00033/\" target=\"_blank\" rel=\"noopener\">FIAT 126 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiatbarchetta.com/\" target=\"_blank\" rel=\"noopener\">The world of the Fiat barchetta</a></li><li><a href=\"http://www.geocities.com/MotorCity/9726/\" target=\"_blank\" rel=\"noopener\">The Fiat Links Collection</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www-personal.umich.edu/~hgranito/FLU/index.htm\" target=\"_blank\" rel=\"noopener\">The club for the discriminating Fiat and Lancia owner</a></li><li><a href=\"http://www.fiatabarth.com/\" target=\"_blank\" rel=\"noopener\">fiatabarth.com</a></li><li><a href=\"https://fiatclubamerica.com/\" target=\"_blank\" rel=\"noopener\">FIAT Club America</a></li><li><a href=\"http://www.fiat.com/\" target=\"_blank\" rel=\"noopener\">fiat.com</a></li><li><a href=\"http://fiatclub.mpx.com.au/\" target=\"_blank\" rel=\"noopener\">Fiat Club of NSW Inc.</a></li><li><a href=\"http://www.eleceng.adelaide.edu.au/Personal/abeaumon/flcc.html\" target=\"_blank\" rel=\"noopener\">FIAT-Lancia Car Club of South Australia</a></li><li>Fiat Car Club of Victoria Inc.<span class=\"addr\">contact: Jon Carroll, GPO Box 4A, Melbourne 3001, Australia</span></li><li><a href=\"http://www.pcug.org.au/~mstreet/autoitalia.htm\" target=\"_blank\" rel=\"noopener\">Auto Italia!</a> <span class=\"addr\">FIAT club of the ACT & Canberra chapter of the Alfa Romeo Owners Club of Australia</span></li><li><a href=\"http://home.sprynet.com/sprynet/olympusdrive/fiat.htm\" target=\"_blank\" rel=\"noopener\">Fiat Internet Connection</a></li><li><a href=\"http://www.autocar.com/faqs/fiat/fiat_faq.html\" target=\"_blank\" rel=\"noopener\">Frequently Asked Questions About Fiats</a></li><li><a href=\"http://web.inter.nl.net/users/C.J.Sibon/index.html\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (English)</a></li><li><a href=\"http://www.geocities.com/~greek-fiat/cinquecento/abart2.htm\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (Greek)</a></li><li><a href=\"http://www.car-list.com/carclub/ccfiat.html\" target=\"_blank\" rel=\"noopener\">Fiat Car Clubs</a></li></ul><h3>Other interesting car sites</h3><ul><li><a href=\"http://www.noob.nl/\" target=\"_blank\" rel=\"noopener\">Nederlands Oldtimer en Occasion Bureau</a></li><li><a href=\"http://www.mclellansautomotive.com/\" target=\"_blank\" rel=\"noopener\">McLellan's Automotive History</a> <span class=\"addr\">9111 Longstaff Drive, Houston, TX 77031-2711 · tel. +1 713 772 3285 · fax +1 713 772 3287</span></li><li><a href=\"http://www.amklassiek.nl/\" target=\"_blank\" rel=\"noopener\">Auto Motor Klassiek (Dutch)</a></li><li><a href=\"http://www.iaehv.nl/users/hgt/dwac/\" target=\"_blank\" rel=\"noopener\">Nederlandse Dwergautoclub</a></li><li><a href=\"http://www.ram.rwth-aachen.de/~glasclub\" target=\"_blank\" rel=\"noopener\">GLAS-Automobilclub International e.V.</a> <span class=\"addr\">incl. the Goggomobil</span></li><li><a href=\"http://www.multiweb.net/~dwf/\" target=\"_blank\" rel=\"noopener\">Dirks Dutch Microcar Page</a></li><li><a href=\"http://klassiekers.com/\" target=\"_blank\" rel=\"noopener\">De Nederlandse website over klassieke automobielen</a></li><li><a href=\"http://surf.to/patron\" target=\"_blank\" rel=\"noopener\">Classic car site (English pages)</a></li><li><a href=\"http://surf.to/lomax\" target=\"_blank\" rel=\"noopener\">Classic car site (Nederlandse pagina's)</a></li><li><a href=\"http://www.autovisie.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AUTOVISIE online</a></li><li><a href=\"http://www.classic-avenue.nl/\" target=\"_blank\" rel=\"noopener\">Classic Avenue</a></li><li><a href=\"http://ruoteclassiche.edidomus.it/\" target=\"_blank\" rel=\"noopener\">RuoteClassiche Online (Italian)</a></li><li><a href=\"http://www.autototaal.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AutoTotaal online</a></li><li><a href=\"http://www.cjnetworks.com/~msabat/index.html\" target=\"_blank\" rel=\"noopener\">BMW Isetta and other little cars</a></li><li><a href=\"http://www.theautochannel.com/\" target=\"_blank\" rel=\"noopener\">The Auto Channel</a></li><li><a href=\"http://www.gopema.nl/oldtimers/\" target=\"_blank\" rel=\"noopener\">GoPeMa ‘Oldtimers & Classic Cars’</a> <span class=\"addr\">Dutch site — clubs, restorers, dealers, sales, events</span></li><li><a href=\"http://www.masadsign.nl/gpf1\" target=\"_blank\" rel=\"noopener\">Your start on your www search for F1 and other automobile sites...</a></li><li><a href=\"http://www.classicar.com/\" target=\"_blank\" rel=\"noopener\">Classicar.com</a> <span class=\"addr\">worldwide access to classic cars, trucks, motorcycles, automobilia and parts</span></li><li><a href=\"http://www.toyshop.com.au/\" target=\"_blank\" rel=\"noopener\">The Toy Shop — Prestige Cars</a> <span class=\"addr\">Ground Floor, Cnr Mount & Arthur Streets, North Sydney NSW 2060, Australia · tel. +61 2 9922 3444</span></li><li><a href=\"http://www.vpm.de/oldtimer-markt/\" target=\"_blank\" rel=\"noopener\">Oldtimer-Markt</a> <span class=\"addr\">Europe's largest classic car & motorcycle magazine online</span></li><li><a href=\"http://www.autoonramp.com/\" target=\"_blank\" rel=\"noopener\">‘Where the automotive world begins!’</a></li><li><a href=\"http://www.antima.com/chauffeur/\" target=\"_blank\" rel=\"noopener\">The CyberHUB of Automotive Enthusiasts</a></li><li><a href=\"http://www.dino.nl/vintage/index2.html\" target=\"_blank\" rel=\"noopener\">Vintage Web — the one & only Dutch Classic Car Website!</a></li><li><a href=\"http://www.montclair.edu/pages/finearts/faculty/luttropp/mmwww/mm.html\" target=\"_blank\" rel=\"noopener\">The Microcar and Minicar Club</a> <span class=\"addr\">PO Box 43137, Upper Montclair, NJ 07043 · Kaz Wysocki, (201) 342-3685</span></li><li><a href=\"http://www.rose-hulman.edu/~carrlr/index.html\" target=\"_blank\" rel=\"noopener\">Lisa Carr's Small Car Home Page</a></li><li><a href=\"http://www.cs.tut.fi/~pasi/autot.html\" target=\"_blank\" rel=\"noopener\">Pasi Isotalus's Vehicle Bookmarks</a></li><li><a href=\"http://www.digest.net/italian-cars/\" target=\"_blank\" rel=\"noopener\">Italian Cars Digest</a></li><li><a href=\"http://www.car-list.com/carclub.html\" target=\"_blank\" rel=\"noopener\">Car clubs from around the world</a></li></ul></div>",
+        "title": "Links — Vignale Gamine",
+        "meta_description": "Vignale & Gamine resources, FIAT 500 clubs worldwide and other classic-car links, built up since the 1990s."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_world": "Wereldwijd",
+        "nav_art": "Kunst ?",
+        "nav_market": "Markt",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt september 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Vertaal deze pagina's",
+        "l_eyebrow": "Interessante links en nuttige adressen",
+        "l_h1": "Interessante links en nuttige adressen",
+        "l_lead": "Een overzicht opgebouwd sinds de jaren negentig: Vignale- en Gamine-bronnen, FIAT 500-clubs wereldwijd, verwante FIAT-sites en andere klassiekerbestemmingen. Veel vermeldingen zijn historisch — adressen en telefoonnummers zijn overgenomen zoals oorspronkelijk gepubliceerd en zijn mogelijk niet meer actueel.",
+        "l_directory": "<div class=\"directory\"><h3>Vignale & Gamine</h3><ul><li><a href=\"carrozzeria_vignale.html\">About Carrozzeria Vignale</a> <span class=\"addr\">extensive information (rebuilt on this site)</span></li><li><a href=\"gamine_club_form.html\">Virtual Vignale Gamine Club</a></li><li><a href=\"http://www.vignale.org/\" target=\"_blank\" rel=\"noopener\">Registro Vignale</a></li><li>Fiat 500 & Vignale Gamine IG Saar<span class=\"addr\">Christian Schmitt, Lautenbacher Str. 50, D-66916 Breitenbach, Tel./Fax +49-6386-7345</span></li><li><a href=\"http://www.vtr.org/\" target=\"_blank\" rel=\"noopener\">The Vintage Triumph Register</a> <span class=\"addr\">incl. the Vignale-bodied Triumph Italia</span></li><li><a href=\"http://vintagetriumphregister.org/italia/\" target=\"_blank\" rel=\"noopener\">Vintage Triumph Register — Triumph Italia</a></li></ul><h3>FIAT 500 clubs, sites & forums</h3><ul><li><a href=\"http://www.fiat500club.nl/\" target=\"_blank\" rel=\"noopener\">FIAT 500 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=1\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – general</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=4\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – events</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=2\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – technical (Dutch)</a></li><li><a href=\"http://fiat500club.org.uk/\" target=\"_blank\" rel=\"noopener\">FIAT 500 Club (UK)</a></li><li><a href=\"http://www.fiat500.ch/\" target=\"_blank\" rel=\"noopener\">fiat500.ch</a></li><li><a href=\"http://www.500clubitalia.it/\" target=\"_blank\" rel=\"noopener\">FIAT 500 – CLUB ITALIA</a> <span class=\"addr\">Via Roma 90, 17033 Garlenda (SV), Italy · tel. +39 0182 582282</span></li><li><a href=\"http://www.500torinoclubitalia.it/\" target=\"_blank\" rel=\"noopener\">500torinoclubitalia.it</a></li><li><a href=\"http://www.club-fiat-500.com/\" target=\"_blank\" rel=\"noopener\">CLUB FIAT 500 et Dérivées</a></li><li><a href=\"http://www.clubfiat500.com/\" target=\"_blank\" rel=\"noopener\">Club Fiat 500 Rhône Alpes</a></li><li><a href=\"http://www.chez.com/fiat500/\" target=\"_blank\" rel=\"noopener\">Formula Fiat 500</a> <span class=\"addr\">email: aiannone@nicematin.fr</span></li><li><a href=\"http://fiat500.alienor.fr/\" target=\"_blank\" rel=\"noopener\">La Fiat 500 est «un petit joujou à quatre roues»</a></li><li>Club Fiat 500 de Perpignan<span class=\"addr\">102 Bd Nungesser et Coli, 66000 Perpignan, France · tel./fax +33 4 68 54 15 03</span></li><li>Fiat 500 Club Canada<span class=\"addr\">PO Box 56600, 93c Woodbridge Ave., Woodbridge L4L 8V3, Ontario, Canada · tel. +1 905 856 7237 · email: fiat500@interlog.com</span></li><li><a href=\"http://www.geocities.com/MotorCity/Downs/5440/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Club Luxembourg</a></li><li><a href=\"http://www.fiat500.de/\" target=\"_blank\" rel=\"noopener\">fiat500.de</a></li><li><a href=\"http://home.t-online.de/home/jan.wunderlich/igrm.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 IG Rhein-Main</a></li><li><a href=\"http://www.dillingen.baynet.de/~gsaam/fiat500.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 pages by Gregor Saam (German)</a></li><li><a href=\"http://www.fiat500.com/\" target=\"_blank\" rel=\"noopener\">Fiat 500 in the Web</a></li><li>Panini Radente e.V. Fiat 500 Berlin<span class=\"addr\">Meinekestr. 7, 10719 Berlin · tel. 030/8813430 · fax 030/8852089</span></li><li>Fiat 500 Exclusiv Club Kiel<span class=\"addr\">Anja Welzbacher, Am Museum 6, 24113 Molfsee · tel. 0431/650106 · fax 04533/61898</span></li><li>Fiat 500 Amici Knesebeck<span class=\"addr\">Angela Reichelt, Im Rietendorf 18, D-29379 Knesebeck · tel. 05834/6834</span></li><li>Fiat 500 Club Aachen ‘Wahn und Weite’<span class=\"addr\">Michael Schwartz, Katzensteinweg 1, D-52078 Aachen · tel. 0241/522518</span></li><li>Fiat 500-Club am Harz<span class=\"addr\">Edgar Dreilich, Alte Siedlung 4, D-37589 Kalefeld · tel./fax 05553/4679</span></li><li>Fiat 500 Club Frankenwald<span class=\"addr\">Edmund Hoh, St. Kunigundenstr. 2, D-96317 Kronach/Glosberg · tel. 09261/1443</span></li><li>Fiat 500 Freunde Nordbayern<span class=\"addr\">Gerlinde Schwarz, Niedermirsbergerstr. 12, D-91320 Ebermannstadt · tel. 09194/4940</span></li><li>Fiat 500 IG Lippe<span class=\"addr\">Jörg Kerkhof, Osterfeldweg 10, D-32791 Lage · tel. 05232/67301</span></li><li>Fiat 500 IG München<span class=\"addr\">Roland Schlitt, Postfach 43 03 28, D-80733 München · tel./fax 089/2724936</span></li><li>Fiat 500 IG Lahn-Dill-Kreis<span class=\"addr\">Michael & Andrea Kabbeck, Lindenweg 5, D-35638 Leun · tel. 06473/931935</span></li><li>Fiat 500 IG Nürnberg<span class=\"addr\">Dirk Klein, Bucher Straße 20a, D-90522 Oberasbach · tel. 0911/6999923</span></li><li>Fiat 500 Microben-Club Bergisch Gladbach<span class=\"addr\">Eichholzer Weg 21, D-51519 Odenthal · tel. 02207/1064 or 02207/5917</span></li><li>Topolino Freunde Deutschland, IG für Fiat 500 A, B, C<span class=\"addr\">Wolfgang Hildebrand, Isardamm 3, D-82538 Geretsried · tel. 08171/8418</span></li><li><a href=\"http://www.geocities.com/MotorCity/9726/500.html\" target=\"_blank\" rel=\"noopener\">FIAT Topolino/500/Derivates</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www.csg-net.it/bianchinaclub\" target=\"_blank\" rel=\"noopener\">Bianchina Club</a></li><li><a href=\"http://unet.univie.ac.at/~a8801765/eokc.html\" target=\"_blank\" rel=\"noopener\">Erster Oesterreichischer Kleinwagen Club</a></li><li><a href=\"http://ns.cti.co.jp/~mmk7013/index.html\" target=\"_blank\" rel=\"noopener\">Fiat 500 Home Page — Japan</a></li><li><a href=\"http://www.asahi-net.or.jp/~MJ6T-ISHR/500-1.html\" target=\"_blank\" rel=\"noopener\">Cafe de 500 — Japan</a></li><li><a href=\"http://www7.big.or.jp/~canta/fiat500/\" target=\"_blank\" rel=\"noopener\">Fiat 500 — Japan</a></li><li><a href=\"http://www.arthouse.co.jp/ontario/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Ontario — Japan</a></li><li><a href=\"http://www.na.rim.or.jp/~doshir/auto/f500/f500.html\" target=\"_blank\" rel=\"noopener\">Cinq's Nest by Doshir — Japan</a></li><li><a href=\"http://selene.kfunigraz.ac.at/~.peroutka.p.user.kfug/\" target=\"_blank\" rel=\"noopener\">Steyr-Puch-Homepage (Österreich/Austria)</a></li><li><a href=\"http://www.sp650.nu/\" target=\"_blank\" rel=\"noopener\">Steyr Puch 650 TR II site</a> <span class=\"addr\">email: Jakob, webmaster@sp650.nu</span></li><li><a href=\"http://www.iht.com/IHT/BJ/96/bj040296a.html\" target=\"_blank\" rel=\"noopener\">Dante Giacosa (creator of the Fiat 500) — obituary</a> <span class=\"addr\">by Barry James, International Herald Tribune</span></li><li><a href=\"http://www.eternalflame.com/dgiacosa.htm\" target=\"_blank\" rel=\"noopener\">eternalflame.com — Dante Giacosa</a></li><li>Fiat 500 Club Praha<span class=\"addr\">Jablonecka 414, 19000 Praha-9, Czech Republic · tel. +42-2-881230 · open to all models 1960-1975, contact: Jakub Novotny</span></li><li>Fiat 500 Club Hungary<span class=\"addr\">Mózner Géza (president), 8360 Keszthely, Vaszary u. 23/b., Hungary · tel. ++36-83-310-410</span></li><li>Fiat 500 Association<span class=\"addr\">Horogh Zsolt, 4031 Debrecen, Egressy Béni tér 12. III/7, Hungary · tel. ++36-52-446-029</span></li><li>Fiat 500 Car Club<span class=\"addr\">contact: Graeme Banks, 9 Marlborough Ave, Glenfield, Auckland 10, New Zealand</span></li><li>Fiat Bambina Club<span class=\"addr\">contact: Michael Bell, 5 St Martins Rd, Christchurch, New Zealand</span></li><li>Topolino Club Livorno<span class=\"addr\">Giuseppe Giovannetti, Via Crispi 32 · tel. 0586-890018/895233 · fax 0586-895233; Comune di Livorno – Assessorato alla Cultura, tel. 0586/820516</span></li><li>Topolino Parts<span class=\"addr\">Ezio Casagrande, Feldmattstrasse 10, CH-6032 Emmen-Waldibrücke · tel. +41 41 260 45 06 · fax +41 41 260 45 10 · email: casagrande@topolino-parts.c</span></li><li><a href=\"https://www.fiat500vdlaan.nl/webshop.php\" target=\"_blank\" rel=\"noopener\">Van der Laan Fiat 500 onderdelen</a></li><li><a href=\"http://www.dino.nl/vintage/dealers/tencate/tencate.html\" target=\"_blank\" rel=\"noopener\">Ten Cate Fiat 500 Import</a></li></ul><h3>FIAT-related clubs & sites</h3><ul><li><a href=\"http://members.tripod.lycos.nl/Fiat600/\" target=\"_blank\" rel=\"noopener\">De FIAT 600 pagina</a></li><li><a href=\"http://home.wxs.nl/~ham00033/\" target=\"_blank\" rel=\"noopener\">FIAT 126 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiatbarchetta.com/\" target=\"_blank\" rel=\"noopener\">The world of the Fiat barchetta</a></li><li><a href=\"http://www.geocities.com/MotorCity/9726/\" target=\"_blank\" rel=\"noopener\">The Fiat Links Collection</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www-personal.umich.edu/~hgranito/FLU/index.htm\" target=\"_blank\" rel=\"noopener\">The club for the discriminating Fiat and Lancia owner</a></li><li><a href=\"http://www.fiatabarth.com/\" target=\"_blank\" rel=\"noopener\">fiatabarth.com</a></li><li><a href=\"https://fiatclubamerica.com/\" target=\"_blank\" rel=\"noopener\">FIAT Club America</a></li><li><a href=\"http://www.fiat.com/\" target=\"_blank\" rel=\"noopener\">fiat.com</a></li><li><a href=\"http://fiatclub.mpx.com.au/\" target=\"_blank\" rel=\"noopener\">Fiat Club of NSW Inc.</a></li><li><a href=\"http://www.eleceng.adelaide.edu.au/Personal/abeaumon/flcc.html\" target=\"_blank\" rel=\"noopener\">FIAT-Lancia Car Club of South Australia</a></li><li>Fiat Car Club of Victoria Inc.<span class=\"addr\">contact: Jon Carroll, GPO Box 4A, Melbourne 3001, Australia</span></li><li><a href=\"http://www.pcug.org.au/~mstreet/autoitalia.htm\" target=\"_blank\" rel=\"noopener\">Auto Italia!</a> <span class=\"addr\">FIAT club of the ACT & Canberra chapter of the Alfa Romeo Owners Club of Australia</span></li><li><a href=\"http://home.sprynet.com/sprynet/olympusdrive/fiat.htm\" target=\"_blank\" rel=\"noopener\">Fiat Internet Connection</a></li><li><a href=\"http://www.autocar.com/faqs/fiat/fiat_faq.html\" target=\"_blank\" rel=\"noopener\">Frequently Asked Questions About Fiats</a></li><li><a href=\"http://web.inter.nl.net/users/C.J.Sibon/index.html\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (English)</a></li><li><a href=\"http://www.geocities.com/~greek-fiat/cinquecento/abart2.htm\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (Greek)</a></li><li><a href=\"http://www.car-list.com/carclub/ccfiat.html\" target=\"_blank\" rel=\"noopener\">Fiat Car Clubs</a></li></ul><h3>Other interesting car sites</h3><ul><li><a href=\"http://www.noob.nl/\" target=\"_blank\" rel=\"noopener\">Nederlands Oldtimer en Occasion Bureau</a></li><li><a href=\"http://www.mclellansautomotive.com/\" target=\"_blank\" rel=\"noopener\">McLellan's Automotive History</a> <span class=\"addr\">9111 Longstaff Drive, Houston, TX 77031-2711 · tel. +1 713 772 3285 · fax +1 713 772 3287</span></li><li><a href=\"http://www.amklassiek.nl/\" target=\"_blank\" rel=\"noopener\">Auto Motor Klassiek (Dutch)</a></li><li><a href=\"http://www.iaehv.nl/users/hgt/dwac/\" target=\"_blank\" rel=\"noopener\">Nederlandse Dwergautoclub</a></li><li><a href=\"http://www.ram.rwth-aachen.de/~glasclub\" target=\"_blank\" rel=\"noopener\">GLAS-Automobilclub International e.V.</a> <span class=\"addr\">incl. the Goggomobil</span></li><li><a href=\"http://www.multiweb.net/~dwf/\" target=\"_blank\" rel=\"noopener\">Dirks Dutch Microcar Page</a></li><li><a href=\"http://klassiekers.com/\" target=\"_blank\" rel=\"noopener\">De Nederlandse website over klassieke automobielen</a></li><li><a href=\"http://surf.to/patron\" target=\"_blank\" rel=\"noopener\">Classic car site (English pages)</a></li><li><a href=\"http://surf.to/lomax\" target=\"_blank\" rel=\"noopener\">Classic car site (Nederlandse pagina's)</a></li><li><a href=\"http://www.autovisie.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AUTOVISIE online</a></li><li><a href=\"http://www.classic-avenue.nl/\" target=\"_blank\" rel=\"noopener\">Classic Avenue</a></li><li><a href=\"http://ruoteclassiche.edidomus.it/\" target=\"_blank\" rel=\"noopener\">RuoteClassiche Online (Italian)</a></li><li><a href=\"http://www.autototaal.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AutoTotaal online</a></li><li><a href=\"http://www.cjnetworks.com/~msabat/index.html\" target=\"_blank\" rel=\"noopener\">BMW Isetta and other little cars</a></li><li><a href=\"http://www.theautochannel.com/\" target=\"_blank\" rel=\"noopener\">The Auto Channel</a></li><li><a href=\"http://www.gopema.nl/oldtimers/\" target=\"_blank\" rel=\"noopener\">GoPeMa ‘Oldtimers & Classic Cars’</a> <span class=\"addr\">Dutch site — clubs, restorers, dealers, sales, events</span></li><li><a href=\"http://www.masadsign.nl/gpf1\" target=\"_blank\" rel=\"noopener\">Your start on your www search for F1 and other automobile sites...</a></li><li><a href=\"http://www.classicar.com/\" target=\"_blank\" rel=\"noopener\">Classicar.com</a> <span class=\"addr\">worldwide access to classic cars, trucks, motorcycles, automobilia and parts</span></li><li><a href=\"http://www.toyshop.com.au/\" target=\"_blank\" rel=\"noopener\">The Toy Shop — Prestige Cars</a> <span class=\"addr\">Ground Floor, Cnr Mount & Arthur Streets, North Sydney NSW 2060, Australia · tel. +61 2 9922 3444</span></li><li><a href=\"http://www.vpm.de/oldtimer-markt/\" target=\"_blank\" rel=\"noopener\">Oldtimer-Markt</a> <span class=\"addr\">Europe's largest classic car & motorcycle magazine online</span></li><li><a href=\"http://www.autoonramp.com/\" target=\"_blank\" rel=\"noopener\">‘Where the automotive world begins!’</a></li><li><a href=\"http://www.antima.com/chauffeur/\" target=\"_blank\" rel=\"noopener\">The CyberHUB of Automotive Enthusiasts</a></li><li><a href=\"http://www.dino.nl/vintage/index2.html\" target=\"_blank\" rel=\"noopener\">Vintage Web — the one & only Dutch Classic Car Website!</a></li><li><a href=\"http://www.montclair.edu/pages/finearts/faculty/luttropp/mmwww/mm.html\" target=\"_blank\" rel=\"noopener\">The Microcar and Minicar Club</a> <span class=\"addr\">PO Box 43137, Upper Montclair, NJ 07043 · Kaz Wysocki, (201) 342-3685</span></li><li><a href=\"http://www.rose-hulman.edu/~carrlr/index.html\" target=\"_blank\" rel=\"noopener\">Lisa Carr's Small Car Home Page</a></li><li><a href=\"http://www.cs.tut.fi/~pasi/autot.html\" target=\"_blank\" rel=\"noopener\">Pasi Isotalus's Vehicle Bookmarks</a></li><li><a href=\"http://www.digest.net/italian-cars/\" target=\"_blank\" rel=\"noopener\">Italian Cars Digest</a></li><li><a href=\"http://www.car-list.com/carclub.html\" target=\"_blank\" rel=\"noopener\">Car clubs from around the world</a></li></ul></div>",
+        "title": "Links — Vignale Gamine",
+        "meta_description": "Vignale- en Gamine-bronnen, FIAT 500-clubs wereldwijd en andere klassiekerlinks, opgebouwd sinds de jaren negentig."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Club",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_world": "Nel mondo",
+        "nav_art": "Arte ?",
+        "nav_market": "Mercato",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato a settembre 2024.",
+        "footer_webmaster": "Webmaster",
+        "footer_translate": "Traduci queste pagine",
+        "l_eyebrow": "Link interessanti e indirizzi utili",
+        "l_h1": "Link interessanti e indirizzi utili",
+        "l_lead": "Un elenco costruito a partire dagli anni '90: risorse su Vignale e Gamine, club FIAT 500 nel mondo, siti FIAT correlati e altre destinazioni per appassionati di auto d'epoca. Molte voci sono storiche — indirizzi e numeri di telefono sono riportati come pubblicati originariamente e potrebbero non essere più attuali.",
+        "l_directory": "<div class=\"directory\"><h3>Vignale & Gamine</h3><ul><li><a href=\"carrozzeria_vignale.html\">About Carrozzeria Vignale</a> <span class=\"addr\">extensive information (rebuilt on this site)</span></li><li><a href=\"gamine_club_form.html\">Virtual Vignale Gamine Club</a></li><li><a href=\"http://www.vignale.org/\" target=\"_blank\" rel=\"noopener\">Registro Vignale</a></li><li>Fiat 500 & Vignale Gamine IG Saar<span class=\"addr\">Christian Schmitt, Lautenbacher Str. 50, D-66916 Breitenbach, Tel./Fax +49-6386-7345</span></li><li><a href=\"http://www.vtr.org/\" target=\"_blank\" rel=\"noopener\">The Vintage Triumph Register</a> <span class=\"addr\">incl. the Vignale-bodied Triumph Italia</span></li><li><a href=\"http://vintagetriumphregister.org/italia/\" target=\"_blank\" rel=\"noopener\">Vintage Triumph Register — Triumph Italia</a></li></ul><h3>FIAT 500 clubs, sites & forums</h3><ul><li><a href=\"http://www.fiat500club.nl/\" target=\"_blank\" rel=\"noopener\">FIAT 500 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=1\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – general</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=4\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – events</a></li><li><a href=\"http://www.fiat500club.nl/forum500/forum.asp?sub=show&action=topics&fid=2\" target=\"_blank\" rel=\"noopener\">WebForum FIAT 500 – technical (Dutch)</a></li><li><a href=\"http://fiat500club.org.uk/\" target=\"_blank\" rel=\"noopener\">FIAT 500 Club (UK)</a></li><li><a href=\"http://www.fiat500.ch/\" target=\"_blank\" rel=\"noopener\">fiat500.ch</a></li><li><a href=\"http://www.500clubitalia.it/\" target=\"_blank\" rel=\"noopener\">FIAT 500 – CLUB ITALIA</a> <span class=\"addr\">Via Roma 90, 17033 Garlenda (SV), Italy · tel. +39 0182 582282</span></li><li><a href=\"http://www.500torinoclubitalia.it/\" target=\"_blank\" rel=\"noopener\">500torinoclubitalia.it</a></li><li><a href=\"http://www.club-fiat-500.com/\" target=\"_blank\" rel=\"noopener\">CLUB FIAT 500 et Dérivées</a></li><li><a href=\"http://www.clubfiat500.com/\" target=\"_blank\" rel=\"noopener\">Club Fiat 500 Rhône Alpes</a></li><li><a href=\"http://www.chez.com/fiat500/\" target=\"_blank\" rel=\"noopener\">Formula Fiat 500</a> <span class=\"addr\">email: aiannone@nicematin.fr</span></li><li><a href=\"http://fiat500.alienor.fr/\" target=\"_blank\" rel=\"noopener\">La Fiat 500 est «un petit joujou à quatre roues»</a></li><li>Club Fiat 500 de Perpignan<span class=\"addr\">102 Bd Nungesser et Coli, 66000 Perpignan, France · tel./fax +33 4 68 54 15 03</span></li><li>Fiat 500 Club Canada<span class=\"addr\">PO Box 56600, 93c Woodbridge Ave., Woodbridge L4L 8V3, Ontario, Canada · tel. +1 905 856 7237 · email: fiat500@interlog.com</span></li><li><a href=\"http://www.geocities.com/MotorCity/Downs/5440/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Club Luxembourg</a></li><li><a href=\"http://www.fiat500.de/\" target=\"_blank\" rel=\"noopener\">fiat500.de</a></li><li><a href=\"http://home.t-online.de/home/jan.wunderlich/igrm.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 IG Rhein-Main</a></li><li><a href=\"http://www.dillingen.baynet.de/~gsaam/fiat500.htm\" target=\"_blank\" rel=\"noopener\">FIAT 500 pages by Gregor Saam (German)</a></li><li><a href=\"http://www.fiat500.com/\" target=\"_blank\" rel=\"noopener\">Fiat 500 in the Web</a></li><li>Panini Radente e.V. Fiat 500 Berlin<span class=\"addr\">Meinekestr. 7, 10719 Berlin · tel. 030/8813430 · fax 030/8852089</span></li><li>Fiat 500 Exclusiv Club Kiel<span class=\"addr\">Anja Welzbacher, Am Museum 6, 24113 Molfsee · tel. 0431/650106 · fax 04533/61898</span></li><li>Fiat 500 Amici Knesebeck<span class=\"addr\">Angela Reichelt, Im Rietendorf 18, D-29379 Knesebeck · tel. 05834/6834</span></li><li>Fiat 500 Club Aachen ‘Wahn und Weite’<span class=\"addr\">Michael Schwartz, Katzensteinweg 1, D-52078 Aachen · tel. 0241/522518</span></li><li>Fiat 500-Club am Harz<span class=\"addr\">Edgar Dreilich, Alte Siedlung 4, D-37589 Kalefeld · tel./fax 05553/4679</span></li><li>Fiat 500 Club Frankenwald<span class=\"addr\">Edmund Hoh, St. Kunigundenstr. 2, D-96317 Kronach/Glosberg · tel. 09261/1443</span></li><li>Fiat 500 Freunde Nordbayern<span class=\"addr\">Gerlinde Schwarz, Niedermirsbergerstr. 12, D-91320 Ebermannstadt · tel. 09194/4940</span></li><li>Fiat 500 IG Lippe<span class=\"addr\">Jörg Kerkhof, Osterfeldweg 10, D-32791 Lage · tel. 05232/67301</span></li><li>Fiat 500 IG München<span class=\"addr\">Roland Schlitt, Postfach 43 03 28, D-80733 München · tel./fax 089/2724936</span></li><li>Fiat 500 IG Lahn-Dill-Kreis<span class=\"addr\">Michael & Andrea Kabbeck, Lindenweg 5, D-35638 Leun · tel. 06473/931935</span></li><li>Fiat 500 IG Nürnberg<span class=\"addr\">Dirk Klein, Bucher Straße 20a, D-90522 Oberasbach · tel. 0911/6999923</span></li><li>Fiat 500 Microben-Club Bergisch Gladbach<span class=\"addr\">Eichholzer Weg 21, D-51519 Odenthal · tel. 02207/1064 or 02207/5917</span></li><li>Topolino Freunde Deutschland, IG für Fiat 500 A, B, C<span class=\"addr\">Wolfgang Hildebrand, Isardamm 3, D-82538 Geretsried · tel. 08171/8418</span></li><li><a href=\"http://www.geocities.com/MotorCity/9726/500.html\" target=\"_blank\" rel=\"noopener\">FIAT Topolino/500/Derivates</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www.csg-net.it/bianchinaclub\" target=\"_blank\" rel=\"noopener\">Bianchina Club</a></li><li><a href=\"http://unet.univie.ac.at/~a8801765/eokc.html\" target=\"_blank\" rel=\"noopener\">Erster Oesterreichischer Kleinwagen Club</a></li><li><a href=\"http://ns.cti.co.jp/~mmk7013/index.html\" target=\"_blank\" rel=\"noopener\">Fiat 500 Home Page — Japan</a></li><li><a href=\"http://www.asahi-net.or.jp/~MJ6T-ISHR/500-1.html\" target=\"_blank\" rel=\"noopener\">Cafe de 500 — Japan</a></li><li><a href=\"http://www7.big.or.jp/~canta/fiat500/\" target=\"_blank\" rel=\"noopener\">Fiat 500 — Japan</a></li><li><a href=\"http://www.arthouse.co.jp/ontario/\" target=\"_blank\" rel=\"noopener\">Fiat 500 Ontario — Japan</a></li><li><a href=\"http://www.na.rim.or.jp/~doshir/auto/f500/f500.html\" target=\"_blank\" rel=\"noopener\">Cinq's Nest by Doshir — Japan</a></li><li><a href=\"http://selene.kfunigraz.ac.at/~.peroutka.p.user.kfug/\" target=\"_blank\" rel=\"noopener\">Steyr-Puch-Homepage (Österreich/Austria)</a></li><li><a href=\"http://www.sp650.nu/\" target=\"_blank\" rel=\"noopener\">Steyr Puch 650 TR II site</a> <span class=\"addr\">email: Jakob, webmaster@sp650.nu</span></li><li><a href=\"http://www.iht.com/IHT/BJ/96/bj040296a.html\" target=\"_blank\" rel=\"noopener\">Dante Giacosa (creator of the Fiat 500) — obituary</a> <span class=\"addr\">by Barry James, International Herald Tribune</span></li><li><a href=\"http://www.eternalflame.com/dgiacosa.htm\" target=\"_blank\" rel=\"noopener\">eternalflame.com — Dante Giacosa</a></li><li>Fiat 500 Club Praha<span class=\"addr\">Jablonecka 414, 19000 Praha-9, Czech Republic · tel. +42-2-881230 · open to all models 1960-1975, contact: Jakub Novotny</span></li><li>Fiat 500 Club Hungary<span class=\"addr\">Mózner Géza (president), 8360 Keszthely, Vaszary u. 23/b., Hungary · tel. ++36-83-310-410</span></li><li>Fiat 500 Association<span class=\"addr\">Horogh Zsolt, 4031 Debrecen, Egressy Béni tér 12. III/7, Hungary · tel. ++36-52-446-029</span></li><li>Fiat 500 Car Club<span class=\"addr\">contact: Graeme Banks, 9 Marlborough Ave, Glenfield, Auckland 10, New Zealand</span></li><li>Fiat Bambina Club<span class=\"addr\">contact: Michael Bell, 5 St Martins Rd, Christchurch, New Zealand</span></li><li>Topolino Club Livorno<span class=\"addr\">Giuseppe Giovannetti, Via Crispi 32 · tel. 0586-890018/895233 · fax 0586-895233; Comune di Livorno – Assessorato alla Cultura, tel. 0586/820516</span></li><li>Topolino Parts<span class=\"addr\">Ezio Casagrande, Feldmattstrasse 10, CH-6032 Emmen-Waldibrücke · tel. +41 41 260 45 06 · fax +41 41 260 45 10 · email: casagrande@topolino-parts.c</span></li><li><a href=\"https://www.fiat500vdlaan.nl/webshop.php\" target=\"_blank\" rel=\"noopener\">Van der Laan Fiat 500 onderdelen</a></li><li><a href=\"http://www.dino.nl/vintage/dealers/tencate/tencate.html\" target=\"_blank\" rel=\"noopener\">Ten Cate Fiat 500 Import</a></li></ul><h3>FIAT-related clubs & sites</h3><ul><li><a href=\"http://members.tripod.lycos.nl/Fiat600/\" target=\"_blank\" rel=\"noopener\">De FIAT 600 pagina</a></li><li><a href=\"http://home.wxs.nl/~ham00033/\" target=\"_blank\" rel=\"noopener\">FIAT 126 CLUB NEDERLAND</a></li><li><a href=\"http://www.fiatbarchetta.com/\" target=\"_blank\" rel=\"noopener\">The world of the Fiat barchetta</a></li><li><a href=\"http://www.geocities.com/MotorCity/9726/\" target=\"_blank\" rel=\"noopener\">The Fiat Links Collection</a> <span class=\"addr\">by Marc Kloosterman</span></li><li><a href=\"http://www-personal.umich.edu/~hgranito/FLU/index.htm\" target=\"_blank\" rel=\"noopener\">The club for the discriminating Fiat and Lancia owner</a></li><li><a href=\"http://www.fiatabarth.com/\" target=\"_blank\" rel=\"noopener\">fiatabarth.com</a></li><li><a href=\"https://fiatclubamerica.com/\" target=\"_blank\" rel=\"noopener\">FIAT Club America</a></li><li><a href=\"http://www.fiat.com/\" target=\"_blank\" rel=\"noopener\">fiat.com</a></li><li><a href=\"http://fiatclub.mpx.com.au/\" target=\"_blank\" rel=\"noopener\">Fiat Club of NSW Inc.</a></li><li><a href=\"http://www.eleceng.adelaide.edu.au/Personal/abeaumon/flcc.html\" target=\"_blank\" rel=\"noopener\">FIAT-Lancia Car Club of South Australia</a></li><li>Fiat Car Club of Victoria Inc.<span class=\"addr\">contact: Jon Carroll, GPO Box 4A, Melbourne 3001, Australia</span></li><li><a href=\"http://www.pcug.org.au/~mstreet/autoitalia.htm\" target=\"_blank\" rel=\"noopener\">Auto Italia!</a> <span class=\"addr\">FIAT club of the ACT & Canberra chapter of the Alfa Romeo Owners Club of Australia</span></li><li><a href=\"http://home.sprynet.com/sprynet/olympusdrive/fiat.htm\" target=\"_blank\" rel=\"noopener\">Fiat Internet Connection</a></li><li><a href=\"http://www.autocar.com/faqs/fiat/fiat_faq.html\" target=\"_blank\" rel=\"noopener\">Frequently Asked Questions About Fiats</a></li><li><a href=\"http://web.inter.nl.net/users/C.J.Sibon/index.html\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (English)</a></li><li><a href=\"http://www.geocities.com/~greek-fiat/cinquecento/abart2.htm\" target=\"_blank\" rel=\"noopener\">Fiat Cinquecento Sporting Homepage (Greek)</a></li><li><a href=\"http://www.car-list.com/carclub/ccfiat.html\" target=\"_blank\" rel=\"noopener\">Fiat Car Clubs</a></li></ul><h3>Other interesting car sites</h3><ul><li><a href=\"http://www.noob.nl/\" target=\"_blank\" rel=\"noopener\">Nederlands Oldtimer en Occasion Bureau</a></li><li><a href=\"http://www.mclellansautomotive.com/\" target=\"_blank\" rel=\"noopener\">McLellan's Automotive History</a> <span class=\"addr\">9111 Longstaff Drive, Houston, TX 77031-2711 · tel. +1 713 772 3285 · fax +1 713 772 3287</span></li><li><a href=\"http://www.amklassiek.nl/\" target=\"_blank\" rel=\"noopener\">Auto Motor Klassiek (Dutch)</a></li><li><a href=\"http://www.iaehv.nl/users/hgt/dwac/\" target=\"_blank\" rel=\"noopener\">Nederlandse Dwergautoclub</a></li><li><a href=\"http://www.ram.rwth-aachen.de/~glasclub\" target=\"_blank\" rel=\"noopener\">GLAS-Automobilclub International e.V.</a> <span class=\"addr\">incl. the Goggomobil</span></li><li><a href=\"http://www.multiweb.net/~dwf/\" target=\"_blank\" rel=\"noopener\">Dirks Dutch Microcar Page</a></li><li><a href=\"http://klassiekers.com/\" target=\"_blank\" rel=\"noopener\">De Nederlandse website over klassieke automobielen</a></li><li><a href=\"http://surf.to/patron\" target=\"_blank\" rel=\"noopener\">Classic car site (English pages)</a></li><li><a href=\"http://surf.to/lomax\" target=\"_blank\" rel=\"noopener\">Classic car site (Nederlandse pagina's)</a></li><li><a href=\"http://www.autovisie.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AUTOVISIE online</a></li><li><a href=\"http://www.classic-avenue.nl/\" target=\"_blank\" rel=\"noopener\">Classic Avenue</a></li><li><a href=\"http://ruoteclassiche.edidomus.it/\" target=\"_blank\" rel=\"noopener\">RuoteClassiche Online (Italian)</a></li><li><a href=\"http://www.autototaal.nl/\" target=\"_blank\" rel=\"noopener\">Dutch AutoTotaal online</a></li><li><a href=\"http://www.cjnetworks.com/~msabat/index.html\" target=\"_blank\" rel=\"noopener\">BMW Isetta and other little cars</a></li><li><a href=\"http://www.theautochannel.com/\" target=\"_blank\" rel=\"noopener\">The Auto Channel</a></li><li><a href=\"http://www.gopema.nl/oldtimers/\" target=\"_blank\" rel=\"noopener\">GoPeMa ‘Oldtimers & Classic Cars’</a> <span class=\"addr\">Dutch site — clubs, restorers, dealers, sales, events</span></li><li><a href=\"http://www.masadsign.nl/gpf1\" target=\"_blank\" rel=\"noopener\">Your start on your www search for F1 and other automobile sites...</a></li><li><a href=\"http://www.classicar.com/\" target=\"_blank\" rel=\"noopener\">Classicar.com</a> <span class=\"addr\">worldwide access to classic cars, trucks, motorcycles, automobilia and parts</span></li><li><a href=\"http://www.toyshop.com.au/\" target=\"_blank\" rel=\"noopener\">The Toy Shop — Prestige Cars</a> <span class=\"addr\">Ground Floor, Cnr Mount & Arthur Streets, North Sydney NSW 2060, Australia · tel. +61 2 9922 3444</span></li><li><a href=\"http://www.vpm.de/oldtimer-markt/\" target=\"_blank\" rel=\"noopener\">Oldtimer-Markt</a> <span class=\"addr\">Europe's largest classic car & motorcycle magazine online</span></li><li><a href=\"http://www.autoonramp.com/\" target=\"_blank\" rel=\"noopener\">‘Where the automotive world begins!’</a></li><li><a href=\"http://www.antima.com/chauffeur/\" target=\"_blank\" rel=\"noopener\">The CyberHUB of Automotive Enthusiasts</a></li><li><a href=\"http://www.dino.nl/vintage/index2.html\" target=\"_blank\" rel=\"noopener\">Vintage Web — the one & only Dutch Classic Car Website!</a></li><li><a href=\"http://www.montclair.edu/pages/finearts/faculty/luttropp/mmwww/mm.html\" target=\"_blank\" rel=\"noopener\">The Microcar and Minicar Club</a> <span class=\"addr\">PO Box 43137, Upper Montclair, NJ 07043 · Kaz Wysocki, (201) 342-3685</span></li><li><a href=\"http://www.rose-hulman.edu/~carrlr/index.html\" target=\"_blank\" rel=\"noopener\">Lisa Carr's Small Car Home Page</a></li><li><a href=\"http://www.cs.tut.fi/~pasi/autot.html\" target=\"_blank\" rel=\"noopener\">Pasi Isotalus's Vehicle Bookmarks</a></li><li><a href=\"http://www.digest.net/italian-cars/\" target=\"_blank\" rel=\"noopener\">Italian Cars Digest</a></li><li><a href=\"http://www.car-list.com/carclub.html\" target=\"_blank\" rel=\"noopener\">Car clubs from around the world</a></li></ul></div>",
+        "title": "Link — Vignale Gamine",
+        "meta_description": "Risorse su Vignale e Gamine, club FIAT 500 nel mondo e altri link per auto d'epoca, costruiti dagli anni '90."
+    }
+};
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>
