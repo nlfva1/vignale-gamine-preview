@@ -361,20 +361,26 @@
 
   /* Spec strip */
   .spec-strip {
-    margin-top: 32px;
+    margin: 0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .spec-strip dl {
-    margin: 0;
+  .spec-strip > div {
     padding: 14px 16px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
   }
-  .spec-strip div:nth-child(2n) dl,
-  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .stats-block {
+    margin-top: 32px;
+  }
+  .stats-heading {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
   .spec-strip dt {
     font-family: var(--font-mono);
     font-size: 0.66rem;
@@ -391,12 +397,8 @@
     color: var(--ink);
   }
   @media (min-width: 700px) {
-    .spec-strip { grid-template-columns: repeat(6, 1fr); }
-    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
-    .spec-strip dl:nth-child(6n) { border-right: none; }
-  }
-  @media (max-width: 699px) {
-    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+    .spec-strip.specs-row { grid-template-columns: repeat(5, 1fr); }
+    .spec-strip.stats-row { grid-template-columns: repeat(4, 1fr); }
   }
 
   /* Sections */
@@ -577,14 +579,26 @@
         <img src="index2_bestanden/image002-verscherpt.jpg" width="1744" height="608" alt="Vignale Gamine, classic two-seater convertible">
       </figure>
 
-      <dl class="spec-strip">
-        <div><dt data-i18n="spec_coachbuilder">Coachbuilder</dt><dd>Vignale</dd></div>
-        <div><dt data-i18n="spec_chassis">Chassis</dt><dd>Fiat 500</dd></div>
-        <div><dt data-i18n="spec_production">Production</dt><dd>1967&ndash;1971</dd></div>
-        <div><dt data-i18n="spec_weight">Weight</dt><dd>480 kg</dd></div>
-        <div><dt data-i18n="spec_length">Length</dt><dd>&asymp; 3.0 m</dd></div>
-        <div><dt data-i18n="spec_site_since">Site online since</dt><dd>1997 (<span id="siteAge">29</span> <span data-i18n="yrs_suffix">yrs</span>)</dd></div>
-      </dl>
+      <div class="stats-block">
+        <p class="stats-heading" data-i18n="production_heading">Production information</p>
+        <dl class="spec-strip specs-row">
+          <div><dt data-i18n="spec_coachbuilder">Coachbuilder</dt><dd>Vignale</dd></div>
+          <div><dt data-i18n="spec_chassis">Chassis</dt><dd>Fiat 500</dd></div>
+          <div><dt data-i18n="spec_production">Production</dt><dd>1967&ndash;1971</dd></div>
+          <div><dt data-i18n="spec_weight">Weight</dt><dd>480 kg</dd></div>
+          <div><dt data-i18n="spec_length">Length</dt><dd>&asymp; 3.0 m</dd></div>
+        </dl>
+      </div>
+
+      <div class="stats-block">
+        <p class="stats-heading" data-i18n="stats_heading">Register information</p>
+        <dl class="spec-strip stats-row">
+          <div><dt data-i18n="spec_found">Gamines found</dt><dd>824</dd></div>
+          <div><dt data-i18n="spec_countries">Countries</dt><dd>38</dd></div>
+          <div><dt data-i18n="spec_chassis_known">Chassis known</dt><dd>516</dd></div>
+          <div><dt data-i18n="spec_photos">Photos</dt><dd>12,877</dd></div>
+        </dl>
+      </div>
     </div>
   </div>
 
@@ -711,8 +725,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Torino, 1967–1971",
       hero_lead: "Tracking down every remaining Vignale Gamine still out there — one story, one chassis number at a time.",
       spec_coachbuilder: "Coachbuilder", spec_chassis: "Chassis", spec_production: "Production",
-      spec_weight: "Weight", spec_length: "Length", spec_site_since: "Site online since",
-      age_suffix: "yrs old", yrs_suffix: "yrs",
+      spec_weight: "Weight", spec_length: "Length", spec_found: "Gamines found",
+      spec_countries: "Countries", spec_chassis_known: "Chassis known", spec_photos: "Number of photos",
+      stats_heading: "Register information", production_heading: "Production information",
+      age_suffix: "yrs old",
       masthead_gamine_suffix: "Years Gamine!", masthead_site_suffix: "Years Gamine Site!",
       story_h2: "The story",
       story_p1: "Many people link the name <a href=\"carrozzeria_vignale.html\">Vignale</a> to earlier models from e.g. Ferrari and Maserati. Few people know that Alfredo actually built cars under his own name as well. For the <a href=\"gamine_meaning.html\">Gamine</a>, Vignale used a Fiat 500 chassis as a base. It was in production from 1967 until 1971. With 480kg and just over 3 metres long, it is most probably the tiniest convertible Vignale designed! Until now, the exact number of Gamines produced remains unknown. Hopefully, one day all remaining Gamines will be united at this website...",
@@ -740,8 +756,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Turijn, 1967–1971",
       hero_lead: "Op zoek naar elke overgebleven Vignale Gamine die er nog is — verhaal voor verhaal, chassisnummer voor chassisnummer.",
       spec_coachbuilder: "Carrosseriebouwer", spec_chassis: "Chassis", spec_production: "Productie",
-      spec_weight: "Gewicht", spec_length: "Lengte", spec_site_since: "Site online sinds",
-      age_suffix: "jaar oud", yrs_suffix: "jaar",
+      spec_weight: "Gewicht", spec_length: "Lengte", spec_found: "Gamines gevonden",
+      spec_countries: "Landen", spec_chassis_known: "Chassis bekend", spec_photos: "Aantal foto's",
+      stats_heading: "Registerinformatie", production_heading: "Productie-informatie",
+      age_suffix: "jaar oud",
       masthead_gamine_suffix: "jaar Gamine!", masthead_site_suffix: "jaar Gamine-site!",
       story_h2: "Het verhaal",
       story_p1: "Veel mensen koppelen de naam <a href=\"carrozzeria_vignale.html\">Vignale</a> aan eerdere modellen van bijvoorbeeld Ferrari en Maserati. Weinig mensen weten dat Alfredo ook auto's onder zijn eigen naam bouwde. Voor de <a href=\"gamine_meaning.html\">Gamine</a> gebruikte Vignale een Fiat 500-chassis als basis. De auto werd geproduceerd van 1967 tot 1971. Met 480 kg en iets meer dan 3 meter lengte is het waarschijnlijk de kleinste cabriolet die Vignale ooit ontwierp! Tot op heden is het exacte aantal geproduceerde Gamines onbekend. Hopelijk worden ooit alle overgebleven Gamines op deze site samengebracht...",
@@ -769,8 +787,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Torino, 1967–1971",
       hero_lead: "Alla ricerca di ogni Vignale Gamine ancora esistente — una storia, un numero di telaio alla volta.",
       spec_coachbuilder: "Carrozzeria", spec_chassis: "Telaio", spec_production: "Produzione",
-      spec_weight: "Peso", spec_length: "Lunghezza", spec_site_since: "Sito online dal",
-      age_suffix: "anni", yrs_suffix: "anni",
+      spec_weight: "Peso", spec_length: "Lunghezza", spec_found: "Gamine trovate",
+      spec_countries: "Paesi", spec_chassis_known: "Telai noti", spec_photos: "Numero di foto",
+      stats_heading: "Informazioni sul registro", production_heading: "Informazioni sulla produzione",
+      age_suffix: "anni",
       masthead_gamine_suffix: "anni di Gamine!", masthead_site_suffix: "anni di sito Gamine!",
       story_h2: "La storia",
       story_p1: "Molti associano il nome <a href=\"carrozzeria_vignale.html\">Vignale</a> ai modelli realizzati in precedenza per, ad esempio, Ferrari e Maserati. Pochi sanno che Alfredo costruì anche automobili a proprio nome. Per la <a href=\"gamine_meaning.html\">Gamine</a>, Vignale utilizzò come base il telaio della Fiat 500. Fu prodotta dal 1967 al 1971. Con 480 kg di peso e poco più di 3 metri di lunghezza, è probabilmente la spider più piccola mai disegnata da Vignale! Ad oggi, il numero esatto di Gamine prodotte resta sconosciuto. Si spera che un giorno tutte le Gamine rimaste possano essere riunite su questo sito...",
@@ -798,8 +818,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Turín, 1967–1971",
       hero_lead: "En busca de cada Vignale Gamine que aún existe — una historia, un número de chasis a la vez.",
       spec_coachbuilder: "Carrocero", spec_chassis: "Chasis", spec_production: "Producción",
-      spec_weight: "Peso", spec_length: "Longitud", spec_site_since: "En línea desde",
-      age_suffix: "años", yrs_suffix: "años",
+      spec_weight: "Peso", spec_length: "Longitud", spec_found: "Gamines encontrados",
+      spec_countries: "Países", spec_chassis_known: "Chasis conocidos", spec_photos: "Número de fotos",
+      stats_heading: "Información del registro", production_heading: "Información de producción",
+      age_suffix: "años",
       masthead_gamine_suffix: "años de Gamine!", masthead_site_suffix: "años del sitio Gamine!",
       story_h2: "La historia",
       story_p1: "Muchos asocian el nombre <a href=\"carrozzeria_vignale.html\">Vignale</a> con modelos anteriores para, por ejemplo, Ferrari y Maserati. Pocos saben que Alfredo también construyó coches con su propio nombre. Para la <a href=\"gamine_meaning.html\">Gamine</a>, Vignale utilizó como base un chasis de Fiat 500. Se produjo entre 1967 y 1971. Con 480 kg y poco más de 3 metros de longitud, es probablemente el descapotable más pequeño que Vignale diseñó jamás. Hasta hoy, se desconoce el número exacto de Gamines producidas. Con suerte, algún día todas las Gamines que quedan se reunirán en este sitio...",
@@ -827,8 +849,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Turin, 1967–1971",
       hero_lead: "À la recherche de chaque Vignale Gamine encore existante — une histoire, un numéro de châssis à la fois.",
       spec_coachbuilder: "Carrossier", spec_chassis: "Châssis", spec_production: "Production",
-      spec_weight: "Poids", spec_length: "Longueur", spec_site_since: "En ligne depuis",
-      age_suffix: "ans", yrs_suffix: "ans",
+      spec_weight: "Poids", spec_length: "Longueur", spec_found: "Gamines trouvées",
+      spec_countries: "Pays", spec_chassis_known: "Châssis connus", spec_photos: "Nombre de photos",
+      stats_heading: "Informations du registre", production_heading: "Informations de production",
+      age_suffix: "ans",
       masthead_gamine_suffix: "ans de Gamine !", masthead_site_suffix: "ans de site Gamine !",
       story_h2: "L'histoire",
       story_p1: "Beaucoup associent le nom <a href=\"carrozzeria_vignale.html\">Vignale</a> à des modèles antérieurs réalisés par exemple pour Ferrari et Maserati. Peu savent qu'Alfredo a aussi construit des voitures sous son propre nom. Pour la <a href=\"gamine_meaning.html\">Gamine</a>, Vignale a utilisé un châssis de Fiat 500 comme base. Elle fut produite de 1967 à 1971. Avec 480 kg et un peu plus de 3 mètres de long, c'est probablement le plus petit cabriolet jamais dessiné par Vignale ! À ce jour, le nombre exact de Gamine produites reste inconnu. Avec un peu de chance, toutes les Gamine restantes seront un jour réunies sur ce site...",
@@ -856,8 +880,10 @@
       hero_eyebrow: "Carrozzeria Vignale · Turin, 1967–1971",
       hero_lead: "Auf der Suche nach jeder noch existierenden Vignale Gamine — eine Geschichte, eine Fahrgestellnummer nach der anderen.",
       spec_coachbuilder: "Karosseriebauer", spec_chassis: "Fahrgestell", spec_production: "Produktion",
-      spec_weight: "Gewicht", spec_length: "Länge", spec_site_since: "Online seit",
-      age_suffix: "Jahre", yrs_suffix: "Jahre",
+      spec_weight: "Gewicht", spec_length: "Länge", spec_found: "Gamines gefunden",
+      spec_countries: "Länder", spec_chassis_known: "Fahrgestelle bekannt", spec_photos: "Anzahl Fotos",
+      stats_heading: "Registerinformationen", production_heading: "Produktionsinformationen",
+      age_suffix: "Jahre",
       masthead_gamine_suffix: "Jahre Gamine!", masthead_site_suffix: "Jahre Gamine-Seite!",
       story_h2: "Die Geschichte",
       story_p1: "Viele verbinden den Namen <a href=\"carrozzeria_vignale.html\">Vignale</a> mit früheren Modellen, die zum Beispiel für Ferrari und Maserati gebaut wurden. Wenige wissen, dass Alfredo auch Autos unter seinem eigenen Namen baute. Für die <a href=\"gamine_meaning.html\">Gamine</a> nutzte Vignale ein Fiat-500-Fahrgestell als Basis. Sie wurde von 1967 bis 1971 produziert. Mit 480 kg und gut 3 Metern Länge ist sie wahrscheinlich das kleinste Cabriolet, das Vignale je entworfen hat! Bis heute ist die genaue Anzahl der produzierten Gamines unbekannt. Hoffentlich werden eines Tages alle verbliebenen Gamines auf dieser Seite zusammengeführt...",
