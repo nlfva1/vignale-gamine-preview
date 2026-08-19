@@ -358,6 +358,26 @@
     padding: 10px 6px 4px;
   }
 
+  .story-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 32px;
+  }
+  .story-gallery figure.plate {
+    margin: 0;
+    width: 280px;
+    max-width: 100%;
+  }
+  .story-gallery figure.plate.small {
+    width: 160px;
+  }
+  .story-gallery figure.plate img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* Spec strip */
   .spec-strip {
     margin-top: 32px;
@@ -682,7 +702,7 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="nieuwe-homepage.html">
       <span class="word">Gamine</span>
       <span class="mark">VIGNALE</span>
     </a>
@@ -704,7 +724,7 @@
       </button>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
         <ul>
-          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
           <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
           <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
           <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
@@ -768,6 +788,13 @@
 <p>Vignale's complete range consisted of the four cars Frixos imported, and one other, the shorter-lived 1500 coupe. The Samantha, Eveline, 850 series and Gamine were built at the plant until 1969, when Vignale sold the factory to DeTomaso Automobili, who used it to produce the Pantera supercar, which Vignale had also designed.</p>
 <p>But three days after completing the deal, Vignale was killed in a road accident while driving his Maserati near his home, dying just one year before Frixos Demetriou.</p>
         </div>
+      </div>
+
+      <div class="story-gallery">
+        <figure class="plate"><img src="index2_bestanden/logo_cyprus_mail.jpg" width="300" height="100" alt="Cyprus Mail newspaper logo"></figure>
+      </div>
+
+      <div class="story-text prose">
         <p style="margin-top:24px;"><a href="gamine_stories.html" data-i18n="gk_back">← Back to Stories</a></p>
       </div>
     </div>

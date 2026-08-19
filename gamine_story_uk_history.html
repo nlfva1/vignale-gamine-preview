@@ -358,6 +358,26 @@
     padding: 10px 6px 4px;
   }
 
+  .story-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 32px;
+  }
+  .story-gallery figure.plate {
+    margin: 0;
+    width: 280px;
+    max-width: 100%;
+  }
+  .story-gallery figure.plate.small {
+    width: 160px;
+  }
+  .story-gallery figure.plate img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* Spec strip */
   .spec-strip {
     margin-top: 32px;
@@ -682,7 +702,7 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="nieuwe-homepage.html">
       <span class="word">Gamine</span>
       <span class="mark">VIGNALE</span>
     </a>
@@ -704,7 +724,7 @@
       </button>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
         <ul>
-          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
           <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
           <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
           <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
@@ -750,6 +770,13 @@
 <p>For most people in the car import business, this would have meant curtains. Luckily, Demetriou was rich enough for this not to bother him. His gaming licence was renewed and he didn’t need the car business any more. In 1970 he decided to return to Cyprus; most of the unsold Gamines followed him.</p>
 <p>There he met an untimely end in the back seat of a Vignale-Fiat in the most unlikely twist to this bizarre tale: a runaway army tank squashed both the car and Mr Demetriou flat. He had outlived Alfredo Vignale, who had died the previous year in a car crash near his home on the very day he signed an agreement to sell out to De Tomaso. Thus Demetriou’s brief existence as an exotic car importer was over. His was a gamble which just didn’t pay off.</p>
 </div>
+      </div>
+
+      <div class="story-gallery">
+        <figure class="plate small"><img src="index2_bestanden/story_uk_history_logo.gif" width="113" height="56" alt="Thoroughbred &amp; Classic Cars magazine logo"></figure>
+      </div>
+
+      <div class="story-text prose">
         <p style="margin-top:24px;"><a href="gamine_stories.html" data-i18n="gg_back">← Back to Stories</a></p>
       </div>
     </div>

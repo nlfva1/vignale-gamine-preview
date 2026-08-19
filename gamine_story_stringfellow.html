@@ -358,6 +358,26 @@
     padding: 10px 6px 4px;
   }
 
+  .story-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 32px;
+  }
+  .story-gallery figure.plate {
+    margin: 0;
+    width: 280px;
+    max-width: 100%;
+  }
+  .story-gallery figure.plate.small {
+    width: 160px;
+  }
+  .story-gallery figure.plate img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* Spec strip */
   .spec-strip {
     margin-top: 32px;
@@ -682,7 +702,7 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="nieuwe-homepage.html">
       <span class="word">Gamine</span>
       <span class="mark">VIGNALE</span>
     </a>
@@ -704,7 +724,7 @@
       </button>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
         <ul>
-          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
           <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
           <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
           <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
@@ -745,6 +765,13 @@
 <p>Of his many cars, he says: “I was fond of a lot of them but, in the end, they don't stand for much. The little Fiat is such fun — so charismatic and so cheeky.” The Fiat created quite a stir outside Stringfellows as the photos were taken. Stringfellow elected to leave it on the pavement as we grabbed a quick coffee. “Perhaps people will think it's there for a publicity stunt?”</p>
 <p>Stringfellow has just been given a parking ticket after leaving the car outside the Hippodrome. “You pay astronomical rents in London and you can't even park outside your own property.”</p>
 </div>
+      </div>
+
+      <div class="story-gallery">
+        <figure class="plate"><img src="index2_bestanden/story_stringfellow.jpg" width="300" height="207" alt="The Gamine parked outside Stringfellows nightclub, London"></figure>
+      </div>
+
+      <div class="story-text prose">
         <p style="margin-top:24px;"><a href="gamine_stories.html" data-i18n="sf_back">← Back to Stories</a></p>
       </div>
     </div>

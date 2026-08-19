@@ -358,6 +358,26 @@
     padding: 10px 6px 4px;
   }
 
+  .story-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0 32px;
+  }
+  .story-gallery figure.plate {
+    margin: 0;
+    width: 280px;
+    max-width: 100%;
+  }
+  .story-gallery figure.plate.small {
+    width: 160px;
+  }
+  .story-gallery figure.plate img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* Spec strip */
   .spec-strip {
     margin-top: 32px;
@@ -682,7 +702,7 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="nieuwe-homepage.html">
       <span class="word">Gamine</span>
       <span class="mark">VIGNALE</span>
     </a>
@@ -704,7 +724,7 @@
       </button>
       <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
         <ul>
-          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="nieuwe-homepage.html" data-i18n="nav_home">Home</a></li>
           <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
           <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
           <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
@@ -759,6 +779,19 @@
 <p>Gamine, Yvon and Martin have already driven to the beach quite a few times to enjoy a sunset, Chianti and pizza, just the three of them. The original idea of selling an Australian car in the Netherlands at a profit will, in all likelihood, never come to anything...</p>
 <p style='font-size:0.85em;'>* CAF = Currency Adjustment Factor (for fluctuations in the dollar exchange rate)<br>** BAF = Bunker Adjustment Factor (for fluctuations in the oil price)</p>
 </div>
+      </div>
+
+      <div class="story-gallery">
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_6.jpg" width="200" height="260" alt="The house in Sydney where the Gamine was found, with its swimming pool and driveway"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_3.jpg" width="300" height="177" alt="The Gamine under a tarpaulin, having stood untouched for years"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_1.jpg" width="300" height="187" alt="The Gamine after being uncovered in Australia"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_2.jpg" width="300" height="189" alt="The Gamine outside the Nippon Express warehouse, Sydney"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_5.jpg" width="300" height="218" alt="The Gamine strapped down for its flight to the Netherlands"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_4.jpg" width="257" height="276" alt="The Gamine photographed by a windmill in Vlaardingen, the Netherlands"></figure>
+        <figure class="plate"><img src="index2_bestanden/story_vliegende_7.jpg" width="300" height="218" alt="The car's Australian certificate of registration"></figure>
+      </div>
+
+      <div class="story-text prose">
         <p style="margin-top:24px;"><a href="gamine_stories.html" data-i18n="fv_back">← Back to Stories</a></p>
       </div>
     </div>
