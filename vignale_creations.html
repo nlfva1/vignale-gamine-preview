@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignale Creations &mdash; Vignale Gamine</title>
+<meta name="description" content="A chronological overview of the cars built and designed by Carrozzeria Vignale, 1946-1969, with links to each model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+  header.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 100%; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+  .sub-hero .badge-emblem {
+    display: block;
+    width: min(420px, 70vw);
+    height: auto;
+    margin: 18px 0 4px;
+  }
+
+  .prose { max-width: 100%; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="cr_eyebrow">Carrozzeria Vignale &middot; Cars built and designed</p>
+      <h1 data-i18n="cr_h1">Vignale Creations</h1>
+      <p class="lead" data-i18n="cr_lead">An overview of the cars built and designed by Carrozzeria Vignale, from the 1946 Cisitalia 202 CMM to the 1969 DeTomaso Pantera &mdash; including the Gamine.</p>
+      <img class="badge-emblem" src="index2_bestanden/vignale_body-by-vignale-badge.png" width="900" height="165" alt="Body by Vignale, Italy">
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="prose" data-i18n="cr_intro">Most links below lead to the relevant model page on vignalegamine.net, the original Vignale Gamine site this list comes from. A few links point elsewhere on the web; those pages are outside our control and may occasionally be unavailable.</p>
+      <div class="directory" data-i18n-html data-i18n="cr_list">
+<h3>1940s</h3>
+<ul>
+<li><a href="https://www.vignalegamine.net/vignale_cisitalia_coupe.html">1946 Cisitialia 202 CMM</a></li>
+<li>1947 Fiat 1100 Spider</li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat.html">1947 Fiat 1500 Cabriolet</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_cisitalia_coupe.html">1948 Cisitalia 202 SC</a></li>
+<li>1949 Fiat 1100 Coupé</li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1949 Lancia Aprilia Coupé</a></li>
+</ul>
+<h3>1950s</h3>
+<ul>
+<li><a href="https://www.vignalegamine.net/vignale_cisitalia_coupe.html">1950 Cisitalia Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_cisitalia_coupe.html">1950 Cisitalia 202B</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1950 Ferrari 166 Inter Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1950 Ferrari 166 MM Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1950 Ferrari 195 Inter Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1950 Lancia Aurelia B50 Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 212 Inter Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 212 Inter Vignale Cabrio</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 212 Export Vignale Cabrio</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 212 Export Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 212 Export Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1951 Ferrari 340 Amerika Vignale Berlinetta</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1951 Lancia Aurelia B50 Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_abarth.html">1951 Abarth 205 A Berlinetta GT</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_osca.html">1951 OSCA Mt4</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_alfa_romeo.html">1951 Alfa Romeo 412 Vignale</a></li>
+<li><a href="http://www.fiatabarth.com/eng/storia/pag2.htm">1952 Abarth 205 Vignale</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_cisitalia_coupe.html">1952 Cisitalia 202C Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 225 S Vignale Berlinetta</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 225 S Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 250 S Vignale Berlinetta</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 340 Mexico Vignale Berlinetta</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 340 Mexico Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 340 America Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 340 America Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1952 Ferrari 342 America Vignale Cabrio</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1952 Lancia Aurelia B52 Coupé</a></li>
+<li>1952 Maserati A6G</li>
+<li><a href="https://www.vignalegamine.net/vignale_osca.html">1952 OSCA Mt4</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 166 MM Vignale Berlinetta</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 166 MM Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 250 Europa Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 250 MM Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 340 MM Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 375 America Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 625 TF Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 625 TF Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 250 Europa GT Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 375 America Vignale Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html">1953 Ferrari 375 America Vignale Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1953 Maserati A6GCS Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_mg_td.html">1953 MG TD</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_volvo.html">1953 Volvo Elisabeth I + II</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_cunningham.html">1953 Cunningham C-3 Vignale Competition</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_1100.html">1953 Vignale Fiat 1100</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_usa.html">1954 Cunningham Continental C3 Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_8v.html">1954 Fiat 8V Vignale</a></li>
+<li>1955 Fiat 8V Demon Rouge</li>
+<li><a href="https://www.vignalegamine.net/vignale_usa.html">1955 Cadillac Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_nardi.html">1955 Nardi ( Derivata Lancia ) Raggio Azzurro I</a></li>
+<li>1956 Desireé 1100</li>
+<li><a href="https://www.vignalegamine.net/vignale_600.html">1956 Fiat 600 Vignale quattro posti</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1956 Lancia Appia Sport</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_abarth.html">1957 Abarth 750 Coupé Vignale</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_500.html">1957 Vignale 500 Spider</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1957 Lancia Appia Convertibile Vignale</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat.html#Coup%C3%A9%20Printemps">1957 Fiat 1100 "Coupé Printemps"</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_nardi.html">1958 Nardi ( Derivata Lancia ) Raggio Azzurro II</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_500.html">1958 Vignale Minnie</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_standard.html">1958 Standard Vanguard Vignale</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_triumph.html">1958 Triumph TR3 one-off</a></li>
+<li>1958 Triumph Herald Prototype</li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_riviera.html">1959 Fiat 600 Vignalina</a></li>
+<li><a href="http://hem.passagen.se/freedman/vignale/vignaleind.htm">1959 Fiat 600 Vignale Rendez Vous</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_bmw.html">1959 BMW 507 one-off by Vignale/Michelotti</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_triumph.html">1959 Triumph Italia</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1959 Lancia Flaminia Spyder</a></li>
+</ul>
+<h3>1960s</h3>
+<ul>
+<li><a href="https://www.vignalegamine.net/vignale_alfa_romeo.html">1960 Alfa Romeo 2000cc Coupe</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_touring_coupe.html">1960 Fiat Vignale 2+2 Touring Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1960 Maserati 3500GT Vignale Spider</a></li>
+<li>1960 Triumph Spitfire Prototype</li>
+<li><a href="https://www.vignalegamine.net/vignale_usa.html">1961 Vignale Corvette one-off</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_riviera.html">1961 Neckar- Jagst 770 Rivièra</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">1962 Lancia Flavia Convertibile</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_riviera.html">1962 Vignale Fiat Rivièra</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1962 Maserati Sebring</a></li>
+<li>1963 Fiat 1500 Glenn</li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1964 Maserati 3500GT one-off</a></li>
+<li>1964 Fiat 750 Spider</li>
+<li><a href="https://www.vignalegamine.net/vignale_daihatsu.html">1964 Daihatsu Sport Cabriolet Prototype</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_fiat_850_coupe_sportivo.html">1965 Fiat 850 Coupè Sportivo</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html#Maserati%205-liter%20Coup%C3%A9">1965 Maserati 5-liter Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_kadett_coupe.html">1965 Vignale Opel Kadett Coupé</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_jensen.html">1965 Jensen Nova</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_jensen.html">1966 Jensen Interceptor</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_daihatsu.html">1965 Daihatsu Compagno</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1966 Maserati Mexico</a></li>
+<li><a href="http://www.amxfiles.com/amc/proto.html#amx_proto">1966 American Motors AMX</a></li>
+<li><a href="https://www.vignalegamine.net/cars_carrozzeria_vignale.html#1500">1966 Vignale 1500</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_argentina.html">1966 Fiat 1500 Coupé [Argentina]</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_argentina.html">1966 Fiat 800 Spider [Argentina]</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_argentina.html">1966 Fiat 800 Coupé [Argentina]</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_125_samantha.html">1967 Vignale 125/Samantha</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_124_eveline.html">1967 Vignale 124/Eveline</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_850.html">19?? Vignale 850 Cabrio</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_850.html">19?? Vignale 850 Coupé 2+2</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_850.html">19?? Vignale 850 Coupé 4</a></li>
+<li><a href="index.html">1967 Vignale Gamine</a></li>
+<li>1968 Daihatsu Light Van</li>
+<li>1968 Matra Sports M530 A</li>
+<li><a href="https://www.vignalegamine.net/vignale_ferrari.html#Stationwagon">1968 Ferrari 330 Vignale Stationwagon</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_tatra.html">1968 Tatra T613 Prototype</a></li>
+<li>1969 Maserati Ghibli</li>
+<li><a href="https://www.vignalegamine.net/vignale_maserati.html">1969 Maserati Indy 4.7</a></li>
+<li><a href="https://www.vignalegamine.net/vignale_lancia.html">19?? Lancia Fulvia Coupé</a></li>
+<li><a href="https://en.wikipedia.org/wiki/De_Tomaso_Pantera">1969 DeTomaso Pantera</a></li>
+<li>19?? Aston Martin DB4 Vignale Coupé</li>
+<li>19?? Packard Vignale Convertible</li>
+</ul>
+      </div>
+      <div class="note-box" data-i18n-html data-i18n="cr_note">Spotted a missing model, or a broken link? <a href="mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale">Mail us</a> &mdash; we&rsquo;d love to add it.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised August 2026.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var GAMINE_CREATIONS_LIST = "<h3>1940s</h3>\n<ul>\n<li><a href=\"https://www.vignalegamine.net/vignale_cisitalia_coupe.html\">1946 Cisitialia 202 CMM</a></li>\n<li>1947 Fiat 1100 Spider</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat.html\">1947 Fiat 1500 Cabriolet</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_cisitalia_coupe.html\">1948 Cisitalia 202 SC</a></li>\n<li>1949 Fiat 1100 Coupé</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1949 Lancia Aprilia Coupé</a></li>\n</ul>\n<h3>1950s</h3>\n<ul>\n<li><a href=\"https://www.vignalegamine.net/vignale_cisitalia_coupe.html\">1950 Cisitalia Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_cisitalia_coupe.html\">1950 Cisitalia 202B</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1950 Ferrari 166 Inter Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1950 Ferrari 166 MM Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1950 Ferrari 195 Inter Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1950 Lancia Aurelia B50 Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 212 Inter Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 212 Inter Vignale Cabrio</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Cabrio</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1951 Ferrari 340 Amerika Vignale Berlinetta</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1951 Lancia Aurelia B50 Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_abarth.html\">1951 Abarth 205 A Berlinetta GT</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_osca.html\">1951 OSCA Mt4</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_alfa_romeo.html\">1951 Alfa Romeo 412 Vignale</a></li>\n<li><a href=\"http://www.fiatabarth.com/eng/storia/pag2.htm\">1952 Abarth 205 Vignale</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_cisitalia_coupe.html\">1952 Cisitalia 202C Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 225 S Vignale Berlinetta</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 225 S Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 250 S Vignale Berlinetta</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 340 Mexico Vignale Berlinetta</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 340 Mexico Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 340 America Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 340 America Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1952 Ferrari 342 America Vignale Cabrio</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1952 Lancia Aurelia B52 Coupé</a></li>\n<li>1952 Maserati A6G</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_osca.html\">1952 OSCA Mt4</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 166 MM Vignale Berlinetta</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 166 MM Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 250 Europa Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 250 MM Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 340 MM Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 375 America Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 625 TF Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 625 TF Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 250 Europa GT Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 375 America Vignale Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html\">1953 Ferrari 375 America Vignale Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1953 Maserati A6GCS Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_mg_td.html\">1953 MG TD</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_volvo.html\">1953 Volvo Elisabeth I + II</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_cunningham.html\">1953 Cunningham C-3 Vignale Competition</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_1100.html\">1953 Vignale Fiat 1100</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_usa.html\">1954 Cunningham Continental C3 Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_8v.html\">1954 Fiat 8V Vignale</a></li>\n<li>1955 Fiat 8V Demon Rouge</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_usa.html\">1955 Cadillac Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_nardi.html\">1955 Nardi ( Derivata Lancia ) Raggio Azzurro I</a></li>\n<li>1956 Desireé 1100</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_600.html\">1956 Fiat 600 Vignale quattro posti</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1956 Lancia Appia Sport</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_abarth.html\">1957 Abarth 750 Coupé Vignale</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_500.html\">1957 Vignale 500 Spider</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1957 Lancia Appia Convertibile Vignale</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat.html#Coup%C3%A9%20Printemps\">1957 Fiat 1100 \"Coupé Printemps\"</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_nardi.html\">1958 Nardi ( Derivata Lancia ) Raggio Azzurro II</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_500.html\">1958 Vignale Minnie</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_standard.html\">1958 Standard Vanguard Vignale</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_triumph.html\">1958 Triumph TR3 one-off</a></li>\n<li>1958 Triumph Herald Prototype</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_riviera.html\">1959 Fiat 600 Vignalina</a></li>\n<li><a href=\"http://hem.passagen.se/freedman/vignale/vignaleind.htm\">1959 Fiat 600 Vignale Rendez Vous</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_bmw.html\">1959 BMW 507 one-off by Vignale/Michelotti</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_triumph.html\">1959 Triumph Italia</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1959 Lancia Flaminia Spyder</a></li>\n</ul>\n<h3>1960s</h3>\n<ul>\n<li><a href=\"https://www.vignalegamine.net/vignale_alfa_romeo.html\">1960 Alfa Romeo 2000cc Coupe</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_touring_coupe.html\">1960 Fiat Vignale 2+2 Touring Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1960 Maserati 3500GT Vignale Spider</a></li>\n<li>1960 Triumph Spitfire Prototype</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_usa.html\">1961 Vignale Corvette one-off</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_riviera.html\">1961 Neckar- Jagst 770 Rivièra</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">1962 Lancia Flavia Convertibile</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_riviera.html\">1962 Vignale Fiat Rivièra</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1962 Maserati Sebring</a></li>\n<li>1963 Fiat 1500 Glenn</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1964 Maserati 3500GT one-off</a></li>\n<li>1964 Fiat 750 Spider</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_daihatsu.html\">1964 Daihatsu Sport Cabriolet Prototype</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_fiat_850_coupe_sportivo.html\">1965 Fiat 850 Coupè Sportivo</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html#Maserati%205-liter%20Coup%C3%A9\">1965 Maserati 5-liter Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_kadett_coupe.html\">1965 Vignale Opel Kadett Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_jensen.html\">1965 Jensen Nova</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_jensen.html\">1966 Jensen Interceptor</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_daihatsu.html\">1965 Daihatsu Compagno</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1966 Maserati Mexico</a></li>\n<li><a href=\"http://www.amxfiles.com/amc/proto.html#amx_proto\">1966 American Motors AMX</a></li>\n<li><a href=\"https://www.vignalegamine.net/cars_carrozzeria_vignale.html#1500\">1966 Vignale 1500</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_argentina.html\">1966 Fiat 1500 Coupé [Argentina]</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_argentina.html\">1966 Fiat 800 Spider [Argentina]</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_argentina.html\">1966 Fiat 800 Coupé [Argentina]</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_125_samantha.html\">1967 Vignale 125/Samantha</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_124_eveline.html\">1967 Vignale 124/Eveline</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_850.html\">19?? Vignale 850 Cabrio</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_850.html\">19?? Vignale 850 Coupé 2+2</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_850.html\">19?? Vignale 850 Coupé 4</a></li>\n<li><a href=\"index.html\">1967 Vignale Gamine</a></li>\n<li>1968 Daihatsu Light Van</li>\n<li>1968 Matra Sports M530 A</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_ferrari.html#Stationwagon\">1968 Ferrari 330 Vignale Stationwagon</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_tatra.html\">1968 Tatra T613 Prototype</a></li>\n<li>1969 Maserati Ghibli</li>\n<li><a href=\"https://www.vignalegamine.net/vignale_maserati.html\">1969 Maserati Indy 4.7</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_lancia.html\">19?? Lancia Fulvia Coupé</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/De_Tomaso_Pantera\">1969 DeTomaso Pantera</a></li>\n<li>19?? Aston Martin DB4 Vignale Coupé</li>\n<li>19?? Packard Vignale Convertible</li>\n</ul>";
+
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised August 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Cars built and designed",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "An overview of the cars built and designed by Carrozzeria Vignale, from the 1946 Cisitalia 202 CMM to the 1969 DeTomaso Pantera — including the Gamine.",
+        "cr_intro": "Most links below lead to the relevant model page on vignalegamine.net, the original Vignale Gamine site this list comes from. A few links point elsewhere on the web; those pages are outside our control and may occasionally be unavailable.",
+        "cr_note": "Spotted a missing model, or a broken link? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Mail us</a> — we’d love to add it.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "A chronological overview of the cars built and designed by Carrozzeria Vignale, 1946-1969, with links to each model.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt augustus 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Gebouwde en ontworpen auto's",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "Een overzicht van de auto's die Carrozzeria Vignale bouwde en ontwierp, van de Cisitalia 202 CMM uit 1946 tot de DeTomaso Pantera uit 1969 — inclusief de Gamine.",
+        "cr_intro": "De meeste links hieronder gaan naar de bijbehorende modelpagina op vignalegamine.net, de oorspronkelijke Vignale Gamine-site waar deze lijst vandaan komt. Een paar links gaan naar elders op het web; die pagina's vallen buiten onze controle en kunnen af en toe niet beschikbaar zijn.",
+        "cr_note": "Ontbreekt er een model, of is een link stuk? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Mail ons</a> — we voegen het graag toe.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "Een chronologisch overzicht van de auto's die Carrozzeria Vignale bouwde en ontwierp, 1946-1969, met links naar elk model.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato ad agosto 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Auto costruite e disegnate",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "Una panoramica delle vetture costruite e disegnate dalla Carrozzeria Vignale, dalla Cisitalia 202 CMM del 1946 alla DeTomaso Pantera del 1969 — Gamine inclusa.",
+        "cr_intro": "La maggior parte dei link qui sotto porta alla relativa pagina del modello su vignalegamine.net, il sito originale della Vignale Gamine da cui proviene questo elenco. Alcuni link puntano altrove sul web; queste pagine non sono sotto il nostro controllo e potrebbero occasionalmente non essere disponibili.",
+        "cr_note": "Manca un modello, o un link non funziona? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Scrivici</a> — lo aggiungeremo volentieri.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "Una panoramica cronologica delle vetture costruite e disegnate dalla Carrozzeria Vignale, 1946-1969, con link a ogni modello.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    },
+    "es": {
+        "skip_link": "Ir al contenido",
+        "lang_switch_label": "Idioma",
+        "nav_aria_toggle": "Abrir menú",
+        "nav_aria_main": "Navegación principal",
+        "nav_home": "Inicio",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Historias",
+        "nav_data": "Datos",
+        "nav_marketing": "Marketing",
+        "nav_links": "Enlaces",
+        "nav_new": "Novedades",
+        "footer_credit": "Sitio creado y mantenido por Martin Wildeboer. Actualizado en agosto de 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Coches construidos y diseñados",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "Un resumen de los coches construidos y diseñados por Carrozzeria Vignale, desde el Cisitalia 202 CMM de 1946 hasta el DeTomaso Pantera de 1969, incluido el Gamine.",
+        "cr_intro": "La mayoría de los enlaces siguientes llevan a la página del modelo correspondiente en vignalegamine.net, el sitio original de Vignale Gamine del que procede esta lista. Algunos enlaces apuntan a otros lugares de la web; esas páginas están fuera de nuestro control y pueden no estar disponibles ocasionalmente.",
+        "cr_note": "¿Falta algún modelo, o hay un enlace roto? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Escríbenos</a> — nos encantará añadirlo.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "Un resumen cronológico de los coches construidos y diseñados por Carrozzeria Vignale, 1946-1969, con enlaces a cada modelo.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    },
+    "fr": {
+        "skip_link": "Aller au contenu",
+        "lang_switch_label": "Langue",
+        "nav_aria_toggle": "Ouvrir le menu",
+        "nav_aria_main": "Navigation principale",
+        "nav_home": "Accueil",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registre",
+        "nav_stories": "Histoires",
+        "nav_data": "Données",
+        "nav_marketing": "Marketing",
+        "nav_links": "Liens",
+        "nav_new": "Nouveautés",
+        "footer_credit": "Site créé et maintenu par Martin Wildeboer. Mis à jour en août 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Voitures construites et dessinées",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "Un aperçu des voitures construites et dessinées par Carrozzeria Vignale, de la Cisitalia 202 CMM de 1946 à la DeTomaso Pantera de 1969, Gamine incluse.",
+        "cr_intro": "La plupart des liens ci-dessous mènent à la page du modèle correspondant sur vignalegamine.net, le site original de la Vignale Gamine dont est issue cette liste. Quelques liens pointent ailleurs sur le web ; ces pages échappent à notre contrôle et peuvent occasionnellement être indisponibles.",
+        "cr_note": "Un modèle manque, ou un lien est cassé ? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Écrivez-nous</a> — nous l'ajouterons avec plaisir.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "Un aperçu chronologique des voitures construites et dessinées par Carrozzeria Vignale, 1946-1969, avec des liens vers chaque modèle.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    },
+    "de": {
+        "skip_link": "Zum Inhalt springen",
+        "lang_switch_label": "Sprache",
+        "nav_aria_toggle": "Menü öffnen",
+        "nav_aria_main": "Hauptnavigation",
+        "nav_home": "Start",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Geschichten",
+        "nav_data": "Daten",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Neues",
+        "footer_credit": "Website erstellt und betreut von Martin Wildeboer. Aktualisiert im August 2026.",
+        "footer_webmaster": "Webmaster",
+        "cr_eyebrow": "Carrozzeria Vignale · Gebaute und entworfene Autos",
+        "cr_h1": "Vignale Creations",
+        "cr_lead": "Ein Überblick über die von Carrozzeria Vignale gebauten und entworfenen Autos, vom Cisitalia 202 CMM (1946) bis zum DeTomaso Pantera (1969) — einschließlich der Gamine.",
+        "cr_intro": "Die meisten Links unten führen zur passenden Modellseite auf vignalegamine.net, der ursprünglichen Vignale-Gamine-Website, von der diese Liste stammt. Einige Links führen anderswohin im Web; diese Seiten liegen außerhalb unserer Kontrolle und können gelegentlich nicht erreichbar sein.",
+        "cr_note": "Fehlt ein Modell, oder ist ein Link defekt? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Schreiben Sie uns</a> — wir ergänzen es gerne.",
+        "title": "Vignale Creations — Vignale Gamine",
+        "meta_description": "Ein chronologischer Überblick über die von Carrozzeria Vignale gebauten und entworfenen Autos, 1946-1969, mit Links zu jedem Modell.",
+        "cr_list": GAMINE_CREATIONS_LIST
+    }
+  };
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>
