@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignale Fiat 1100 — Vignale Gamine</title>
+<meta name="description" content="The 1953 Vignale Fiat 1100, its owner's restoration story and the original Michelotti sketches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+  header.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 100%; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+  .sub-hero .badge-emblem {
+    display: block;
+    width: min(420px, 70vw);
+    height: auto;
+    margin: 18px 0 4px;
+  }
+
+  .prose { max-width: 100%; }
+  .prose p, .prose ul, .prose ol { max-width: 580px; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+
+  /* Data table (production numbers, specs) */
+  .table-scroll { overflow-x: auto; margin: 8px 0 32px; }
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 420px;
+  }
+  table.data-table th, table.data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+  table.data-table th {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    white-space: nowrap;
+  }
+  table.data-table td:last-child, table.data-table th:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.data-table tbody tr:hover td { background: var(--surface); }
+
+  .credit-line {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .model-figure { margin: 0 0 32px; }
+  .model-figure figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 2px 0;
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="f11_eyebrow">Carrozzeria Vignale &middot; Fiat</p>
+      <h1>1953 Vignale Fiat 1100</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap prose">
+      <p class="credit-line" data-i18n="f11_sketches">Sketches by Michelotti</p>
+      <div class="book-spread"><figure class="plate" style="max-width:249px;"><img src="index2_bestanden/vignale_fiat_1100_1953_2.jpg" width="249" height="171" alt="1953 Vignale Fiat 1100"></figure><figure class="plate" style="max-width:267px;"><img src="index2_bestanden/michellotti_vignale_fiat_1100_drawing2.jpg" width="267" height="170" alt="Michelotti sketch"></figure></div>
+      <div class="book-spread"><figure class="plate" style="max-width:311px;"><img src="index2_bestanden/michellotti_vignale_fiat_1100_drawing1.jpg" width="311" height="274" alt="Michelotti sketch"></figure><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/michellotti_vignale_fiat_1100_drawing3.jpg" width="300" height="164" alt="Michelotti sketch"></figure></div>
+      <p data-i18n="f11_owned_by" class="credit-line">Owned by: Mike Malone</p>
+      <p data-i18n="f11_p1">In 1984, I bought a Vignale Fiat. The car was last driven in 1967, and according to the people I bought it from, it was being driven from California to Seattle, when it blew a piston while passing through Salem, Oregon. It has never been restored since the engine problem in 1967. The person who owned it when the piston blew claimed to be in the movie industry, and said the car had been in a movie. The elderly people I bought the car from could not remember clearly, but they thought the car had been in either an Alan Ladd or Kirk Douglas movie.</p>
+      <figure class="plate" style="max-width:300px;"><img src="index2_bestanden/vignale_fiat_1100_1953.jpg" width="300" height="84" alt="1953 Vignale Fiat 1100 — firewall plate"></figure>
+      <p data-i18n="f11_p2">I did some research after buying the car in 1984, and it from the fire wall plate, my research indicated that the car was made in 1953. That&rsquo;s about all I know about it, and I have kept it in storage since I bought it in 1984. Also, it appears that the original color of the car was a dark blue as evidenced by the color under the peeling red paint, and inside the door openings.</p>
+      <figure class="plate" style="max-width:350px;"><img src="index2_bestanden/vignale_fiat_1100_1953_3.jpg" width="350" height="238" alt="1953 Vignale Fiat 1100"></figure>
+      <h3 data-i18n="f11_sketches_h3">Sketches by Michelotti</h3>
+      <p data-i18n="f11_p3">Following note regarding the drawings was made by Edgardo Michelotti, Giovanni&rsquo;s son, when he came over to England with his photographer Brambillo. Whilst taking a batch of photos of the sketches he mentioned that although many of the drawings were unsigned they were definitely done by his father and not another&hellip; often when completing a sketch he would simply draw a circle around it.</p>
+      <p data-i18n="f11_p4">One of them has the emblem &ldquo;FG&rdquo;, but the significance remains unknown.</p>
+      <p data-i18n="f11_p5">Eventually, Mike would like to totally restore the car to its original condition, but he does not want to begin until he has fully researched the car. It is his desire to hear from anyone who can give information on this car and its history.</p>
+      <p class="credit-line" data-i18n="f11_credit">Mike Malone</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised August 2026.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised August 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Sketches by Michelotti",
+        "f11_owned_by": "Owned by: Mike Malone",
+        "f11_p1": "In 1984, I bought a Vignale Fiat. The car was last driven in 1967, and according to the people I bought it from, it was being driven from California to Seattle, when it blew a piston while passing through Salem, Oregon. It has never been restored since the engine problem in 1967. The person who owned it when the piston blew claimed to be in the movie industry, and said the car had been in a movie. The elderly people I bought the car from could not remember clearly, but they thought the car had been in either an Alan Ladd or Kirk Douglas movie.",
+        "f11_p2": "I did some research after buying the car in 1984, and it from the fire wall plate, my research indicated that the car was made in 1953. That's about all I know about it, and I have kept it in storage since I bought it in 1984. Also, it appears that the original color of the car was a dark blue as evidenced by the color under the peeling red paint, and inside the door openings.",
+        "f11_sketches_h3": "Sketches by Michelotti",
+        "f11_p3": "Following note regarding the drawings was made by Edgardo Michelotti, Giovanni's son, when he came over to England with his photographer Brambillo. Whilst taking a batch of photos of the sketches he mentioned that although many of the drawings were unsigned they were definitely done by his father and not another… often when completing a sketch he would simply draw a circle around it.",
+        "f11_p4": "One of them has the emblem “FG”, but the significance remains unknown.",
+        "f11_p5": "Eventually, Mike would like to totally restore the car to its original condition, but he does not want to begin until he has fully researched the car. It is his desire to hear from anyone who can give information on this car and its history.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "The 1953 Vignale Fiat 1100, its owner's restoration story and the original Michelotti sketches."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt augustus 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Schetsen door Michelotti",
+        "f11_owned_by": "Eigenaar: Mike Malone",
+        "f11_p1": "In 1984 kocht ik een Vignale Fiat. De auto had voor het laatst gereden in 1967 en werd, volgens de mensen bij wie ik hem kocht, van Californië naar Seattle gereden toen er ter hoogte van Salem, Oregon, een zuiger doorsloeg. Sindsdien is de auto nooit meer gerestaureerd. De eigenaar op het moment van de motorschade beweerde in de filmindustrie te werken en zei dat de auto in een film had gezeten. De oudere mensen bij wie ik de auto kocht konden het zich niet precies herinneren, maar dachten dat het een film met Alan Ladd of Kirk Douglas was geweest.",
+        "f11_p2": "Na de aankoop in 1984 heb ik wat onderzoek gedaan; op basis van het typeplaatje bij het brandschot bleek de auto uit 1953 te stammen. Meer weet ik er niet van, en ik heb hem sinds 1984 in opslag gehouden. Ook blijkt de oorspronkelijke kleur donkerblauw te zijn geweest, te zien aan de kleur onder de afbladderende rode lak en in de deuropeningen.",
+        "f11_sketches_h3": "Schetsen door Michelotti",
+        "f11_p3": "Onderstaande notitie over de tekeningen is gemaakt door Edgardo Michelotti, de zoon van Giovanni, toen hij met zijn fotograaf Brambillo naar Engeland kwam. Terwijl hij een serie foto's van de schetsen maakte, merkte hij op dat veel tekeningen weliswaar ongesigneerd waren, maar wel degelijk door zijn vader gemaakt waren en niet door iemand anders... vaak trok hij bij het afronden van een schets simpelweg een cirkel eromheen.",
+        "f11_p4": "Eén ervan draagt het embleem “FG”, maar de betekenis daarvan blijft onbekend.",
+        "f11_p5": "Uiteindelijk wil Mike de auto volledig in oorspronkelijke staat restaureren, maar hij wil daar pas mee beginnen als hij de auto grondig heeft uitgezocht. Hij hoort graag van iedereen die informatie heeft over deze auto en zijn geschiedenis.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "De 1953 Vignale Fiat 1100, het restauratieverhaal van de eigenaar en de originele Michelotti-schetsen."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato ad agosto 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Schizzi di Michelotti",
+        "f11_owned_by": "Proprietario: Mike Malone",
+        "f11_p1": "Nel 1984 ho comprato una Vignale Fiat. L'auto era stata guidata l'ultima volta nel 1967 e, secondo le persone da cui l'ho acquistata, stava viaggiando dalla California a Seattle quando, all'altezza di Salem, in Oregon, si ruppe un pistone. Da allora, a causa di quel problema al motore del 1967, non è mai stata restaurata. Il proprietario al momento del guasto sosteneva di lavorare nell'industria cinematografica e disse che l'auto era apparsa in un film. Le persone anziane da cui l'ho comprata non ricordavano bene, ma pensavano si trattasse di un film con Alan Ladd o Kirk Douglas.",
+        "f11_p2": "Dopo l'acquisto nel 1984 ho fatto qualche ricerca; dalla targhetta sul paratia risultava che l'auto fu costruita nel 1953. Questo è praticamente tutto ciò che so, e l'ho tenuta in rimessaggio da quando l'ho comprata nel 1984. Sembra inoltre che il colore originale fosse blu scuro, a giudicare dal colore sotto la vernice rossa scrostata e all'interno delle aperture delle portiere.",
+        "f11_sketches_h3": "Schizzi di Michelotti",
+        "f11_p3": "La seguente nota sui disegni è stata scritta da Edgardo Michelotti, figlio di Giovanni, quando venne in Inghilterra con il suo fotografo Brambillo. Mentre scattava una serie di foto degli schizzi, fece notare che, sebbene molti disegni non fossero firmati, erano sicuramente opera di suo padre e non di altri... spesso, terminando uno schizzo, si limitava a tracciarvi intorno un cerchio.",
+        "f11_p4": "Uno di essi reca l'emblema “FG”, il cui significato resta tuttavia sconosciuto.",
+        "f11_p5": "Alla fine Mike vorrebbe restaurare completamente l'auto riportandola alle condizioni originali, ma non vuole iniziare finché non avrà completato le ricerche sulla vettura. Il suo desiderio è ricevere notizie da chiunque possa fornire informazioni su questa auto e sulla sua storia.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "La Vignale Fiat 1100 del 1953, la storia del restauro del proprietario e gli schizzi originali di Michelotti."
+    },
+    "es": {
+        "skip_link": "Ir al contenido",
+        "lang_switch_label": "Idioma",
+        "nav_aria_toggle": "Abrir menú",
+        "nav_aria_main": "Navegación principal",
+        "nav_home": "Inicio",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Historias",
+        "nav_data": "Datos",
+        "nav_marketing": "Marketing",
+        "nav_links": "Enlaces",
+        "nav_new": "Novedades",
+        "footer_credit": "Sitio creado y mantenido por Martin Wildeboer. Actualizado en agosto de 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Bocetos de Michelotti",
+        "f11_owned_by": "Propietario: Mike Malone",
+        "f11_p1": "En 1984 compré un Vignale Fiat. El coche había circulado por última vez en 1967 y, según las personas a quienes se lo compré, iba de California a Seattle cuando reventó un pistón a la altura de Salem, Oregón. Desde ese fallo de motor en 1967 nunca ha sido restaurado. La persona que lo tenía cuando reventó el pistón decía trabajar en la industria del cine y afirmaba que el coche había salido en una película. Las personas mayores a quienes se lo compré no lo recordaban con claridad, pero creían que había sido una película de Alan Ladd o de Kirk Douglas.",
+        "f11_p2": "Tras comprarlo en 1984 hice algunas averiguaciones; según la placa del mamparo, mi investigación indicaba que el coche se fabricó en 1953. Eso es prácticamente todo lo que sé, y lo he mantenido guardado desde que lo compré en 1984. Además, parece que el color original era azul oscuro, a juzgar por el color que se ve bajo la pintura roja descascarillada y en el interior de los huecos de las puertas.",
+        "f11_sketches_h3": "Bocetos de Michelotti",
+        "f11_p3": "La siguiente nota sobre los dibujos la escribió Edgardo Michelotti, hijo de Giovanni, cuando vino a Inglaterra con su fotógrafo Brambillo. Mientras fotografiaba los bocetos, comentó que, aunque muchos dibujos no estaban firmados, eran sin duda obra de su padre y no de otra persona... a menudo, al terminar un boceto, simplemente dibujaba un círculo alrededor.",
+        "f11_p4": "Uno de ellos lleva el emblema “FG”, aunque su significado sigue siendo desconocido.",
+        "f11_p5": "Al final, Mike querría restaurar por completo el coche a su estado original, pero no quiere empezar hasta haber investigado a fondo el vehículo. Le gustaría saber de cualquiera que pueda aportar información sobre este coche y su historia.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "El Vignale Fiat 1100 de 1953, la historia de restauración de su propietario y los bocetos originales de Michelotti."
+    },
+    "fr": {
+        "skip_link": "Aller au contenu",
+        "lang_switch_label": "Langue",
+        "nav_aria_toggle": "Ouvrir le menu",
+        "nav_aria_main": "Navigation principale",
+        "nav_home": "Accueil",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registre",
+        "nav_stories": "Histoires",
+        "nav_data": "Données",
+        "nav_marketing": "Marketing",
+        "nav_links": "Liens",
+        "nav_new": "Nouveautés",
+        "footer_credit": "Site créé et maintenu par Martin Wildeboer. Mis à jour en août 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Croquis de Michelotti",
+        "f11_owned_by": "Propriétaire : Mike Malone",
+        "f11_p1": "En 1984, j'ai acheté une Vignale Fiat. La voiture avait roulé pour la dernière fois en 1967 et, selon les personnes à qui je l'ai achetée, elle allait de Californie à Seattle lorsqu'un piston a lâché près de Salem, dans l'Oregon. Elle n'a jamais été restaurée depuis ce problème moteur de 1967. La personne qui la possédait au moment de la panne prétendait travailler dans l'industrie du cinéma et affirmait que la voiture avait figuré dans un film. Les personnes âgées à qui je l'ai achetée ne s'en souvenaient pas clairement, mais pensaient qu'il s'agissait d'un film avec Alan Ladd ou Kirk Douglas.",
+        "f11_p2": "Après l'achat en 1984, j'ai fait quelques recherches ; d'après la plaque du pare-feu, mes recherches indiquaient que la voiture avait été fabriquée en 1953. C'est à peu près tout ce que je sais, et je l'ai gardée entreposée depuis 1984. Il semble en outre que la couleur d'origine était un bleu foncé, comme en témoigne la couleur visible sous la peinture rouge écaillée et à l'intérieur des ouvertures de portières.",
+        "f11_sketches_h3": "Croquis de Michelotti",
+        "f11_p3": "La note suivante concernant les dessins a été rédigée par Edgardo Michelotti, le fils de Giovanni, lorsqu'il est venu en Angleterre avec son photographe Brambillo. En prenant une série de photos des croquis, il a fait remarquer que, bien que de nombreux dessins ne soient pas signés, ils étaient bien l'œuvre de son père et non d'un autre... souvent, en terminant un croquis, il se contentait de tracer un cercle autour.",
+        "f11_p4": "L'un d'eux porte l'emblème « FG », dont la signification reste toutefois inconnue.",
+        "f11_p5": "À terme, Mike aimerait restaurer complètement la voiture dans son état d'origine, mais il ne veut commencer qu'une fois ses recherches sur la voiture achevées. Il souhaite avoir des nouvelles de toute personne pouvant fournir des informations sur cette voiture et son histoire.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "La Vignale Fiat 1100 de 1953, l'histoire de restauration de son propriétaire et les croquis originaux de Michelotti."
+    },
+    "de": {
+        "skip_link": "Zum Inhalt springen",
+        "lang_switch_label": "Sprache",
+        "nav_aria_toggle": "Menü öffnen",
+        "nav_aria_main": "Hauptnavigation",
+        "nav_home": "Start",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Geschichten",
+        "nav_data": "Daten",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Neues",
+        "footer_credit": "Website erstellt und betreut von Martin Wildeboer. Aktualisiert im August 2026.",
+        "footer_webmaster": "Webmaster",
+        "f11_eyebrow": "Carrozzeria Vignale · Fiat",
+        "f11_sketches": "Skizzen von Michelotti",
+        "f11_owned_by": "Besitzer: Mike Malone",
+        "f11_p1": "1984 kaufte ich einen Vignale Fiat. Der Wagen war zuletzt 1967 gefahren worden und wurde, laut den Leuten, von denen ich ihn kaufte, gerade von Kalifornien nach Seattle gefahren, als bei Salem, Oregon, ein Kolben durchschlug. Seit diesem Motorschaden 1967 wurde er nie restauriert. Der Besitzer zum Zeitpunkt des Kolbenschadens gab an, in der Filmindustrie zu arbeiten, und sagte, der Wagen sei in einem Film zu sehen gewesen. Die älteren Leute, von denen ich den Wagen kaufte, konnten sich nicht mehr genau erinnern, glaubten aber, es sei ein Film mit Alan Ladd oder Kirk Douglas gewesen.",
+        "f11_p2": "Nach dem Kauf 1984 habe ich recherchiert; laut dem Typenschild an der Spritzwand stammte der Wagen den Recherchen zufolge aus dem Jahr 1953. Mehr weiß ich nicht darüber, und ich habe ihn seit dem Kauf 1984 eingelagert. Außerdem scheint die ursprüngliche Farbe Dunkelblau gewesen zu sein, erkennbar an der Farbe unter dem abblätternden roten Lack und in den Türöffnungen.",
+        "f11_sketches_h3": "Skizzen von Michelotti",
+        "f11_p3": "Die folgende Notiz zu den Zeichnungen stammt von Edgardo Michelotti, dem Sohn von Giovanni, als er mit seinem Fotografen Brambillo nach England kam. Beim Fotografieren der Skizzen bemerkte er, dass viele der Zeichnungen zwar unsigniert, aber definitiv von seinem Vater und nicht von jemand anderem stammten... oft zog er beim Abschluss einer Skizze einfach einen Kreis darum.",
+        "f11_p4": "Eine davon trägt das Emblem „FG“, dessen Bedeutung jedoch unbekannt bleibt.",
+        "f11_p5": "Letztlich möchte Mike den Wagen vollständig in seinen Originalzustand zurückversetzen, will damit aber erst beginnen, wenn er den Wagen gründlich erforscht hat. Er würde sich freuen, von jedem zu hören, der Informationen zu diesem Wagen und seiner Geschichte hat.",
+        "f11_credit": "Mike Malone",
+        "title": "Vignale Fiat 1100 — Vignale Gamine",
+        "meta_description": "Der Vignale Fiat 1100 von 1953, die Restaurierungsgeschichte des Besitzers und die originalen Michelotti-Skizzen."
+    }
+  };
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>
