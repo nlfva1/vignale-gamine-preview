@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vignale Creations &mdash; Vignale Gamine</title>
-<meta name="description" content="A chronological overview of the cars built and designed by Carrozzeria Vignale, 1946-1969, with links to each model.">
+<title>Vignale Volvo — Vignale Gamine</title>
+<meta name="description" content="The Volvo Elisabeth I and Elisabeth II, two one-off Volvos built by Vignale in the 1950s.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -543,6 +543,8 @@
   }
 
   .prose { max-width: 100%; }
+  .wrap.prose { max-width: 1080px; }
+  .prose p, .prose ul, .prose ol { max-width: 580px; }
   .prose p { font-size: 1.02rem; margin: 0 0 16px; }
   .prose h3 {
     font-family: var(--font-display);
@@ -681,6 +683,51 @@
     border: 1.5px solid var(--accent);
     color: var(--accent);
   }
+
+  /* Data table (production numbers, specs) */
+  .table-scroll { overflow-x: auto; margin: 8px 0 32px; }
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 420px;
+  }
+  table.data-table th, table.data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+  table.data-table th {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    white-space: nowrap;
+  }
+  table.data-table td:last-child, table.data-table th:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.data-table tbody tr:hover td { background: var(--surface); }
+
+  .credit-line {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .model-figure { margin: 0 0 32px; }
+  .model-figure figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 2px 0;
+  }
 </style>
 </head>
 <body>
@@ -727,142 +774,27 @@
 
   <div class="sub-hero">
     <div class="wrap sub-hero-inner">
-      <p class="eyebrow" data-i18n="cr_eyebrow">Carrozzeria Vignale &middot; Cars built and designed</p>
-      <h1 data-i18n="cr_h1">Vignale Creations</h1>
-      <p class="lead" data-i18n="cr_lead">An overview of the cars built and designed by Carrozzeria Vignale, from the 1946 Cisitalia 202 CMM to the 1969 DeTomaso Pantera &mdash; including the Gamine.</p>
-      <img class="badge-emblem" src="index2_bestanden/vignale_body-by-vignale-badge.png" width="900" height="165" alt="Body by Vignale, Italy">
+      <p class="eyebrow" data-i18n="vol_eyebrow">Carrozzeria Vignale &middot; Volvo</p>
+      <h1 data-i18n="vol_h1">Volvo by Vignale</h1>
     </div>
   </div>
-
   <section>
-    <div class="wrap">
-      <p class="prose" data-i18n="cr_intro">Most links below lead to the relevant model page on vignalegamine.net, the original Vignale Gamine site this list comes from. A few links point elsewhere on the web; those pages are outside our control and may occasionally be unavailable.</p>
-      <div class="directory" data-i18n-html data-i18n="cr_list">
-<h3>1940s</h3>
-<ul>
-<li><a href="vignale_cisitalia_coupe.html">1946 Cisitialia 202 CMM</a></li>
-<li>1947 Fiat 1100 Spider</li>
-<li><a href="vignale_fiat.html">1947 Fiat 1500 Cabriolet</a></li>
-<li><a href="vignale_cisitalia_coupe.html">1948 Cisitalia 202 SC</a></li>
-<li>1949 Fiat 1100 Coupé</li>
-<li><a href="vignale_lancia.html">1949 Lancia Aprilia Coupé</a></li>
-</ul>
-<h3>1950s</h3>
-<ul>
-<li><a href="vignale_cisitalia_coupe.html">1950 Cisitalia Coupé</a></li>
-<li><a href="vignale_cisitalia_coupe.html">1950 Cisitalia 202B</a></li>
-<li><a href="vignale_ferrari.html">1950 Ferrari 166 Inter Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1950 Ferrari 166 MM Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1950 Ferrari 195 Inter Vignale Coupé</a></li>
-<li><a href="vignale_lancia.html">1950 Lancia Aurelia B50 Coupé</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 212 Inter Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 212 Inter Vignale Cabrio</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 212 Export Vignale Cabrio</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 212 Export Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 212 Export Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1951 Ferrari 340 Amerika Vignale Berlinetta</a></li>
-<li><a href="vignale_lancia.html">1951 Lancia Aurelia B50 Coupé</a></li>
-<li><a href="vignale_abarth.html">1951 Abarth 205 A Berlinetta GT</a></li>
-<li><a href="vignale_osca.html">1951 OSCA Mt4</a></li>
-<li><a href="vignale_alfa_romeo.html">1951 Alfa Romeo 412 Vignale</a></li>
-<li><a href="http://www.fiatabarth.com/eng/storia/pag2.htm">1952 Abarth 205 Vignale</a></li>
-<li><a href="vignale_cisitalia_coupe.html">1952 Cisitalia 202C Coupé</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 225 S Vignale Berlinetta</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 225 S Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 250 S Vignale Berlinetta</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 340 Mexico Vignale Berlinetta</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 340 Mexico Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 340 America Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 340 America Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1952 Ferrari 342 America Vignale Cabrio</a></li>
-<li><a href="vignale_lancia.html">1952 Lancia Aurelia B52 Coupé</a></li>
-<li>1952 Maserati A6G</li>
-<li><a href="vignale_osca.html">1952 OSCA Mt4</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 166 MM Vignale Berlinetta</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 166 MM Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 250 Europa Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 250 MM Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 340 MM Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 375 America Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 625 TF Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 625 TF Vignale Spider</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 250 Europa GT Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 375 America Vignale Coupé</a></li>
-<li><a href="vignale_ferrari.html">1953 Ferrari 375 America Vignale Spider</a></li>
-<li><a href="vignale_maserati.html">1953 Maserati A6GCS Spider</a></li>
-<li><a href="vignale_mg_td.html">1953 MG TD</a></li>
-<li><a href="vignale_volvo.html">1953 Volvo Elisabeth I + II</a></li>
-<li><a href="https://www.vignalegamine.net/vignale_cunningham.html">1953 Cunningham C-3 Vignale Competition</a></li>
-<li><a href="vignale_fiat_1100.html">1953 Vignale Fiat 1100</a></li>
-<li><a href="vignale_usa.html">1954 Cunningham Continental C3 Coupé</a></li>
-<li><a href="vignale_fiat_8v.html">1954 Fiat 8V Vignale</a></li>
-<li>1955 Fiat 8V Demon Rouge</li>
-<li><a href="vignale_usa.html">1955 Cadillac Coupé</a></li>
-<li><a href="https://www.vignalegamine.net/vignale_nardi.html">1955 Nardi ( Derivata Lancia ) Raggio Azzurro I</a></li>
-<li>1956 Desireé 1100</li>
-<li><a href="vignale_600.html">1956 Fiat 600 Vignale quattro posti</a></li>
-<li><a href="vignale_lancia.html">1956 Lancia Appia Sport</a></li>
-<li><a href="vignale_abarth.html">1957 Abarth 750 Coupé Vignale</a></li>
-<li><a href="vignale_500.html">1957 Vignale 500 Spider</a></li>
-<li><a href="vignale_lancia.html">1957 Lancia Appia Convertibile Vignale</a></li>
-<li><a href="vignale_fiat.html">1957 Fiat 1100 "Coupé Printemps"</a></li>
-<li><a href="https://www.vignalegamine.net/vignale_nardi.html">1958 Nardi ( Derivata Lancia ) Raggio Azzurro II</a></li>
-<li><a href="vignale_500.html">1958 Vignale Minnie</a></li>
-<li><a href="vignale_standard.html">1958 Standard Vanguard Vignale</a></li>
-<li><a href="vignale_triumph.html">1958 Triumph TR3 one-off</a></li>
-<li>1958 Triumph Herald Prototype</li>
-<li><a href="vignale_fiat_riviera.html">1959 Fiat 600 Vignalina</a></li>
-<li><a href="http://hem.passagen.se/freedman/vignale/vignaleind.htm">1959 Fiat 600 Vignale Rendez Vous</a></li>
-<li><a href="vignale_bmw.html">1959 BMW 507 one-off by Vignale/Michelotti</a></li>
-<li><a href="vignale_triumph.html">1959 Triumph Italia</a></li>
-<li><a href="vignale_lancia.html">1959 Lancia Flaminia Spyder</a></li>
-</ul>
-<h3>1960s</h3>
-<ul>
-<li><a href="vignale_alfa_romeo.html">1960 Alfa Romeo 2000cc Coupe</a></li>
-<li><a href="vignale_fiat_touring_coupe.html">1960 Fiat Vignale 2+2 Touring Coupé</a></li>
-<li><a href="vignale_maserati.html">1960 Maserati 3500GT Vignale Spider</a></li>
-<li>1960 Triumph Spitfire Prototype</li>
-<li><a href="vignale_usa.html">1961 Vignale Corvette one-off</a></li>
-<li><a href="vignale_fiat_riviera.html">1961 Neckar- Jagst 770 Rivièra</a></li>
-<li><a href="vignale_lancia.html">1962 Lancia Flavia Convertibile</a></li>
-<li><a href="vignale_fiat_riviera.html">1962 Vignale Fiat Rivièra</a></li>
-<li><a href="vignale_maserati.html">1962 Maserati Sebring</a></li>
-<li>1963 Fiat 1500 Glenn</li>
-<li><a href="vignale_maserati.html">1964 Maserati 3500GT one-off</a></li>
-<li>1964 Fiat 750 Spider</li>
-<li><a href="vignale_daihatsu.html">1964 Daihatsu Sport Cabriolet Prototype</a></li>
-<li><a href="vignale_fiat_850_coupe_sportivo.html">1965 Fiat 850 Coupè Sportivo</a></li>
-<li><a href="vignale_maserati.html">1965 Maserati 5-liter Coupé</a></li>
-<li><a href="https://www.vignalegamine.net/vignale_kadett_coupe.html">1965 Vignale Opel Kadett Coupé</a></li>
-<li><a href="vignale_jensen.html">1965 Jensen Nova</a></li>
-<li><a href="vignale_jensen.html">1966 Jensen Interceptor</a></li>
-<li><a href="vignale_daihatsu.html">1965 Daihatsu Compagno</a></li>
-<li><a href="vignale_maserati.html">1966 Maserati Mexico</a></li>
-<li><a href="http://www.amxfiles.com/amc/proto.html#amx_proto">1966 American Motors AMX</a></li>
-<li><a href="https://www.vignalegamine.net/cars_carrozzeria_vignale.html#1500">1966 Vignale 1500</a></li>
-<li><a href="vignale_argentina.html">1966 Fiat 1500 Coupé [Argentina]</a></li>
-<li><a href="vignale_argentina.html">1966 Fiat 800 Spider [Argentina]</a></li>
-<li><a href="vignale_argentina.html">1966 Fiat 800 Coupé [Argentina]</a></li>
-<li><a href="vignale_125_samantha.html">1967 Vignale 125/Samantha</a></li>
-<li><a href="vignale_124_eveline.html">1967 Vignale 124/Eveline</a></li>
-<li><a href="vignale_850.html">19?? Vignale 850 Cabrio</a></li>
-<li><a href="vignale_850.html">19?? Vignale 850 Coupé 2+2</a></li>
-<li><a href="vignale_850.html">19?? Vignale 850 Coupé 4</a></li>
-<li><a href="index.html">1967 Vignale Gamine</a></li>
-<li>1968 Daihatsu Light Van</li>
-<li>1968 Matra Sports M530 A</li>
-<li><a href="vignale_ferrari.html">1968 Ferrari 330 Vignale Stationwagon</a></li>
-<li><a href="vignale_tatra.html">1968 Tatra T613 Prototype</a></li>
-<li>1969 Maserati Ghibli</li>
-<li><a href="vignale_maserati.html">1969 Maserati Indy 4.7</a></li>
-<li><a href="vignale_lancia.html">19?? Lancia Fulvia Coupé</a></li>
-<li><a href="https://en.wikipedia.org/wiki/De_Tomaso_Pantera">1969 DeTomaso Pantera</a></li>
-<li>19?? Aston Martin DB4 Vignale Coupé</li>
-<li>19?? Packard Vignale Convertible</li>
-</ul>
-      </div>
-      <div class="note-box" data-i18n-html data-i18n="cr_note">Spotted a missing model, or a broken link? <a href="mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale">Mail us</a> &mdash; we&rsquo;d love to add it.</div>
+    <div class="wrap prose">
+      <h3 data-i18n="vol_h3">Volvo-cars with special bodywork &mdash; a car named Elisabeth</h3>
+      <p data-i18n="vol_p1">The history of Volvo has very few low-series/sporty vehicles. Yet, some very odd cars carrying the Volvo logo have seen the daylight. One of them was Elisabeth 1 (see image, rearview), parked at Volvo HQ in Gothenburg. But Volvo did not build the car. The man behind the project was the Swedish businessman Goesta Wennberg, who made contact with Michelotti in Paris in 1952. Michelotti was supposed to design the bodywork of a car to be built by Ghia-Aigle, but the drawings came to Vignale, Torino, instead. The work itself took place mainly at Allemano in the same city. The nice coachwork was mounted on a P 445 chassis. Because of the construction of the chassis there was no space for a back seat. This was probably one of the main reasons for Volvo&rsquo;s lack of interest in serial production of Elisabeth I, which was Wennberg&rsquo;s original intention with this project.</p>
+
+      <h3 data-i18n="vol_e1_h3">Volvo Elisabeth I &ldquo;one-off&rdquo;</h3>
+      <figure class="plate" style="max-width:500px;"><img src="index2_bestanden/vignale_volvo_elisabeth_I.jpg" width="500" height="341" alt="Volvo Elisabeth I"></figure>
+      <p data-i18n="vol_e1_p1">This photo shows the rear end of the car. It was crashed in the early sixties.</p>
+      <p data-i18n="vol_e1_p2">Built around 1953-54 on one of many unsold Volvo 445 chassis.</p>
+      <figure class="plate" style="max-width:500px;"><img src="index2_bestanden/vignale_volvo_elisabeth_I_a.jpg" width="500" height="304" alt="Volvo Elisabeth I"></figure>
+
+      <h3 data-i18n="vol_e2_h3">Volvo Elisabeth II &mdash; a unique Volvo that has survived</h3>
+      <p data-i18n="vol_e2_p1">The barber (also named Goesta) Thamsten in Norrbotten is leaning against his unique car, Elisabeth II, Wennberg&rsquo;s second attempt as an automobile manufacturer. This particular vehicle, in a way resembling the Amazon (P 120), is based on the PV 444. The main issue for Volvo was the backseat spacing which had radically improved compared to Elisabeth I. But after the Volvo crew estimated the manufacturing costs, even this improved version was of no interest. Another reason for Volvo&rsquo;s lack of interest was simply their own new project, the Volvo P 1900. Elisabeth II was soon in private hands and in the beginning of the &lsquo;90s underwent total restoration by a new owner in western Sweden.</p>
+
+      <p class="credit-line" data-i18n="vol_credit1">Pictures and text from: Bilar vi minns (Cars we remember). Author: Peter Haventon. ISBN 91-552-2618-3.</p>
+      <p class="credit-line" data-i18n="vol_credit2">Many thanks to Jan Oskarsson for the contents of this page.</p>
+      <p data-i18n="vol_p_end">He once failed to buy Elisabeth II; if you have any information on the whereabouts of this car, please let him know!</p>
     </div>
   </section>
 
@@ -896,8 +828,6 @@
 })();
 
 (function () {
-  var GAMINE_CREATIONS_LIST = "<h3>1940s</h3>\n<ul>\n<li><a href=\"vignale_cisitalia_coupe.html\">1946 Cisitialia 202 CMM</a></li>\n<li>1947 Fiat 1100 Spider</li>\n<li><a href=\"vignale_fiat.html\">1947 Fiat 1500 Cabriolet</a></li>\n<li><a href=\"vignale_cisitalia_coupe.html\">1948 Cisitalia 202 SC</a></li>\n<li>1949 Fiat 1100 Coupé</li>\n<li><a href=\"vignale_lancia.html\">1949 Lancia Aprilia Coupé</a></li>\n</ul>\n<h3>1950s</h3>\n<ul>\n<li><a href=\"vignale_cisitalia_coupe.html\">1950 Cisitalia Coupé</a></li>\n<li><a href=\"vignale_cisitalia_coupe.html\">1950 Cisitalia 202B</a></li>\n<li><a href=\"vignale_ferrari.html\">1950 Ferrari 166 Inter Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1950 Ferrari 166 MM Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1950 Ferrari 195 Inter Vignale Coupé</a></li>\n<li><a href=\"vignale_lancia.html\">1950 Lancia Aurelia B50 Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 212 Inter Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 212 Inter Vignale Cabrio</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Cabrio</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 212 Export Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1951 Ferrari 340 Amerika Vignale Berlinetta</a></li>\n<li><a href=\"vignale_lancia.html\">1951 Lancia Aurelia B50 Coupé</a></li>\n<li><a href=\"vignale_abarth.html\">1951 Abarth 205 A Berlinetta GT</a></li>\n<li><a href=\"vignale_osca.html\">1951 OSCA Mt4</a></li>\n<li><a href=\"vignale_alfa_romeo.html\">1951 Alfa Romeo 412 Vignale</a></li>\n<li><a href=\"http://www.fiatabarth.com/eng/storia/pag2.htm\">1952 Abarth 205 Vignale</a></li>\n<li><a href=\"vignale_cisitalia_coupe.html\">1952 Cisitalia 202C Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 225 S Vignale Berlinetta</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 225 S Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 250 S Vignale Berlinetta</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 340 Mexico Vignale Berlinetta</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 340 Mexico Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 340 America Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 340 America Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1952 Ferrari 342 America Vignale Cabrio</a></li>\n<li><a href=\"vignale_lancia.html\">1952 Lancia Aurelia B52 Coupé</a></li>\n<li>1952 Maserati A6G</li>\n<li><a href=\"vignale_osca.html\">1952 OSCA Mt4</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 166 MM Vignale Berlinetta</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 166 MM Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 250 Europa Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 250 MM Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 340 MM Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 375 America Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 625 TF Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 625 TF Vignale Spider</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 250 Europa GT Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 375 America Vignale Coupé</a></li>\n<li><a href=\"vignale_ferrari.html\">1953 Ferrari 375 America Vignale Spider</a></li>\n<li><a href=\"vignale_maserati.html\">1953 Maserati A6GCS Spider</a></li>\n<li><a href=\"vignale_mg_td.html\">1953 MG TD</a></li>\n<li><a href=\"vignale_volvo.html\">1953 Volvo Elisabeth I + II</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_cunningham.html\">1953 Cunningham C-3 Vignale Competition</a></li>\n<li><a href=\"vignale_fiat_1100.html\">1953 Vignale Fiat 1100</a></li>\n<li><a href=\"vignale_usa.html\">1954 Cunningham Continental C3 Coupé</a></li>\n<li><a href=\"vignale_fiat_8v.html\">1954 Fiat 8V Vignale</a></li>\n<li>1955 Fiat 8V Demon Rouge</li>\n<li><a href=\"vignale_usa.html\">1955 Cadillac Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_nardi.html\">1955 Nardi ( Derivata Lancia ) Raggio Azzurro I</a></li>\n<li>1956 Desireé 1100</li>\n<li><a href=\"vignale_600.html\">1956 Fiat 600 Vignale quattro posti</a></li>\n<li><a href=\"vignale_lancia.html\">1956 Lancia Appia Sport</a></li>\n<li><a href=\"vignale_abarth.html\">1957 Abarth 750 Coupé Vignale</a></li>\n<li><a href=\"vignale_500.html\">1957 Vignale 500 Spider</a></li>\n<li><a href=\"vignale_lancia.html\">1957 Lancia Appia Convertibile Vignale</a></li>\n<li><a href=\"vignale_fiat.html\">1957 Fiat 1100 \"Coupé Printemps\"</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_nardi.html\">1958 Nardi ( Derivata Lancia ) Raggio Azzurro II</a></li>\n<li><a href=\"vignale_500.html\">1958 Vignale Minnie</a></li>\n<li><a href=\"vignale_standard.html\">1958 Standard Vanguard Vignale</a></li>\n<li><a href=\"vignale_triumph.html\">1958 Triumph TR3 one-off</a></li>\n<li>1958 Triumph Herald Prototype</li>\n<li><a href=\"vignale_fiat_riviera.html\">1959 Fiat 600 Vignalina</a></li>\n<li><a href=\"http://hem.passagen.se/freedman/vignale/vignaleind.htm\">1959 Fiat 600 Vignale Rendez Vous</a></li>\n<li><a href=\"vignale_bmw.html\">1959 BMW 507 one-off by Vignale/Michelotti</a></li>\n<li><a href=\"vignale_triumph.html\">1959 Triumph Italia</a></li>\n<li><a href=\"vignale_lancia.html\">1959 Lancia Flaminia Spyder</a></li>\n</ul>\n<h3>1960s</h3>\n<ul>\n<li><a href=\"vignale_alfa_romeo.html\">1960 Alfa Romeo 2000cc Coupe</a></li>\n<li><a href=\"vignale_fiat_touring_coupe.html\">1960 Fiat Vignale 2+2 Touring Coupé</a></li>\n<li><a href=\"vignale_maserati.html\">1960 Maserati 3500GT Vignale Spider</a></li>\n<li>1960 Triumph Spitfire Prototype</li>\n<li><a href=\"vignale_usa.html\">1961 Vignale Corvette one-off</a></li>\n<li><a href=\"vignale_fiat_riviera.html\">1961 Neckar- Jagst 770 Rivièra</a></li>\n<li><a href=\"vignale_lancia.html\">1962 Lancia Flavia Convertibile</a></li>\n<li><a href=\"vignale_fiat_riviera.html\">1962 Vignale Fiat Rivièra</a></li>\n<li><a href=\"vignale_maserati.html\">1962 Maserati Sebring</a></li>\n<li>1963 Fiat 1500 Glenn</li>\n<li><a href=\"vignale_maserati.html\">1964 Maserati 3500GT one-off</a></li>\n<li>1964 Fiat 750 Spider</li>\n<li><a href=\"vignale_daihatsu.html\">1964 Daihatsu Sport Cabriolet Prototype</a></li>\n<li><a href=\"vignale_fiat_850_coupe_sportivo.html\">1965 Fiat 850 Coupè Sportivo</a></li>\n<li><a href=\"vignale_maserati.html\">1965 Maserati 5-liter Coupé</a></li>\n<li><a href=\"https://www.vignalegamine.net/vignale_kadett_coupe.html\">1965 Vignale Opel Kadett Coupé</a></li>\n<li><a href=\"vignale_jensen.html\">1965 Jensen Nova</a></li>\n<li><a href=\"vignale_jensen.html\">1966 Jensen Interceptor</a></li>\n<li><a href=\"vignale_daihatsu.html\">1965 Daihatsu Compagno</a></li>\n<li><a href=\"vignale_maserati.html\">1966 Maserati Mexico</a></li>\n<li><a href=\"http://www.amxfiles.com/amc/proto.html#amx_proto\">1966 American Motors AMX</a></li>\n<li><a href=\"https://www.vignalegamine.net/cars_carrozzeria_vignale.html#1500\">1966 Vignale 1500</a></li>\n<li><a href=\"vignale_argentina.html\">1966 Fiat 1500 Coupé [Argentina]</a></li>\n<li><a href=\"vignale_argentina.html\">1966 Fiat 800 Spider [Argentina]</a></li>\n<li><a href=\"vignale_argentina.html\">1966 Fiat 800 Coupé [Argentina]</a></li>\n<li><a href=\"vignale_125_samantha.html\">1967 Vignale 125/Samantha</a></li>\n<li><a href=\"vignale_124_eveline.html\">1967 Vignale 124/Eveline</a></li>\n<li><a href=\"vignale_850.html\">19?? Vignale 850 Cabrio</a></li>\n<li><a href=\"vignale_850.html\">19?? Vignale 850 Coupé 2+2</a></li>\n<li><a href=\"vignale_850.html\">19?? Vignale 850 Coupé 4</a></li>\n<li><a href=\"index.html\">1967 Vignale Gamine</a></li>\n<li>1968 Daihatsu Light Van</li>\n<li>1968 Matra Sports M530 A</li>\n<li><a href=\"vignale_ferrari.html\">1968 Ferrari 330 Vignale Stationwagon</a></li>\n<li><a href=\"vignale_tatra.html\">1968 Tatra T613 Prototype</a></li>\n<li>1969 Maserati Ghibli</li>\n<li><a href=\"vignale_maserati.html\">1969 Maserati Indy 4.7</a></li>\n<li><a href=\"vignale_lancia.html\">19?? Lancia Fulvia Coupé</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/De_Tomaso_Pantera\">1969 DeTomaso Pantera</a></li>\n<li>19?? Aston Martin DB4 Vignale Coupé</li>\n<li>19?? Packard Vignale Convertible</li>\n</ul>";
-
   var translations = {
     "en": {
         "skip_link": "Skip to content",
@@ -914,14 +844,20 @@
         "nav_new": "New",
         "footer_credit": "Site built and maintained by Martin Wildeboer. Revised August 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Cars built and designed",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "An overview of the cars built and designed by Carrozzeria Vignale, from the 1946 Cisitalia 202 CMM to the 1969 DeTomaso Pantera — including the Gamine.",
-        "cr_intro": "Most links below lead to the relevant model page on vignalegamine.net, the original Vignale Gamine site this list comes from. A few links point elsewhere on the web; those pages are outside our control and may occasionally be unavailable.",
-        "cr_note": "Spotted a missing model, or a broken link? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Mail us</a> — we’d love to add it.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "A chronological overview of the cars built and designed by Carrozzeria Vignale, 1946-1969, with links to each model.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo by Vignale",
+        "vol_h3": "Volvo-cars with special bodywork — a car named Elisabeth",
+        "vol_p1": "The history of Volvo has very few low-series/sporty vehicles. Yet, some very odd cars carrying the Volvo logo have seen the daylight. One of them was Elisabeth 1 (see image, rearview), parked at Volvo HQ in Gothenburg. But Volvo did not build the car. The man behind the project was the Swedish businessman Goesta Wennberg, who made contact with Michelotti in Paris in 1952. Michelotti was supposed to design the bodywork of a car to be built by Ghia-Aigle, but the drawings came to Vignale, Torino, instead. The work itself took place mainly at Allemano in the same city. The nice coachwork was mounted on a P 445 chassis. Because of the construction of the chassis there was no space for a back seat. This was probably one of the main reasons for Volvo's lack of interest in serial production of Elisabeth I, which was Wennberg's original intention with this project.",
+        "vol_e1_h3": "Volvo Elisabeth I “one-off”",
+        "vol_e1_p1": "This photo shows the rear end of the car. It was crashed in the early sixties.",
+        "vol_e1_p2": "Built around 1953-54 on one of many unsold Volvo 445 chassis.",
+        "vol_e2_h3": "Volvo Elisabeth II — a unique Volvo that has survived",
+        "vol_e2_p1": "The barber (also named Goesta) Thamsten in Norrbotten is leaning against his unique car, Elisabeth II, Wennberg's second attempt as an automobile manufacturer. This particular vehicle, in a way resembling the Amazon (P 120), is based on the PV 444. The main issue for Volvo was the backseat spacing which had radically improved compared to Elisabeth I. But after the Volvo crew estimated the manufacturing costs, even this improved version was of no interest. Another reason for Volvo's lack of interest was simply their own new project, the Volvo P 1900. Elisabeth II was soon in private hands and in the beginning of the '90s underwent total restoration by a new owner in western Sweden.",
+        "vol_credit1": "Pictures and text from: Bilar vi minns (Cars we remember). Author: Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Many thanks to Jan Oskarsson for the contents of this page.",
+        "vol_p_end": "He once failed to buy Elisabeth II; if you have any information on the whereabouts of this car, please let him know!",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "The Volvo Elisabeth I and Elisabeth II, two one-off Volvos built by Vignale in the 1950s."
     },
     "nl": {
         "skip_link": "Direct naar inhoud",
@@ -938,14 +874,20 @@
         "nav_new": "Nieuw",
         "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt augustus 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Gebouwde en ontworpen auto's",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "Een overzicht van de auto's die Carrozzeria Vignale bouwde en ontwierp, van de Cisitalia 202 CMM uit 1946 tot de DeTomaso Pantera uit 1969 — inclusief de Gamine.",
-        "cr_intro": "De meeste links hieronder gaan naar de bijbehorende modelpagina op vignalegamine.net, de oorspronkelijke Vignale Gamine-site waar deze lijst vandaan komt. Een paar links gaan naar elders op het web; die pagina's vallen buiten onze controle en kunnen af en toe niet beschikbaar zijn.",
-        "cr_note": "Ontbreekt er een model, of is een link stuk? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Mail ons</a> — we voegen het graag toe.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "Een chronologisch overzicht van de auto's die Carrozzeria Vignale bouwde en ontwierp, 1946-1969, met links naar elk model.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo door Vignale",
+        "vol_h3": "Volvo's met speciale carrosserie — een auto genaamd Elisabeth",
+        "vol_p1": "In de geschiedenis van Volvo zijn er maar weinig kleinschalige/sportieve modellen. Toch zijn er enkele opmerkelijke auto's met het Volvo-logo verschenen. Een daarvan was Elisabeth 1 (zie foto, achteraanzicht), geparkeerd bij het Volvo-hoofdkantoor in Göteborg. Maar Volvo bouwde de auto niet zelf. De man achter het project was de Zweedse zakenman Goesta Wennberg, die in 1952 in Parijs contact legde met Michelotti. Michelotti zou de carrosserie ontwerpen van een auto die door Ghia-Aigle gebouwd zou worden, maar de tekeningen kwamen in plaats daarvan bij Vignale in Turijn terecht. Het eigenlijke werk vond grotendeels plaats bij Allemano, in dezelfde stad. De fraaie carrosserie werd gemonteerd op een P 445-chassis. Door de constructie van het chassis was er geen ruimte voor een achterbank. Dit was waarschijnlijk een van de belangrijkste redenen voor Volvo's gebrek aan interesse in serieproductie van Elisabeth I, wat Wennbergs oorspronkelijke bedoeling met dit project was.",
+        "vol_e1_h3": "Volvo Elisabeth I – \"unicum\"",
+        "vol_e1_p1": "Deze foto toont de achterkant van de auto. Hij werd begin jaren '60 total loss gereden.",
+        "vol_e1_p2": "Rond 1953-'54 gebouwd op een van de vele onverkochte Volvo 445-chassis.",
+        "vol_e2_h3": "Volvo Elisabeth II — een unieke Volvo die is overgebleven",
+        "vol_e2_p1": "De kapper (eveneens Goesta genaamd) Thamsten uit Norrbotten leunt tegen zijn unieke auto, Elisabeth II, Wennbergs tweede poging als autofabrikant. Deze auto, die enigszins doet denken aan de Amazon (P 120), is gebaseerd op de PV 444. Het belangrijkste aandachtspunt voor Volvo was de ruimte op de achterbank, die ten opzichte van Elisabeth I sterk was verbeterd. Maar nadat het Volvo-team de productiekosten had ingeschat, bleek zelfs deze verbeterde versie geen interesse te wekken... Een andere reden voor Volvo's gebrek aan interesse was simpelweg hun eigen nieuwe project, de Volvo P 1900. Elisabeth II kwam al snel in particulier bezit en onderging begin jaren 90 een volledige restauratie door een nieuwe eigenaar in West-Zweden.",
+        "vol_credit1": "Foto's en tekst uit: Bilar vi minns (Auto's die we ons herinneren). Auteur: Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Met veel dank aan Jan Oskarsson voor de inhoud van deze pagina.",
+        "vol_p_end": "Hij is er ooit niet in geslaagd Elisabeth II te kopen; heb je informatie over de verblijfplaats van deze auto, laat het hem dan weten!",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "De Volvo Elisabeth I en Elisabeth II, twee unieke Volvo's die Vignale in de jaren 50 bouwde."
     },
     "it": {
         "skip_link": "Vai al contenuto",
@@ -962,14 +904,20 @@
         "nav_new": "Novità",
         "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato ad agosto 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Auto costruite e disegnate",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "Una panoramica delle vetture costruite e disegnate dalla Carrozzeria Vignale, dalla Cisitalia 202 CMM del 1946 alla DeTomaso Pantera del 1969 — Gamine inclusa.",
-        "cr_intro": "La maggior parte dei link qui sotto porta alla relativa pagina del modello su vignalegamine.net, il sito originale della Vignale Gamine da cui proviene questo elenco. Alcuni link puntano altrove sul web; queste pagine non sono sotto il nostro controllo e potrebbero occasionalmente non essere disponibili.",
-        "cr_note": "Manca un modello, o un link non funziona? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Scrivici</a> — lo aggiungeremo volentieri.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "Una panoramica cronologica delle vetture costruite e disegnate dalla Carrozzeria Vignale, 1946-1969, con link a ogni modello.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo di Vignale",
+        "vol_h3": "Volvo con carrozzeria speciale — un'auto chiamata Elisabeth",
+        "vol_p1": "Nella storia Volvo ci sono pochissimi modelli di piccola serie/sportivi. Eppure alcune auto piuttosto insolite con il logo Volvo hanno visto la luce. Una di queste era Elisabeth 1 (vedi immagine, vista posteriore), parcheggiata presso il quartier generale Volvo a Göteborg. Ma Volvo non costruì l'auto. L'uomo dietro il progetto era l'uomo d'affari svedese Goesta Wennberg, che nel 1952 prese contatto con Michelotti a Parigi. Michelotti avrebbe dovuto disegnare la carrozzeria di un'auto da costruire presso Ghia-Aigle, ma i disegni finirono invece a Vignale, a Torino. Il lavoro vero e proprio avvenne principalmente presso Allemano, nella stessa città. La bella carrozzeria fu montata su un telaio P 445. A causa della costruzione del telaio non c'era spazio per un sedile posteriore. Questo fu probabilmente uno dei motivi principali del disinteresse di Volvo verso la produzione in serie della Elisabeth I, che era l'intenzione originaria di Wennberg con questo progetto.",
+        "vol_e1_h3": "Volvo Elisabeth I — esemplare unico",
+        "vol_e1_p1": "Questa foto mostra la parte posteriore dell'auto. Fu incidentata nei primi anni '60.",
+        "vol_e1_p2": "Costruita intorno al 1953-54 su uno dei tanti telai Volvo 445 invenduti.",
+        "vol_e2_h3": "Volvo Elisabeth II — una Volvo unica sopravvissuta",
+        "vol_e2_p1": "Il barbiere (anch'egli di nome Goesta) Thamsten, nel Norrbotten, si appoggia alla sua auto unica, Elisabeth II, il secondo tentativo di Wennberg come costruttore automobilistico. Questa vettura, per certi versi simile alla Amazon (P 120), è basata sulla PV 444. Il problema principale per Volvo era lo spazio per il sedile posteriore, che era stato notevolmente migliorato rispetto alla Elisabeth I. Ma dopo che il team Volvo stimò i costi di produzione, anche questa versione migliorata non suscitò interesse... Un altro motivo del disinteresse di Volvo fu semplicemente il loro nuovo progetto, la Volvo P 1900. Elisabeth II passò presto in mani private e all'inizio degli anni '90 fu sottoposta a un restauro completo da parte di un nuovo proprietario nella Svezia occidentale.",
+        "vol_credit1": "Immagini e testo da: Bilar vi minns (Auto che ricordiamo). Autore: Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Un grazie di cuore a Jan Oskarsson per i contenuti di questa pagina.",
+        "vol_p_end": "Un tempo non riuscì ad acquistare la Elisabeth II; se avete informazioni su dove si trovi questa vettura, fateglielo sapere!",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "La Volvo Elisabeth I ed Elisabeth II, due Volvo uniche costruite da Vignale negli anni '50."
     },
     "es": {
         "skip_link": "Ir al contenido",
@@ -986,14 +934,20 @@
         "nav_new": "Novedades",
         "footer_credit": "Sitio creado y mantenido por Martin Wildeboer. Actualizado en agosto de 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Coches construidos y diseñados",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "Un resumen de los coches construidos y diseñados por Carrozzeria Vignale, desde el Cisitalia 202 CMM de 1946 hasta el DeTomaso Pantera de 1969, incluido el Gamine.",
-        "cr_intro": "La mayoría de los enlaces siguientes llevan a la página del modelo correspondiente en vignalegamine.net, el sitio original de Vignale Gamine del que procede esta lista. Algunos enlaces apuntan a otros lugares de la web; esas páginas están fuera de nuestro control y pueden no estar disponibles ocasionalmente.",
-        "cr_note": "¿Falta algún modelo, o hay un enlace roto? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Escríbenos</a> — nos encantará añadirlo.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "Un resumen cronológico de los coches construidos y diseñados por Carrozzeria Vignale, 1946-1969, con enlaces a cada modelo.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo de Vignale",
+        "vol_h3": "Volvos con carrocería especial — un coche llamado Elisabeth",
+        "vol_p1": "La historia de Volvo cuenta con muy pocos vehículos de pequeña serie/deportivos. Sin embargo, algunos coches muy peculiares con el logotipo de Volvo vieron la luz. Uno de ellos fue Elisabeth 1 (véase la imagen, vista trasera), aparcado en la sede central de Volvo en Gotemburgo. Pero Volvo no construyó el coche. El hombre detrás del proyecto fue el empresario sueco Goesta Wennberg, que en 1952 contactó con Michelotti en París. Michelotti debía diseñar la carrocería de un coche que construiría Ghia-Aigle, pero los planos acabaron llegando a Vignale, en Turín. El trabajo en sí se realizó principalmente en Allemano, en la misma ciudad. La bonita carrocería se montó sobre un chasis P 445. Debido a la construcción del chasis, no había espacio para un asiento trasero. Esta fue probablemente una de las principales razones del desinterés de Volvo por la producción en serie del Elisabeth I, que era la intención original de Wennberg con este proyecto.",
+        "vol_e1_h3": "Volvo Elisabeth I — ejemplar único",
+        "vol_e1_p1": "Esta foto muestra la parte trasera del coche. Sufrió un accidente a principios de los años 60.",
+        "vol_e1_p2": "Construido hacia 1953-54 sobre uno de los muchos chasis Volvo 445 sin vender.",
+        "vol_e2_h3": "Volvo Elisabeth II — un Volvo único que ha sobrevivido",
+        "vol_e2_p1": "El barbero (también llamado Goesta) Thamsten, de Norrbotten, se apoya en su coche único, Elisabeth II, el segundo intento de Wennberg como fabricante de automóviles. Este vehículo en particular, que en cierto modo recuerda al Amazon (P 120), está basado en el PV 444. La principal cuestión para Volvo era el espacio del asiento trasero, que había mejorado radicalmente respecto al Elisabeth I. Pero tras estimar el equipo de Volvo los costes de fabricación, ni siquiera esta versión mejorada suscitó interés... Otro motivo del desinterés de Volvo fue simplemente su propio proyecto nuevo, el Volvo P 1900. El Elisabeth II pasó pronto a manos privadas y, a principios de los años 90, fue sometido a una restauración completa por un nuevo propietario en el oeste de Suecia.",
+        "vol_credit1": "Imágenes y texto de: Bilar vi minns (Coches que recordamos). Autor: Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Muchas gracias a Jan Oskarsson por el contenido de esta página.",
+        "vol_p_end": "En su día no logró comprar el Elisabeth II; si tienes información sobre el paradero de este coche, ¡házselo saber!",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "El Volvo Elisabeth I y Elisabeth II, dos Volvos únicos construidos por Vignale en los años 50."
     },
     "fr": {
         "skip_link": "Aller au contenu",
@@ -1010,14 +964,20 @@
         "nav_new": "Nouveautés",
         "footer_credit": "Site créé et maintenu par Martin Wildeboer. Mis à jour en août 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Voitures construites et dessinées",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "Un aperçu des voitures construites et dessinées par Carrozzeria Vignale, de la Cisitalia 202 CMM de 1946 à la DeTomaso Pantera de 1969, Gamine incluse.",
-        "cr_intro": "La plupart des liens ci-dessous mènent à la page du modèle correspondant sur vignalegamine.net, le site original de la Vignale Gamine dont est issue cette liste. Quelques liens pointent ailleurs sur le web ; ces pages échappent à notre contrôle et peuvent occasionnellement être indisponibles.",
-        "cr_note": "Un modèle manque, ou un lien est cassé ? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Écrivez-nous</a> — nous l'ajouterons avec plaisir.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "Un aperçu chronologique des voitures construites et dessinées par Carrozzeria Vignale, 1946-1969, avec des liens vers chaque modèle.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo par Vignale",
+        "vol_h3": "Des Volvo à carrosserie spéciale — une voiture nommée Elisabeth",
+        "vol_p1": "L'histoire de Volvo compte très peu de modèles de petite série ou sportifs. Pourtant, quelques voitures assez insolites portant le logo Volvo ont vu le jour. L'une d'elles était Elisabeth 1 (voir photo, vue arrière), garée au siège de Volvo à Göteborg. Mais Volvo n'a pas construit cette voiture. L'homme à l'origine du projet était l'homme d'affaires suédois Goesta Wennberg, qui prit contact avec Michelotti à Paris en 1952. Michelotti devait dessiner la carrosserie d'une voiture destinée à être construite par Ghia-Aigle, mais les dessins aboutirent finalement chez Vignale, à Turin. Le travail lui-même eut lieu principalement chez Allemano, dans la même ville. La belle carrosserie fut montée sur un châssis P 445. En raison de la conception du châssis, il n'y avait pas de place pour une banquette arrière. Ce fut probablement l'une des principales raisons du désintérêt de Volvo pour une production en série de l'Elisabeth I, qui était pourtant l'intention initiale de Wennberg pour ce projet.",
+        "vol_e1_h3": "Volvo Elisabeth I — exemplaire unique",
+        "vol_e1_p1": "Cette photo montre l'arrière de la voiture. Elle fut accidentée au début des années 1960.",
+        "vol_e1_p2": "Construite vers 1953-54 sur l'un des nombreux châssis Volvo 445 invendus.",
+        "vol_e2_h3": "Volvo Elisabeth II — une Volvo unique qui a survécu",
+        "vol_e2_p1": "Le coiffeur (également prénommé Goesta) Thamsten, dans le Norrbotten, s'appuie sur sa voiture unique, Elisabeth II, la deuxième tentative de Wennberg en tant que constructeur automobile. Ce véhicule en particulier, qui rappelle d'une certaine manière l'Amazon (P 120), est basé sur la PV 444. La principale préoccupation de Volvo concernait l'espace de la banquette arrière, radicalement amélioré par rapport à l'Elisabeth I. Mais après que l'équipe Volvo eut estimé les coûts de fabrication, même cette version améliorée ne suscita aucun intérêt... Une autre raison du désintérêt de Volvo était tout simplement leur propre nouveau projet, la Volvo P 1900. L'Elisabeth II passa rapidement aux mains d'un particulier et, au début des années 1990, fit l'objet d'une restauration complète par un nouveau propriétaire dans l'ouest de la Suède.",
+        "vol_credit1": "Photos et texte tirés de : Bilar vi minns (Les voitures dont on se souvient). Auteur : Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Un grand merci à Jan Oskarsson pour le contenu de cette page.",
+        "vol_p_end": "Il n'est un jour pas parvenu à acheter l'Elisabeth II ; si vous avez des informations sur l'endroit où se trouve cette voiture, faites-le-lui savoir !",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "La Volvo Elisabeth I et Elisabeth II, deux Volvo uniques construites par Vignale dans les années 1950."
     },
     "de": {
         "skip_link": "Zum Inhalt springen",
@@ -1034,14 +994,20 @@
         "nav_new": "Neues",
         "footer_credit": "Website erstellt und betreut von Martin Wildeboer. Aktualisiert im August 2026.",
         "footer_webmaster": "Webmaster",
-        "cr_eyebrow": "Carrozzeria Vignale · Gebaute und entworfene Autos",
-        "cr_h1": "Vignale Creations",
-        "cr_lead": "Ein Überblick über die von Carrozzeria Vignale gebauten und entworfenen Autos, vom Cisitalia 202 CMM (1946) bis zum DeTomaso Pantera (1969) — einschließlich der Gamine.",
-        "cr_intro": "Die meisten Links unten führen zur passenden Modellseite auf vignalegamine.net, der ursprünglichen Vignale-Gamine-Website, von der diese Liste stammt. Einige Links führen anderswohin im Web; diese Seiten liegen außerhalb unserer Kontrolle und können gelegentlich nicht erreichbar sein.",
-        "cr_note": "Fehlt ein Modell, oder ist ein Link defekt? <a href=\"mailto:gamine@vignalegamine.net?subject=Addition%20to%20cars%20by%20Vignale\">Schreiben Sie uns</a> — wir ergänzen es gerne.",
-        "title": "Vignale Creations — Vignale Gamine",
-        "meta_description": "Ein chronologischer Überblick über die von Carrozzeria Vignale gebauten und entworfenen Autos, 1946-1969, mit Links zu jedem Modell.",
-        "cr_list": GAMINE_CREATIONS_LIST
+        "vol_eyebrow": "Carrozzeria Vignale · Volvo",
+        "vol_h1": "Volvo von Vignale",
+        "vol_h3": "Volvos mit Sonderkarosserie — ein Wagen namens Elisabeth",
+        "vol_p1": "In der Geschichte von Volvo gibt es nur sehr wenige kleinserien- oder sportlich orientierte Fahrzeuge. Dennoch erblickten einige recht ungewöhnliche Wagen mit dem Volvo-Logo das Licht der Welt. Einer davon war Elisabeth 1 (siehe Bild, Heckansicht), abgestellt am Volvo-Hauptsitz in Göteborg. Volvo baute den Wagen jedoch nicht selbst. Der Mann hinter dem Projekt war der schwedische Geschäftsmann Goesta Wennberg, der 1952 in Paris Kontakt zu Michelotti aufnahm. Michelotti sollte die Karosserie eines Wagens entwerfen, der bei Ghia-Aigle gebaut werden sollte, doch die Zeichnungen landeten stattdessen bei Vignale in Turin. Die eigentliche Arbeit fand größtenteils bei Allemano statt, ebenfalls in Turin. Die schöne Karosserie wurde auf ein P-445-Chassis montiert. Aufgrund der Konstruktion des Chassis gab es keinen Platz für eine Rückbank. Dies war wahrscheinlich einer der Hauptgründe für Volvos mangelndes Interesse an einer Serienproduktion der Elisabeth I, was Wennbergs ursprüngliche Absicht mit diesem Projekt gewesen war.",
+        "vol_e1_h3": "Volvo Elisabeth I – Einzelstück",
+        "vol_e1_p1": "Dieses Foto zeigt das Heck des Wagens. Er wurde Anfang der 1960er-Jahre bei einem Unfall zerstört.",
+        "vol_e1_p2": "Um 1953/54 auf einem der vielen unverkauften Volvo-445-Chassis gebaut.",
+        "vol_e2_h3": "Volvo Elisabeth II — ein einzigartiger, erhaltener Volvo",
+        "vol_e2_p1": "Der (ebenfalls Goesta genannte) Friseur Thamsten aus Norrbotten lehnt sich an seinen einzigartigen Wagen, die Elisabeth II, Wennbergs zweiten Versuch als Automobilhersteller. Dieses Fahrzeug, das in gewisser Weise an den Amazon (P 120) erinnert, basiert auf dem PV 444. Das Hauptanliegen für Volvo war der Platz auf der Rückbank, der im Vergleich zur Elisabeth I deutlich verbessert worden war. Doch nachdem das Volvo-Team die Herstellungskosten geschätzt hatte, stieß selbst diese verbesserte Version auf kein Interesse ... Ein weiterer Grund für Volvos mangelndes Interesse war schlicht das eigene neue Projekt, der Volvo P 1900. Die Elisabeth II gelangte bald in Privatbesitz und wurde Anfang der 1990er-Jahre von einem neuen Besitzer in Westschweden vollständig restauriert.",
+        "vol_credit1": "Bilder und Text aus: Bilar vi minns (Autos, an die wir uns erinnern). Autor: Peter Haventon. ISBN 91-552-2618-3.",
+        "vol_credit2": "Herzlichen Dank an Jan Oskarsson für den Inhalt dieser Seite.",
+        "vol_p_end": "Er hat es einst nicht geschafft, die Elisabeth II zu kaufen; falls Sie Informationen zum Verbleib dieses Wagens haben, lassen Sie es ihn bitte wissen!",
+        "title": "Vignale Volvo — Vignale Gamine",
+        "meta_description": "Der Volvo Elisabeth I und Elisabeth II, zwei einzigartige, von Vignale in den 1950er-Jahren gebaute Volvos."
     }
   };
 
