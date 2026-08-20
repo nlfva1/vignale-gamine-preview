@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vignale Cunningham — Vignale Gamine</title>
+<meta name="description" content="The 1953 Cunningham C-3 Vignale Competition Continental Coupe, its design history and the full ownership history of chassis C53-8-1086.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+  header.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 100%; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+  .sub-hero .badge-emblem {
+    display: block;
+    width: min(420px, 70vw);
+    height: auto;
+    margin: 18px 0 4px;
+  }
+
+  .prose { max-width: 100%; }
+  .wrap.prose { max-width: 1080px; }
+  .prose p, .prose ul, .prose ol { max-width: 580px; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+
+  /* Data table (production numbers, specs) */
+  .table-scroll { overflow-x: auto; margin: 8px 0 32px; }
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 420px;
+  }
+  table.data-table th, table.data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+  table.data-table th {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    white-space: nowrap;
+  }
+  table.data-table td:last-child, table.data-table th:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.data-table tbody tr:hover td { background: var(--surface); }
+
+  .credit-line {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .model-figure { margin: 0 0 32px; }
+  .model-figure figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 2px 0;
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="cn_eyebrow">Carrozzeria Vignale &middot; Cunningham</p>
+      <h1 data-i18n="cn_h1">1953 Cunningham C-3 Vignale Competition Continental Coupe</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap prose">
+      <p class="credit-line" data-i18n="cn_chassis">Chassis No. C53-8-1086</p>
+      <div class="book-spread"><figure class="plate" style="max-width:200px;"><img src="index2_bestanden/logo_symbolicmotors.gif" width="200" height="51" alt="Symbolic Motors"></figure><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_1.jpg" width="300" height="128" alt="1953 Cunningham C-3"></figure></div>
+      <figure class="plate" style="max-width:250px;"><img src="index2_bestanden/logo_cunningham_vignale.gif" width="250" height="143" alt="Cunningham Vignale"></figure>
+
+      <p class="credit-line" data-i18n="cn_source">Excerpt from the Great Book of Sports Cars:</p>
+      <p data-i18n="cn_p1">Hollywood could make a movie about Briggs Swift Cunningham, and should. The son of a Cincinnati banker and godson of the Proctor half of Proctor &amp; Gamble, he cut a dashing figure in high society. He knew all the &ldquo;right&rdquo; people (many as rich as himself) and had a passion for sports: golfing, flying, yachting especially&mdash;and sports cars. After joining the infant Sports Car Club of America in the early postwar years, Briggs drove to second at Watkins Glen in 1948 in his unique &ldquo;Bumerc,&rdquo; a rebuilt Mercedes SSK with Buick power.</p>
+      <p data-i18n="cn_p2">Then Briggs got serious. Having met Phil Walters and Bill Frick at the Glen, he acquired their services as driver/engineers by buying their small company, hoping to enter their hybrid &ldquo;Fordillac&rdquo; in the 1950 running of the Le Mans 24 Hours, the world&rsquo;s premier endurance race. But the Fordillac didn&rsquo;t qualify, so Briggs fielded two cars powered by Cadillac&rsquo;s new OHV V-8. One was a big special-bodied streamliner (nicknamed <em>Le Monstre</em> by appreciative French racegoers). The other was a stock 1950 Coupe de Ville. Against all odds, the latter finished 10th overall while the special finished 11th.</p>
+      <p data-i18n="cn_p3">Buoyed by this success, Briggs turned to crafting his own sports-racing cars, setting up a company in West Palm Beach, Florida that same year. &ldquo;We don&rsquo;t intend to build two types of car, one for racing and the other for touring,&rdquo; he said. &ldquo;Our policy is to concentrate on one model readily adaptable for both purposes.&rdquo; Before it was all over in 1955, he&rsquo;d develop several.</p>
+      <p data-i18n="cn_p4">The first, logically tagged C-1, was a smooth, low-slung roadster that looked like a cross between the early Ferrari Barchettas and some of the later Ghia-bodied Chrysler specials. Power was supplied by Chrysler&rsquo;s 331-cubic-inch hemi-head V-8, mounted in a strong tubular-steel chassis with independent coil-spring front suspension, de Dion rear end, generous 105-inch wheelbase, and broad 58-inch front and rear tracks. Only one C-1 was completed, equipped for road use, rather lavishly so by European standards.</p>
+      <div class="book-spread"><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/logo_cunningham.jpg" width="300" height="148" alt="Cunningham"></figure><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_2.jpg" width="300" height="254" alt="1953 Cunningham C-3"></figure></div>
+      <div class="book-spread"><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_3.jpg" width="300" height="160" alt="1953 Cunningham C-3"></figure><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_4.jpg" width="300" height="268" alt="1953 Cunningham C-3"></figure></div>
+      <p data-i18n="cn_p5">Next came the evolutionary C-2. Only three were built, all racers designated C-2R. Walters and Fitch drove one at Le Mans in 1951, but had to settle for 18th overall. Late that year, Briggs decided to make the C-2 more of a road car and sell it in limited numbers. The resulting C-3 would be offered as a coupe in addition to the usual roadster at respective base prices of $9,000 and $8,000. Also planned was a $2,915 racing package comprising four-carburetor manifold, ported and polished heads, oil cooler, competition brakes, and racing bumperettes and grille screen. But by the time a prototype coupe was finished, someone had figured out that each C-3 would cost $15,000 just to build.</p>
+      <p data-i18n="cn_p6">That was no way to run things so in early 1952, Cunningham contracted with Alfredo Vignale&rsquo;s Carrozzeria Vignale Coachworks in Turin, Italy to build C-3 bodies to a new design by Giovanni Michelotti. With this, the projected base price was dropped back to $9,000. What emerged was an American Gran Turismo as elegant and exciting as anything from Europe.</p>
+      <p data-i18n="cn_p7">The C-3&rsquo;s ladder-type tube chassis (with modified Ford front suspension) was almost identical with the C-2&rsquo;s, but the De Dion rear end gave way to a far simpler and more reliable coil-sprung Chrysler live axle located by parallel trailing arms. Brakes were a combination of 11-inch-diameter Mercury drums and Delco actuating mechanisms. Wheelbase remained at 105 inches initially, but was later stretched two inches for more proper 2+2 seating. The V-8 used was basically as supplied by Chrysler Industrial except for Cunningham&rsquo;s own log-type manifolds with four Zenith downdraft carburetors. With the semi-automatic Chrysler transmission and a 235bhp hemi-engine, the C-3 Continental Competition Coupes were good for sub-seven-second, 0&ndash;60mph runs. They were also capable of reaching and cruising along at 120mph, making them a formidable endurance racer!</p>
+      <p data-i18n="cn_p8">Inside and out, the C-3 bore more than a passing resemblance to other Michelotti Vignale designs of the period, particularly some of the early Ferraris 212 and 225 Sport racing models currently under production. The bodywork was distinctively Vignale though, and one of the coachbuilder&rsquo;s better efforts. Pleated-leather seats graced the cockpit, while the dash was dominated by a large speedometer and matching combination gauge with clock. A small tachometer was mounted between and slightly above the main dials. Luggage had to be carried inside, because the spare tire and fuel tank occupied most of the normal trunk space.</p>
+      <p data-i18n="cn_p9">The first C-3 coupe, named <em>Continental</em>, was finished in time for the Cunningham team to drive to the Glen in September 1952. It then toured U.S. auto shows while a second car was displayed at the Paris Salon that October.</p>
+      <p data-i18n="cn_p10">&ldquo;Production&rdquo; got underway by early 1953. Unfortunately, while the Palm Beach works could build a chassis a week, Vignale needed almost two months to complete the rest of the car. A planned cabriolet derivative was shown at Geneva in March while assembly continued at this snail&rsquo;s pace. Ultimately, just nine cabriolets and 18 Competition Coupes would be built, the former carrying a delivered price of exactly $11,422.50. It was as close as Briggs ever got to a production model.</p>
+      <p data-i18n="cn_p11">Of course, the real reason for all this was to give Cunningham a contender in production-class racing, though the C-3 was never produced in numbers enough to make it much of a threat. Briggs&rsquo; remaining competition efforts would be made with further variations on his original theme: the C-4R and C-4RK, C-5R, and C-6R.</p>
+      <p data-i18n="cn_p12">Nevertheless, the C-3 was svelte and compact next to most contemporary American cars, and it was a styling tour de force. Arthur Drexler, then director of New York&rsquo;s Museum of Modern Art, put the coupe on his list of the world&rsquo;s 10 best designs. For a discerning, monied few, the C-3 was a terrific buy, and it sold as quickly as the Cunningham company could build it.</p>
+      <p data-i18n="cn_p13">The C-3 was regarded as every bit as good as a contemporary Ferrari&mdash;maybe better in some respects. And while the Chrysler hemi was likely the best engine of its day, few were willing to spend nearly $12,000 for a car in the early Fifties. A pity. They missed a very good car!</p>
+
+      <h3 data-i18n="cn_history_h3">This car&rsquo;s history</h3>
+      <p data-i18n="cn_p14">Chassis No. C53-8-1086 was ordered new by Doctor Floyd W. McRae, based in Atlanta, Georgia. Dr. McRae ordered his Competition Coupe directly from Briggs Swift Cunningham in the Spring of 1953 and paid approximately $11,000 U.S. dollars to be one of the first owners of the newly released production Cunninghams. Chassis C53-8-1086 was the fourth production C-3. Two prototypes were produced in the Fall of 1952. An additional three production versions were finished before Dr. McRae took delivery of his blue and white coupe.</p>
+      <p data-i18n="cn_p15">Dr. McRae registered the car on Fulton County, Georgia plates &ldquo;033 696&rdquo;. On January 10, 1964, Dr. McRae re-registered the car again in Fulton County, Georgia. The new license plates were &ldquo;2943&rdquo;. It is not known what races, if any, Dr. McRae ran his Competition Coupe in. It has been rumored that the car had a sole class win at the SCCA, Sowega, Georgia races in 1954. However, this has never been confirmed.</p>
+      <p data-i18n="cn_p16">On July 1, 1970, Dr. McRae sold the car to Bill Harrah of Reno, Nevada for $3,000 U.S. dollars. The total mileage at the time of the sale was 21,188.</p>
+      <p data-i18n="cn_p17">The car was later sold to Doctor Fredrick A. Simione of Philadelphia, Pennsylvania. Doctor Simione sold the car in April of 1994 to Mr. Horace Jeffrey of Orange, California as part exchange in his purchase of Mr. Jeffrey&rsquo;s 1954 Ferrari 375 Mille Miglia Pinin Farina Competition Spyder, s/n 0412 AM.</p>
+      <p data-i18n-html="cn_p18">In 1997, Doctor Simeone repurchased the car from Jeffrey for $183,000 U.S. dollars and in March of 1998 the car was traded to <a href="http://www.symbolicmotors.com/">Symbolic Motor Car Company</a>.</p>
+      <p data-i18n="cn_p19">This beautiful Italian-American hybrid is one of just 16 production examples completed. The car has been thoroughly race prepared and is eligible for numerous Historic Touring and racing events throughout the world.</p>
+      <div class="book-spread"><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_5.jpg" width="300" height="181" alt="1953 Cunningham C-3"></figure><figure class="plate" style="max-width:300px;"><img src="index2_bestanden/cunningham_c3_white_blue_6.jpg" width="300" height="177" alt="1953 Cunningham C-3"></figure></div>
+      <figure class="plate" style="max-width:400px;"><img src="index2_bestanden/cunningham_c3_white_blue_7.jpg" width="400" height="431" alt="1953 Cunningham C-3"></figure>
+      <p data-i18n-html="cn_contact">For more information on this and other classic automobiles, please contact Symbolic Motors in La Jolla, California.</p>
+      <figure class="plate" style="max-width:200px;"><img src="index2_bestanden/logo_symbolicmotors.gif" width="200" height="51" alt="Symbolic Motors"></figure>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised August 2026.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised August 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "Chassis No. C53-8-1086",
+        "cn_source": "Excerpt from the Great Book of Sports Cars:",
+        "cn_p1": "Hollywood could make a movie about Briggs Swift Cunningham, and should. The son of a Cincinnati banker and godson of the Proctor half of Proctor & Gamble, he cut a dashing figure in high society. He knew all the “right” people (many as rich as himself) and had a passion for sports: golfing, flying, yachting especially—and sports cars. After joining the infant Sports Car Club of America in the early postwar years, Briggs drove to second at Watkins Glen in 1948 in his unique “Bumerc,” a rebuilt Mercedes SSK with Buick power.",
+        "cn_p2": "Then Briggs got serious. Having met Phil Walters and Bill Frick at the Glen, he acquired their services as driver/engineers by buying their small company, hoping to enter their hybrid “Fordillac” in the 1950 running of the Le Mans 24 Hours, the world's premier endurance race. But the Fordillac didn't qualify, so Briggs fielded two cars powered by Cadillac's new OHV V-8. One was a big special-bodied streamliner (nicknamed Le Monstre by appreciative French racegoers). The other was a stock 1950 Coupe de Ville. Against all odds, the latter finished 10th overall while the special finished 11th.",
+        "cn_p3": "Buoyed by this success, Briggs turned to crafting his own sports-racing cars, setting up a company in West Palm Beach, Florida that same year. “We don't intend to build two types of car, one for racing and the other for touring,” he said. “Our policy is to concentrate on one model readily adaptable for both purposes.” Before it was all over in 1955, he'd develop several.",
+        "cn_p4": "The first, logically tagged C-1, was a smooth, low-slung roadster that looked like a cross between the early Ferrari Barchettas and some of the later Ghia-bodied Chrysler specials. Power was supplied by Chrysler's 331-cubic-inch hemi-head V-8, mounted in a strong tubular-steel chassis with independent coil-spring front suspension, de Dion rear end, generous 105-inch wheelbase, and broad 58-inch front and rear tracks. Only one C-1 was completed, equipped for road use, rather lavishly so by European standards.",
+        "cn_p5": "Next came the evolutionary C-2. Only three were built, all racers designated C-2R. Walters and Fitch drove one at Le Mans in 1951, but had to settle for 18th overall. Late that year, Briggs decided to make the C-2 more of a road car and sell it in limited numbers. The resulting C-3 would be offered as a coupe in addition to the usual roadster at respective base prices of $9,000 and $8,000. Also planned was a $2,915 racing package comprising four-carburetor manifold, ported and polished heads, oil cooler, competition brakes, and racing bumperettes and grille screen. But by the time a prototype coupe was finished, someone had figured out that each C-3 would cost $15,000 just to build.",
+        "cn_p6": "That was no way to run things so in early 1952, Cunningham contracted with Alfredo Vignale's Carrozzeria Vignale Coachworks in Turin, Italy to build C-3 bodies to a new design by Giovanni Michelotti. With this, the projected base price was dropped back to $9,000. What emerged was an American Gran Turismo as elegant and exciting as anything from Europe.",
+        "cn_p7": "The C-3's ladder-type tube chassis (with modified Ford front suspension) was almost identical with the C-2's, but the De Dion rear end gave way to a far simpler and more reliable coil-sprung Chrysler live axle located by parallel trailing arms. Brakes were a combination of 11-inch-diameter Mercury drums and Delco actuating mechanisms. Wheelbase remained at 105 inches initially, but was later stretched two inches for more proper 2+2 seating. The V-8 used was basically as supplied by Chrysler Industrial except for Cunningham's own log-type manifolds with four Zenith downdraft carburetors. With the semi-automatic Chrysler transmission and a 235bhp hemi-engine, the C-3 Continental Competition Coupes were good for sub-seven-second, 0–60mph runs. They were also capable of reaching and cruising along at 120mph, making them a formidable endurance racer!",
+        "cn_p8": "Inside and out, the C-3 bore more than a passing resemblance to other Michelotti Vignale designs of the period, particularly some of the early Ferraris 212 and 225 Sport racing models currently under production. The bodywork was distinctively Vignale though, and one of the coachbuilder's better efforts. Pleated-leather seats graced the cockpit, while the dash was dominated by a large speedometer and matching combination gauge with clock. A small tachometer was mounted between and slightly above the main dials. Luggage had to be carried inside, because the spare tire and fuel tank occupied most of the normal trunk space.",
+        "cn_p9": "The first C-3 coupe, named Continental, was finished in time for the Cunningham team to drive to the Glen in September 1952. It then toured U.S. auto shows while a second car was displayed at the Paris Salon that October.",
+        "cn_p10": "“Production” got underway by early 1953. Unfortunately, while the Palm Beach works could build a chassis a week, Vignale needed almost two months to complete the rest of the car. A planned cabriolet derivative was shown at Geneva in March while assembly continued at this snail's pace. Ultimately, just nine cabriolets and 18 Competition Coupes would be built, the former carrying a delivered price of exactly $11,422.50. It was as close as Briggs ever got to a production model.",
+        "cn_p11": "Of course, the real reason for all this was to give Cunningham a contender in production-class racing, though the C-3 was never produced in numbers enough to make it much of a threat. Briggs' remaining competition efforts would be made with further variations on his original theme: the C-4R and C-4RK, C-5R, and C-6R.",
+        "cn_p12": "Nevertheless, the C-3 was svelte and compact next to most contemporary American cars, and it was a styling tour de force. Arthur Drexler, then director of New York's Museum of Modern Art, put the coupe on his list of the world's 10 best designs. For a discerning, monied few, the C-3 was a terrific buy, and it sold as quickly as the Cunningham company could build it.",
+        "cn_p13": "The C-3 was regarded as every bit as good as a contemporary Ferrari—maybe better in some respects. And while the Chrysler hemi was likely the best engine of its day, few were willing to spend nearly $12,000 for a car in the early Fifties. A pity. They missed a very good car!",
+        "cn_history_h3": "This car's history",
+        "cn_p14": "Chassis No. C53-8-1086 was ordered new by Doctor Floyd W. McRae, based in Atlanta, Georgia. Dr. McRae ordered his Competition Coupe directly from Briggs Swift Cunningham in the Spring of 1953 and paid approximately $11,000 U.S. dollars to be one of the first owners of the newly released production Cunninghams. Chassis C53-8-1086 was the fourth production C-3. Two prototypes were produced in the Fall of 1952. An additional three production versions were finished before Dr. McRae took delivery of his blue and white coupe.",
+        "cn_p15": "Dr. McRae registered the car on Fulton County, Georgia plates “033 696”. On January 10, 1964, Dr. McRae re-registered the car again in Fulton County, Georgia. The new license plates were “2943”. It is not known what races, if any, Dr. McRae ran his Competition Coupe in. It has been rumored that the car had a sole class win at the SCCA, Sowega, Georgia races in 1954. However, this has never been confirmed.",
+        "cn_p16": "On July 1, 1970, Dr. McRae sold the car to Bill Harrah of Reno, Nevada for $3,000 U.S. dollars. The total mileage at the time of the sale was 21,188.",
+        "cn_p17": "The car was later sold to Doctor Fredrick A. Simione of Philadelphia, Pennsylvania. Doctor Simione sold the car in April of 1994 to Mr. Horace Jeffrey of Orange, California as part exchange in his purchase of Mr. Jeffrey's 1954 Ferrari 375 Mille Miglia Pinin Farina Competition Spyder, s/n 0412 AM.",
+        "cn_p18": "In 1997, Doctor Simeone repurchased the car from Jeffrey for $183,000 U.S. dollars and in March of 1998 the car was traded to <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "This beautiful Italian-American hybrid is one of just 16 production examples completed. The car has been thoroughly race prepared and is eligible for numerous Historic Touring and racing events throughout the world.",
+        "cn_contact": "For more information on this and other classic automobiles, please contact Symbolic Motors in La Jolla, California.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "The 1953 Cunningham C-3 Vignale Competition Continental Coupe, its design history and the full ownership history of chassis C53-8-1086."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt augustus 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "Chassisnr. C53-8-1086",
+        "cn_source": "Fragment uit The Great Book of Sports Cars:",
+        "cn_p1": "Hollywood zou een film kunnen maken over Briggs Swift Cunningham, en zou dat eigenlijk ook moeten doen. Als zoon van een bankier uit Cincinnati en petekind van de Proctor-helft van Proctor & Gamble maakte hij indruk in de hogere kringen. Hij kende alle 'juiste' mensen (velen net zo rijk als hijzelf) en had een passie voor sport: golf, vliegen, vooral zeilen — en sportauto's. Nadat hij zich begin naoorlogse jaren aansloot bij de piepjonge Sports Car Club of America, reed Briggs in 1948 naar een tweede plaats bij Watkins Glen in zijn unieke 'Bumerc', een omgebouwde Mercedes SSK met Buick-motor.",
+        "cn_p2": "Toen werd Briggs serieus. Nadat hij bij de Glen Phil Walters en Bill Frick had ontmoet, verwierf hij hun diensten als coureur/technicus door hun kleine bedrijf over te nemen, in de hoop hun hybride 'Fordillac' in te schrijven voor de Le Mans 24 uur van 1950, 's werelds belangrijkste langeafstandsrace. Maar de Fordillac kwalificeerde zich niet, dus stuurde Briggs twee auto's met Cadillac's nieuwe OHV-V8 naar de start. Eén was een grote streamliner met speciale carrosserie (door bewonderende Franse toeschouwers 'Le Monstre' gedoopt). De andere was een standaard Coupe de Ville uit 1950. Tegen alle verwachtingen in eindigde die laatste als 10e in het algemeen klassement, terwijl de speciale auto 11e werd.",
+        "cn_p3": "Gesterkt door dit succes ging Briggs zich toeleggen op het bouwen van zijn eigen sportracewagens en richtte hij datzelfde jaar een bedrijf op in West Palm Beach, Florida. 'We zijn niet van plan twee soorten auto te bouwen, één voor racen en één voor toeren,' zei hij. 'Ons beleid is om ons te concentreren op één model dat goed voor beide doeleinden geschikt is.' Voordat het in 1955 allemaal voorbij was, zou hij er meerdere ontwikkelen.",
+        "cn_p4": "De eerste, logischerwijs C-1 genoemd, was een gestroomlijnde, laaggebouwde roadster die leek op een kruising tussen de vroege Ferrari Barchetta's en enkele latere, door Ghia gecarrosseerde Chrysler-specials. Het vermogen kwam van Chryslers 331-cubic-inch hemi-kop V8, gemonteerd in een stevig buisframe met onafhankelijke voorwielophanging op schroefveren, een De Dion-achteras, een royale wielbasis van 105 inch en brede sporen van 58 inch voor en achter. Er werd slechts één C-1 afgebouwd, geschikt voor de openbare weg, en naar Europese maatstaven behoorlijk luxueus uitgerust.",
+        "cn_p5": "Daarna kwam de doorontwikkelde C-2. Er werden er maar drie gebouwd, allemaal racewagens met de aanduiding C-2R. Walters en Fitch reden er één in 1951 bij Le Mans, maar moesten genoegen nemen met een 18e plaats in het algemeen klassement. Later dat jaar besloot Briggs om van de C-2 meer een wegauto te maken en hem in beperkte oplage te verkopen. De resulterende C-3 zou naast de gebruikelijke roadster ook als coupé worden aangeboden, tegen respectievelijke basisprijzen van $9.000 en $8.000. Ook gepland was een racepakket van $2.915 met een viercarburateur-inlaatspruitstuk, gestroomlijnde en gepolijste cilinderkoppen, oliekoeler, competitieremmen en race-bumpertjes en grillescherm. Maar tegen de tijd dat een prototype-coupé klaar was, had iemand uitgerekend dat elke C-3 alleen al $15.000 zou kosten om te bouwen.",
+        "cn_p6": "Zo kon het niet langer, dus begin 1952 sloot Cunningham een contract met Alfredo Vignale's Carrozzeria Vignale in Turijn, Italië, om C-3-carrosserieën te bouwen naar een nieuw ontwerp van Giovanni Michelotti. Daarmee zakte de geplande basisprijs weer terug naar $9.000. Het resultaat was een Amerikaanse Gran Turismo, even elegant en spannend als alles wat Europa te bieden had.",
+        "cn_p7": "Het ladderframe met buisconstructie van de C-3 (met aangepaste Ford-voorwielophanging) was vrijwel identiek aan dat van de C-2, maar de De Dion-achteras maakte plaats voor een veel eenvoudigere en betrouwbaardere starre Chrysler-as op schroefveren, geleid door parallelle trailingarms. De remmen waren een combinatie van Mercury-trommels met een diameter van 11 inch en Delco-bekrachtiging. De wielbasis bleef aanvankelijk 105 inch, maar werd later 2 inch verlengd voor een betere 2+2-zitpositie. De gebruikte V8 kwam grotendeels overeen met wat Chrysler Industrial leverde, op Cunninghams eigen spruitstukken met vier Zenith-valstroomcarburateurs na. Met de semi-automatische Chrysler-transmissie en een 235pk hemi-motor haalden de C-3 Continental Competition Coupes een 0-100 km/u onder de zeven seconden. Ze konden ook een topsnelheid van 120 mph aanhouden op kruissnelheid, wat ze tot een formidabele langeafstandsracer maakte!",
+        "cn_p8": "Van binnen en van buiten vertoonde de C-3 meer dan een oppervlakkige gelijkenis met andere Michelotti-Vignale-ontwerpen uit die periode, met name enkele vroege Ferrari 212- en 225 Sport-racemodellen die op dat moment in productie waren. De carrosserie was echter herkenbaar Vignale, en een van de betere prestaties van de carrosseriebouwer. Geplooide lederen stoelen sierden de cockpit, terwijl het dashboard werd gedomineerd door een grote snelheidsmeter met bijpassende combimeter en klok. Een kleine toerenteller was ertussenin en iets hoger gemonteerd. Bagage moest binnenin worden meegenomen, omdat het reservewiel en de brandstoftank het grootste deel van de normale kofferruimte innamen.",
+        "cn_p9": "De eerste C-3-coupé, genaamd Continental, was op tijd klaar zodat het Cunningham-team ermee naar de Glen kon rijden in september 1952. Daarna toerde hij langs Amerikaanse autoshows, terwijl een tweede exemplaar die oktober werd getoond op het Salon van Parijs.",
+        "cn_p10": "De 'productie' kwam begin 1953 op gang. Helaas kon de fabriek in Palm Beach weliswaar één chassis per week bouwen, maar had Vignale bijna twee maanden nodig om de rest van de auto af te maken. Een geplande cabrioletversie werd in maart getoond in Genève, terwijl de assemblage in dit slakkentempo doorging. Uiteindelijk werden er slechts negen cabriolets en 18 Competition Coupes gebouwd; de cabriolet had een afleverprijs van precies $11.422,50. Dichter bij een productiemodel is Briggs nooit gekomen.",
+        "cn_p11": "De echte reden achter dit alles was natuurlijk om Cunningham een kanshebber te geven in de productieklasse-racerij, hoewel de C-3 nooit in voldoende aantallen werd gebouwd om echt een bedreiging te vormen. Briggs' verdere inspanningen op wedstrijdgebied gebeurden met verdere varianten op zijn oorspronkelijke thema: de C-4R en C-4RK, C-5R en C-6R.",
+        "cn_p12": "Toch was de C-3 slank en compact vergeleken met de meeste hedendaagse Amerikaanse auto's, en het was een stilistisch hoogstandje. Arthur Drexler, destijds directeur van het Museum of Modern Art in New York, zette de coupé op zijn lijst van de tien beste ontwerpen ter wereld. Voor een select gezelschap van kenners met geld was de C-3 een fantastische koop, en hij verkocht zo snel als Cunningham hem kon bouwen.",
+        "cn_p13": "De C-3 werd beschouwd als minstens net zo goed als een hedendaagse Ferrari — in sommige opzichten misschien zelfs beter. En hoewel de Chrysler hemi-motor waarschijnlijk de beste motor van zijn tijd was, waren er begin jaren vijftig maar weinig mensen bereid bijna $12.000 uit te geven aan een auto. Jammer. Ze misten een heel goede auto!",
+        "cn_history_h3": "De geschiedenis van deze auto",
+        "cn_p14": "Chassisnummer C53-8-1086 werd nieuw besteld door dokter Floyd W. McRae, gevestigd in Atlanta, Georgia. Dr. McRae bestelde zijn Competition Coupe rechtstreeks bij Briggs Swift Cunningham in het voorjaar van 1953 en betaalde ongeveer $11.000 om een van de eerste eigenaren te worden van de zojuist uitgebrachte productie-Cunninghams. Chassis C53-8-1086 was de vierde productie-C-3. In het najaar van 1952 werden twee prototypes gebouwd. Er werden nog drie productie-exemplaren afgebouwd voordat dr. McRae zijn blauw-witte coupé in ontvangst nam.",
+        "cn_p15": "Dr. McRae registreerde de auto met kentekenplaten '033 696' in Fulton County, Georgia. Op 10 januari 1964 registreerde dr. McRae de auto opnieuw in Fulton County, Georgia. De nieuwe kentekenplaten waren '2943'. Het is niet bekend in welke races, indien van toepassing, dr. McRae zijn Competition Coupe heeft gereden. Er gaat een gerucht dat de auto in 1954 een klassewinst behaalde bij de SCCA-races in Sowega, Georgia. Dit is echter nooit bevestigd.",
+        "cn_p16": "Op 1 juli 1970 verkocht dr. McRae de auto aan Bill Harrah uit Reno, Nevada, voor $3.000. De totale kilometerstand op het moment van verkoop was 21.188 mijl.",
+        "cn_p17": "De auto werd later verkocht aan dokter Fredrick A. Simione uit Philadelphia, Pennsylvania. Dokter Simione verkocht de auto in april 1994 aan de heer Horace Jeffrey uit Orange, Californië, als deel van de betaling voor de aankoop van de heer Jeffreys 1954 Ferrari 375 Mille Miglia Pinin Farina Competition Spyder, chassisnr. 0412 AM.",
+        "cn_p18": "In 1997 kocht dokter Simeone de auto terug van Jeffrey voor $183.000, en in maart 1998 werd de auto ingeruild bij <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "Deze prachtige Italiaans-Amerikaanse hybride is een van slechts 16 voltooide productie-exemplaren. De auto is grondig raceklaar gemaakt en komt in aanmerking voor tal van Historic Touring- en race-evenementen over de hele wereld.",
+        "cn_contact": "Voor meer informatie over deze en andere klassieke automobielen, neem contact op met Symbolic Motors in La Jolla, Californië.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "De 1953 Cunningham C-3 Vignale Competition Continental Coupe, het ontwerpverhaal en de volledige eigendomsgeschiedenis van chassis C53-8-1086."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato ad agosto 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "Telaio n. C53-8-1086",
+        "cn_source": "Estratto da The Great Book of Sports Cars:",
+        "cn_p1": "Hollywood potrebbe fare un film su Briggs Swift Cunningham, e dovrebbe farlo. Figlio di un banchiere di Cincinnati e figlioccio della metà Proctor di Proctor & Gamble, era una figura affascinante nell'alta società. Conosceva tutte le persone \"giuste\" (molte ricche quanto lui) e aveva una passione per lo sport: golf, volo, soprattutto vela — e le auto sportive. Dopo essersi unito, nei primi anni del dopoguerra, alla nascente Sports Car Club of America, Briggs arrivò secondo a Watkins Glen nel 1948 con la sua unica \"Bumerc\", una Mercedes SSK ricostruita con motore Buick.",
+        "cn_p2": "Poi Briggs fece sul serio. Dopo aver conosciuto Phil Walters e Bill Frick al Glen, si assicurò i loro servizi come piloti/ingegneri acquistando la loro piccola azienda, sperando di iscrivere la loro ibrida \"Fordillac\" alla 24 Ore di Le Mans del 1950, la più importante gara di durata al mondo. Ma la Fordillac non si qualificò, così Briggs schierò due vetture spinte dal nuovo V8 OHV Cadillac. Una era una grande streamliner dalla carrozzeria speciale (soprannominata Le Monstre dagli entusiasti tifosi francesi). L'altra era una Coupe de Ville di serie del 1950. Contro ogni pronostico, quest'ultima chiuse decima assoluta, mentre la speciale fu undicesima.",
+        "cn_p3": "Incoraggiato da questo successo, Briggs si dedicò alla realizzazione delle proprie vetture sportive da competizione, fondando quello stesso anno un'azienda a West Palm Beach, in Florida. \"Non intendiamo costruire due tipi di auto, una per le corse e una per il turismo\", disse. \"La nostra politica è concentrarci su un unico modello facilmente adattabile a entrambi gli scopi.\" Prima che tutto finisse nel 1955, ne avrebbe sviluppate diverse.",
+        "cn_p4": "La prima, logicamente chiamata C-1, era una roadster filante e bassa che sembrava un incrocio tra le prime Ferrari Barchetta e alcune delle successive Chrysler speciali carrozzate da Ghia. La potenza era fornita dal V8 Chrysler hemi da 331 pollici cubici, montato su un robusto telaio tubolare in acciaio con sospensioni anteriori indipendenti a molle elicoidali, retrotreno De Dion, un generoso passo di 105 pollici e carreggiate larghe di 58 pollici davanti e dietro. Fu completata una sola C-1, allestita per l'uso stradale, in modo piuttosto lussuoso secondo gli standard europei.",
+        "cn_p5": "Seguì poi l'evoluzione C-2. Ne furono costruite solo tre, tutte da competizione e denominate C-2R. Walters e Fitch ne guidarono una a Le Mans nel 1951, ma dovettero accontentarsi del 18° posto assoluto. Alla fine di quell'anno, Briggs decise di rendere la C-2 più una vettura stradale e di venderla in numero limitato. La C-3 risultante sarebbe stata offerta come coupé oltre alla consueta roadster, a prezzi base rispettivamente di 9.000 e 8.000 dollari. Era previsto anche un pacchetto da competizione da 2.915 dollari, comprendente un collettore a quattro carburatori, teste rettificate e lucidate, radiatore dell'olio, freni da competizione e paraurti e griglia da corsa. Ma quando fu completato un prototipo coupé, qualcuno calcolò che ogni C-3 sarebbe costata 15.000 dollari solo da costruire.",
+        "cn_p6": "Non era un modo sostenibile di procedere, così all'inizio del 1952 Cunningham firmò un contratto con la Carrozzeria Vignale di Alfredo Vignale a Torino per costruire le carrozzerie della C-3 secondo un nuovo disegno di Giovanni Michelotti. Con questo, il prezzo base previsto tornò a 9.000 dollari. Ne nacque una Gran Turismo americana elegante ed emozionante quanto qualsiasi cosa proveniente dall'Europa.",
+        "cn_p7": "Il telaio tubolare a longheroni della C-3 (con sospensione anteriore Ford modificata) era quasi identico a quello della C-2, ma il retrotreno De Dion lasciò il posto a un assale rigido Chrysler molto più semplice e affidabile, a molle elicoidali, guidato da bracci longitudinali paralleli. I freni erano una combinazione di tamburi Mercury da 11 pollici di diametro e meccanismi di azionamento Delco. Il passo rimase inizialmente di 105 pollici, ma fu poi allungato di due pollici per una seduta 2+2 più adeguata. Il V8 utilizzato era sostanzialmente quello fornito da Chrysler Industrial, salvo i collettori \"a log\" propri di Cunningham con quattro carburatori Zenith a caduta. Con il cambio semiautomatico Chrysler e un motore hemi da 235 CV, le C-3 Continental Competition Coupe erano capaci di uno 0-60 mph in meno di sette secondi. Erano inoltre in grado di raggiungere e mantenere una velocità di crociera di 120 mph, il che le rendeva formidabili vetture da endurance!",
+        "cn_p8": "Sia dentro che fuori, la C-3 mostrava più di una semplice somiglianza con altri progetti Michelotti-Vignale dell'epoca, in particolare con alcuni dei primi modelli da competizione Ferrari 212 e 225 Sport allora in produzione. La carrozzeria era però inconfondibilmente Vignale, e una delle migliori realizzazioni del carrozziere. Sedili in pelle plissettata arredavano l'abitacolo, mentre il cruscotto era dominato da un grande tachimetro e da un contagiri combinato con orologio. Un piccolo contagiri era posizionato tra i due quadranti principali, leggermente più in alto. I bagagli dovevano essere trasportati all'interno, poiché la ruota di scorta e il serbatoio del carburante occupavano quasi tutto il normale vano bagagli.",
+        "cn_p9": "La prima coupé C-3, chiamata Continental, fu completata in tempo perché il team Cunningham potesse guidarla fino al Glen nel settembre 1952. In seguito girò le fiere dell'auto statunitensi, mentre una seconda vettura fu esposta al Salone di Parigi in ottobre.",
+        "cn_p10": "La \"produzione\" iniziò all'inizio del 1953. Purtroppo, mentre lo stabilimento di Palm Beach riusciva a costruire un telaio a settimana, Vignale impiegava quasi due mesi per completare il resto della vettura. Una versione cabriolet prevista fu mostrata a Ginevra in marzo, mentre l'assemblaggio proseguiva a questo ritmo lentissimo. Alla fine furono costruite solo nove cabriolet e 18 Competition Coupe, con la prima venduta a un prezzo consegnato di esattamente 11.422,50 dollari. Fu il modello più vicino a una produzione di serie che Briggs riuscì mai a realizzare.",
+        "cn_p11": "Naturalmente il vero motivo di tutto ciò era dare a Cunningham un contendente nelle corse riservate alle vetture di serie, anche se la C-3 non fu mai prodotta in numero sufficiente da rappresentare una vera minaccia. I successivi sforzi agonistici di Briggs furono realizzati con ulteriori varianti del suo tema originale: la C-4R e C-4RK, la C-5R e la C-6R.",
+        "cn_p12": "Ciononostante, la C-3 era slanciata e compatta rispetto alla maggior parte delle vetture americane coeve, e rappresentava un vero tour de force stilistico. Arthur Drexler, allora direttore del Museum of Modern Art di New York, inserì la coupé nella sua lista dei 10 migliori design al mondo. Per una ristretta cerchia di intenditori benestanti, la C-3 era un acquisto formidabile, e si vendeva tanto rapidamente quanto la Cunningham riusciva a costruirla.",
+        "cn_p13": "La C-3 era considerata altrettanto valida di una Ferrari coeva — forse migliore sotto alcuni aspetti. E sebbene l'hemi Chrysler fosse probabilmente il miglior motore della sua epoca, pochi erano disposti a spendere quasi 12.000 dollari per un'auto nei primi anni Cinquanta. Un peccato. Si sono persi un'ottima vettura!",
+        "cn_history_h3": "La storia di questa vettura",
+        "cn_p14": "Il telaio n. C53-8-1086 fu ordinato nuovo dal dottor Floyd W. McRae, di Atlanta, Georgia. Il dott. McRae ordinò la sua Competition Coupe direttamente a Briggs Swift Cunningham nella primavera del 1953, pagando circa 11.000 dollari per essere tra i primi proprietari delle nuove Cunningham di serie. Il telaio C53-8-1086 fu la quarta C-3 di produzione. Due prototipi furono realizzati nell'autunno del 1952. Altre tre versioni di produzione furono completate prima che il dott. McRae prendesse in consegna la sua coupé blu e bianca.",
+        "cn_p15": "Il dott. McRae immatricolò la vettura nella contea di Fulton, Georgia, con targa \"033 696\". Il 10 gennaio 1964, il dott. McRae reimmatricolò nuovamente la vettura nella contea di Fulton, Georgia. La nuova targa era \"2943\". Non si sa in quali gare, se in alcuna, il dott. McRae abbia utilizzato la sua Competition Coupe. Si vocifera che l'auto abbia ottenuto un'unica vittoria di classe alle gare SCCA di Sowega, Georgia, nel 1954. Ciò tuttavia non è mai stato confermato.",
+        "cn_p16": "Il 1° luglio 1970, il dott. McRae vendette l'auto a Bill Harrah di Reno, Nevada, per 3.000 dollari. Il chilometraggio totale al momento della vendita era di 21.188 miglia.",
+        "cn_p17": "L'auto fu successivamente venduta al dottor Fredrick A. Simione di Filadelfia, Pennsylvania. Il dottor Simione la vendette nell'aprile 1994 al signor Horace Jeffrey di Orange, California, come parte di permuta per l'acquisto della sua Ferrari 375 Mille Miglia Pinin Farina Competition Spyder del 1954, telaio n. 0412 AM.",
+        "cn_p18": "Nel 1997 il dottor Simeone riacquistò l'auto da Jeffrey per 183.000 dollari e nel marzo 1998 la vettura fu ceduta in permuta a <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "Questo splendido ibrido italo-americano è uno dei soli 16 esemplari di produzione completati. La vettura è stata accuratamente preparata per le competizioni ed è ammessa a numerosi eventi di Historic Touring e gare in tutto il mondo.",
+        "cn_contact": "Per maggiori informazioni su questa e altre auto d'epoca, contattare Symbolic Motors a La Jolla, California.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "La Cunningham C-3 Vignale Competition Continental Coupe del 1953, la sua storia progettuale e la storia proprietaria completa del telaio C53-8-1086."
+    },
+    "es": {
+        "skip_link": "Ir al contenido",
+        "lang_switch_label": "Idioma",
+        "nav_aria_toggle": "Abrir menú",
+        "nav_aria_main": "Navegación principal",
+        "nav_home": "Inicio",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Historias",
+        "nav_data": "Datos",
+        "nav_marketing": "Marketing",
+        "nav_links": "Enlaces",
+        "nav_new": "Novedades",
+        "footer_credit": "Sitio creado y mantenido por Martin Wildeboer. Actualizado en agosto de 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "N.º de chasis C53-8-1086",
+        "cn_source": "Extracto de The Great Book of Sports Cars:",
+        "cn_p1": "Hollywood podría hacer una película sobre Briggs Swift Cunningham, y debería hacerla. Hijo de un banquero de Cincinnati y ahijado de la mitad Proctor de Proctor & Gamble, cortaba una figura elegante en la alta sociedad. Conocía a toda la gente \"adecuada\" (muchos tan ricos como él) y sentía pasión por el deporte: el golf, volar, sobre todo la vela, y los coches deportivos. Tras unirse al incipiente Sports Car Club of America en los primeros años de posguerra, Briggs terminó segundo en Watkins Glen en 1948 con su singular \"Bumerc\", un Mercedes SSK reconstruido con motor Buick.",
+        "cn_p2": "Entonces Briggs se lo tomó en serio. Tras conocer a Phil Walters y Bill Frick en el Glen, se hizo con sus servicios como pilotos/ingenieros comprando su pequeña empresa, con la esperanza de inscribir su híbrido \"Fordillac\" en las 24 Horas de Le Mans de 1950, la carrera de resistencia más importante del mundo. Pero el Fordillac no logró clasificar, así que Briggs presentó dos coches propulsados por el nuevo V8 OHV de Cadillac. Uno era un gran streamliner de carrocería especial (apodado Le Monstre por los aficionados franceses). El otro era un Coupe de Ville de serie de 1950. Contra todo pronóstico, este último terminó décimo en la general, mientras que el especial fue undécimo.",
+        "cn_p3": "Animado por este éxito, Briggs se dedicó a construir sus propios coches deportivos de competición, fundando ese mismo año una empresa en West Palm Beach, Florida. \"No pretendemos construir dos tipos de coche, uno para carreras y otro para turismo\", dijo. \"Nuestra política es concentrarnos en un solo modelo fácilmente adaptable a ambos propósitos.\" Antes de que todo terminara en 1955, desarrollaría varios.",
+        "cn_p4": "El primero, lógicamente llamado C-1, era un roadster estilizado y bajo que parecía un cruce entre los primeros Ferrari Barchetta y algunos de los posteriores Chrysler especiales carrozados por Ghia. La potencia la proporcionaba el V8 hemi de Chrysler de 331 pulgadas cúbicas, montado sobre un robusto chasis tubular de acero con suspensión delantera independiente de muelles helicoidales, eje trasero De Dion, una generosa distancia entre ejes de 105 pulgadas y anchas vías de 58 pulgadas delante y detrás. Solo se completó un C-1, equipado para uso en carretera, de forma bastante lujosa para los estándares europeos.",
+        "cn_p5": "A continuación llegó la evolución C-2. Solo se construyeron tres, todos de competición y designados C-2R. Walters y Fitch condujeron uno en Le Mans en 1951, pero tuvieron que conformarse con el 18.º puesto en la general. A finales de ese año, Briggs decidió convertir el C-2 en un coche más orientado a la carretera y venderlo en cantidades limitadas. El C-3 resultante se ofrecería como coupé además del habitual roadster, a precios base de 9.000 y 8.000 dólares respectivamente. También se planeó un paquete de competición de 2.915 dólares que incluía colector de cuatro carburadores, culatas rectificadas y pulidas, radiador de aceite, frenos de competición y parachoques y rejilla de carreras. Pero cuando se terminó un prototipo de coupé, alguien calculó que cada C-3 costaría 15.000 dólares solo de fabricar.",
+        "cn_p6": "Aquello no era manera de gestionar el negocio, así que a principios de 1952 Cunningham contrató a la Carrozzeria Vignale de Alfredo Vignale, en Turín, Italia, para construir las carrocerías del C-3 según un nuevo diseño de Giovanni Michelotti. Con ello, el precio base previsto volvió a bajar a 9.000 dólares. El resultado fue un Gran Turismo americano tan elegante y emocionante como cualquier cosa procedente de Europa.",
+        "cn_p7": "El chasis tubular de tipo escalera del C-3 (con suspensión delantera Ford modificada) era casi idéntico al del C-2, pero el eje trasero De Dion dio paso a un eje rígido Chrysler mucho más simple y fiable, con muelles helicoidales, guiado por brazos tirados paralelos. Los frenos eran una combinación de tambores Mercury de 11 pulgadas de diámetro y mecanismos de accionamiento Delco. La distancia entre ejes se mantuvo inicialmente en 105 pulgadas, pero luego se alargó dos pulgadas para una disposición 2+2 más adecuada. El V8 utilizado era básicamente el suministrado por Chrysler Industrial, salvo por los colectores propios de Cunningham con cuatro carburadores Zenith de tiro descendente. Con la transmisión semiautomática Chrysler y un motor hemi de 235 CV, los Cunningham C-3 Continental Competition Coupe lograban un 0-60 mph en menos de siete segundos. También eran capaces de alcanzar y mantener 120 mph de crucero, lo que los convertía en formidables coches de resistencia.",
+        "cn_p8": "Tanto por dentro como por fuera, el C-3 guardaba más que un ligero parecido con otros diseños de Michelotti-Vignale de la época, en particular con algunos de los primeros modelos de competición Ferrari 212 y 225 Sport, entonces en producción. La carrocería, sin embargo, era inconfundiblemente Vignale, y uno de los mejores logros del carrocero. Asientos de cuero plisado adornaban el habitáculo, mientras que el salpicadero estaba dominado por un gran velocímetro y un indicador combinado a juego con reloj. Un pequeño cuentarrevoluciones se montaba entre ambos, ligeramente más elevado. El equipaje había que llevarlo dentro, ya que la rueda de repuesto y el depósito de combustible ocupaban la mayor parte del maletero.",
+        "cn_p9": "El primer coupé C-3, llamado Continental, se terminó a tiempo para que el equipo Cunningham lo condujera hasta el Glen en septiembre de 1952. Después recorrió salones del automóvil estadounidenses, mientras un segundo ejemplar se exhibió en el Salón de París ese mismo octubre.",
+        "cn_p10": "La \"producción\" comenzó a principios de 1953. Por desgracia, mientras la fábrica de Palm Beach podía construir un chasis a la semana, Vignale necesitaba casi dos meses para completar el resto del coche. Una versión cabriolet prevista se mostró en Ginebra en marzo, mientras el ensamblaje continuaba a este ritmo tan lento. Finalmente solo se construyeron nueve cabriolets y 18 Competition Coupe, el primero con un precio de entrega de exactamente 11.422,50 dólares. Fue lo más cerca que Briggs llegó jamás de un modelo de producción.",
+        "cn_p11": "Por supuesto, la verdadera razón de todo esto era dar a Cunningham un contendiente en las carreras de la clase de producción, aunque el C-3 nunca se fabricó en cantidad suficiente como para suponer una gran amenaza. Los siguientes esfuerzos competitivos de Briggs se realizarían con nuevas variaciones sobre su tema original: el C-4R y C-4RK, el C-5R y el C-6R.",
+        "cn_p12": "Aun así, el C-3 era esbelto y compacto en comparación con la mayoría de los coches americanos contemporáneos, y suponía un auténtico tour de force estilístico. Arthur Drexler, entonces director del Museo de Arte Moderno de Nueva York, incluyó el coupé en su lista de los 10 mejores diseños del mundo. Para unos pocos entendidos y adinerados, el C-3 era una compra formidable, y se vendía tan rápido como Cunningham podía construirlo.",
+        "cn_p13": "El C-3 se consideraba tan bueno como un Ferrari contemporáneo, e incluso mejor en algunos aspectos. Y aunque el hemi de Chrysler era probablemente el mejor motor de su época, pocos estaban dispuestos a gastar casi 12.000 dólares en un coche a principios de los años cincuenta. Una lástima. Se perdieron un coche muy bueno.",
+        "cn_history_h3": "Historia de este coche",
+        "cn_p14": "El chasis n.º C53-8-1086 fue encargado nuevo por el doctor Floyd W. McRae, de Atlanta, Georgia. El Dr. McRae encargó su Competition Coupe directamente a Briggs Swift Cunningham en la primavera de 1953 y pagó aproximadamente 11.000 dólares por ser uno de los primeros propietarios de los recién lanzados Cunningham de producción. El chasis C53-8-1086 fue el cuarto C-3 de producción. Se fabricaron dos prototipos en el otoño de 1952. Se completaron otras tres unidades de producción antes de que el Dr. McRae recibiera su coupé azul y blanco.",
+        "cn_p15": "El Dr. McRae matriculó el coche con placas \"033 696\" del condado de Fulton, Georgia. El 10 de enero de 1964, el Dr. McRae volvió a matricular el coche en el condado de Fulton, Georgia. Las nuevas placas eran \"2943\". No se sabe en qué carreras, si acaso participó en alguna, condujo el Dr. McRae su Competition Coupe. Se ha rumoreado que el coche logró una única victoria de clase en las carreras del SCCA en Sowega, Georgia, en 1954. Sin embargo, esto nunca se ha confirmado.",
+        "cn_p16": "El 1 de julio de 1970, el Dr. McRae vendió el coche a Bill Harrah, de Reno, Nevada, por 3.000 dólares. El kilometraje total en el momento de la venta era de 21.188 millas.",
+        "cn_p17": "El coche se vendió después al doctor Fredrick A. Simione, de Filadelfia, Pensilvania. El doctor Simione lo vendió en abril de 1994 al señor Horace Jeffrey, de Orange, California, como parte del pago por la compra del Ferrari 375 Mille Miglia Pinin Farina Competition Spyder de 1954 del señor Jeffrey, n.º de chasis 0412 AM.",
+        "cn_p18": "En 1997, el doctor Simeone recompró el coche a Jeffrey por 183.000 dólares y en marzo de 1998 el coche se entregó como parte de pago a <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "Este magnífico híbrido ítalo-americano es uno de solo 16 ejemplares de producción completados. El coche ha sido minuciosamente preparado para competición y es apto para numerosos eventos de Historic Touring y carreras en todo el mundo.",
+        "cn_contact": "Para más información sobre este y otros automóviles clásicos, ponte en contacto con Symbolic Motors en La Jolla, California.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "El Cunningham C-3 Vignale Competition Continental Coupe de 1953, su historia de diseño y la historia completa de propiedad del chasis C53-8-1086."
+    },
+    "fr": {
+        "skip_link": "Aller au contenu",
+        "lang_switch_label": "Langue",
+        "nav_aria_toggle": "Ouvrir le menu",
+        "nav_aria_main": "Navigation principale",
+        "nav_home": "Accueil",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registre",
+        "nav_stories": "Histoires",
+        "nav_data": "Données",
+        "nav_marketing": "Marketing",
+        "nav_links": "Liens",
+        "nav_new": "Nouveautés",
+        "footer_credit": "Site créé et maintenu par Martin Wildeboer. Mis à jour en août 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "N° de châssis C53-8-1086",
+        "cn_source": "Extrait de The Great Book of Sports Cars :",
+        "cn_p1": "Hollywood pourrait faire un film sur Briggs Swift Cunningham, et devrait le faire. Fils d'un banquier de Cincinnati et filleul de la moitié Proctor de Proctor & Gamble, il coupait une figure élégante dans la haute société. Il connaissait toutes les « bonnes » personnes (dont beaucoup étaient aussi riches que lui) et avait une passion pour le sport : le golf, le pilotage, surtout la voile — et les voitures de sport. Après avoir rejoint le tout jeune Sports Car Club of America dans les premières années de l'après-guerre, Briggs termina deuxième à Watkins Glen en 1948 au volant de sa « Bumerc » unique, une Mercedes SSK reconstruite avec un moteur Buick.",
+        "cn_p2": "Puis Briggs devint sérieux. Ayant rencontré Phil Walters et Bill Frick au Glen, il s'assura leurs services de pilotes-ingénieurs en rachetant leur petite entreprise, espérant engager leur hybride « Fordillac » aux 24 Heures du Mans 1950, la plus grande course d'endurance au monde. Mais la Fordillac ne se qualifia pas, alors Briggs aligna deux voitures propulsées par le nouveau V8 OHV de Cadillac. L'une était une grande profilée à carrosserie spéciale (surnommée Le Monstre par les spectateurs français conquis). L'autre était une Coupe de Ville de série de 1950. Contre toute attente, cette dernière termina 10e au classement général, tandis que la spéciale finit 11e.",
+        "cn_p3": "Porté par ce succès, Briggs se lança dans la construction de ses propres voitures de sport-compétition, fondant cette même année une entreprise à West Palm Beach, en Floride. « Nous n'avons pas l'intention de construire deux types de voitures, l'une pour la course, l'autre pour le tourisme », déclara-t-il. « Notre politique est de nous concentrer sur un seul modèle facilement adaptable aux deux usages. » Avant que tout ne s'achève en 1955, il en développerait plusieurs.",
+        "cn_p4": "La première, logiquement baptisée C-1, était un roadster fluide et surbaissé qui ressemblait à un croisement entre les premières Ferrari Barchetta et certaines des Chrysler spéciales carrossées par Ghia. La puissance provenait du V8 hemi Chrysler de 331 pouces cubes, monté sur un solide châssis tubulaire en acier avec suspension avant indépendante à ressorts hélicoïdaux, essieu arrière De Dion, un généreux empattement de 105 pouces et de larges voies de 58 pouces à l'avant comme à l'arrière. Une seule C-1 fut achevée, équipée pour la route, de façon plutôt luxueuse selon les standards européens.",
+        "cn_p5": "Vint ensuite la C-2, une évolution. Seules trois furent construites, toutes des voitures de course désignées C-2R. Walters et Fitch en pilotèrent une au Mans en 1951, mais durent se contenter d'une 18e place au général. À la fin de cette année-là, Briggs décida de faire de la C-2 une voiture plus routière et de la vendre en nombre limité. La C-3 qui en résulta serait proposée en coupé en plus du roadster habituel, aux prix de base respectifs de 9 000 et 8 000 dollars. Un pack compétition à 2 915 dollars était également prévu, comprenant un collecteur à quatre carburateurs, des culasses portées et polies, un radiateur d'huile, des freins de compétition ainsi que des butoirs et une grille de course. Mais au moment où un prototype coupé fut achevé, quelqu'un calcula que chaque C-3 coûterait 15 000 dollars rien qu'à construire.",
+        "cn_p6": "Ce n'était pas une façon viable de procéder, aussi, début 1952, Cunningham signa un contrat avec la Carrozzeria Vignale d'Alfredo Vignale, à Turin, en Italie, pour construire les carrosseries de la C-3 selon un nouveau dessin de Giovanni Michelotti. Le prix de base prévu redescendit alors à 9 000 dollars. Il en résulta une Gran Turismo américaine aussi élégante et exaltante que tout ce que l'Europe pouvait proposer.",
+        "cn_p7": "Le châssis tubulaire de type échelle de la C-3 (avec suspension avant Ford modifiée) était presque identique à celui de la C-2, mais l'essieu arrière De Dion céda la place à un essieu rigide Chrysler bien plus simple et fiable, à ressorts hélicoïdaux, guidé par des bras tirés parallèles. Les freins étaient une combinaison de tambours Mercury de 11 pouces de diamètre et de mécanismes d'actionnement Delco. L'empattement resta d'abord à 105 pouces, avant d'être allongé de deux pouces pour une assise 2+2 plus adéquate. Le V8 utilisé était pour l'essentiel celui fourni par Chrysler Industrial, à l'exception des collecteurs maison de Cunningham à quatre carburateurs Zenith inversés. Avec la transmission semi-automatique Chrysler et un moteur hemi de 235 ch, les coupés C-3 Continental Competition abattaient le 0 à 60 mph en moins de sept secondes. Elles pouvaient aussi atteindre et maintenir une vitesse de croisière de 120 mph, ce qui en faisait de redoutables voitures d'endurance !",
+        "cn_p8": "À l'intérieur comme à l'extérieur, la C-3 présentait plus qu'une simple ressemblance avec d'autres créations Michelotti-Vignale de l'époque, notamment certains modèles de course Ferrari 212 et 225 Sport alors en production. La carrosserie était néanmoins typiquement Vignale, et l'une des meilleures réalisations du carrossier. Des sièges en cuir plissé ornaient l'habitacle, tandis que le tableau de bord était dominé par un grand compteur de vitesse et un cadran combiné assorti avec horloge. Un petit compte-tours était monté entre les deux, légèrement plus haut. Les bagages devaient être transportés à l'intérieur, la roue de secours et le réservoir de carburant occupant l'essentiel du coffre habituel.",
+        "cn_p9": "Le premier coupé C-3, baptisé Continental, fut achevé à temps pour que l'équipe Cunningham le conduise jusqu'au Glen en septembre 1952. Il fit ensuite le tour des salons automobiles américains, tandis qu'un second exemplaire était exposé au Salon de Paris en octobre de la même année.",
+        "cn_p10": "La « production » démarra début 1953. Malheureusement, alors que l'usine de Palm Beach pouvait construire un châssis par semaine, Vignale avait besoin de près de deux mois pour achever le reste de la voiture. Une version cabriolet prévue fut présentée à Genève en mars, tandis que l'assemblage se poursuivait à ce rythme d'escargot. Au final, seuls neuf cabriolets et 18 Competition Coupe furent construits, le premier affichant un prix livré de exactement 11 422,50 dollars. Ce fut ce dont Briggs se rapprocha le plus d'un modèle de série.",
+        "cn_p11": "Bien sûr, la véritable raison de tout cela était de donner à Cunningham un prétendant dans les courses de catégorie production, même si la C-3 ne fut jamais produite en nombre suffisant pour représenter une réelle menace. Les efforts de compétition restants de Briggs se feraient avec de nouvelles variations sur son thème d'origine : la C-4R et la C-4RK, la C-5R et la C-6R.",
+        "cn_p12": "Néanmoins, la C-3 était svelte et compacte comparée à la plupart des voitures américaines contemporaines, et constituait un véritable tour de force stylistique. Arthur Drexler, alors directeur du Museum of Modern Art de New York, plaça le coupé sur sa liste des 10 meilleurs designs au monde. Pour une élite fortunée et avertie, la C-3 était une excellente affaire, et elle se vendait aussi vite que Cunningham parvenait à la construire.",
+        "cn_p13": "La C-3 était considérée comme aussi bonne qu'une Ferrari contemporaine — voire meilleure à certains égards. Et bien que le hemi Chrysler ait sans doute été le meilleur moteur de son époque, peu de gens étaient prêts à dépenser près de 12 000 dollars pour une voiture au début des années cinquante. Dommage. Ils sont passés à côté d'une très bonne voiture !",
+        "cn_history_h3": "L'histoire de cette voiture",
+        "cn_p14": "Le châssis n° C53-8-1086 fut commandé à l'état neuf par le docteur Floyd W. McRae, basé à Atlanta, en Géorgie. Le Dr McRae commanda sa Competition Coupe directement auprès de Briggs Swift Cunningham au printemps 1953 et paya environ 11 000 dollars pour devenir l'un des premiers propriétaires des Cunningham de série tout juste lancées. Le châssis C53-8-1086 était la quatrième C-3 de série. Deux prototypes avaient été produits à l'automne 1952. Trois autres exemplaires de série furent achevés avant que le Dr McRae ne prenne livraison de son coupé bleu et blanc.",
+        "cn_p15": "Le Dr McRae immatricula la voiture avec la plaque « 033 696 » du comté de Fulton, en Géorgie. Le 10 janvier 1964, le Dr McRae la réimmatricula à nouveau dans le comté de Fulton, en Géorgie. La nouvelle plaque était « 2943 ». On ignore dans quelles courses, le cas échéant, le Dr McRae a engagé sa Competition Coupe. Il a été rapporté que la voiture aurait remporté une seule victoire de catégorie lors des courses du SCCA à Sowega, en Géorgie, en 1954. Cela n'a toutefois jamais été confirmé.",
+        "cn_p16": "Le 1er juillet 1970, le Dr McRae vendit la voiture à Bill Harrah, de Reno, dans le Nevada, pour 3 000 dollars. Le kilométrage total au moment de la vente était de 21 188 miles.",
+        "cn_p17": "La voiture fut ensuite vendue au docteur Fredrick A. Simione, de Philadelphie, en Pennsylvanie. Le docteur Simione la revendit en avril 1994 à M. Horace Jeffrey, d'Orange, en Californie, en partie en échange de l'achat de la Ferrari 375 Mille Miglia Pinin Farina Competition Spyder de 1954 de M. Jeffrey, n° de série 0412 AM.",
+        "cn_p18": "En 1997, le docteur Simeone racheta la voiture à Jeffrey pour 183 000 dollars, et en mars 1998 elle fut reprise en échange par <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "Ce superbe hybride italo-américain est l'un des seulement 16 exemplaires de série achevés. La voiture a été soigneusement préparée pour la compétition et est éligible à de nombreux événements Historic Touring et de course à travers le monde.",
+        "cn_contact": "Pour plus d'informations sur cette voiture et d'autres automobiles classiques, veuillez contacter Symbolic Motors à La Jolla, en Californie.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "La Cunningham C-3 Vignale Competition Continental Coupe de 1953, son histoire de conception et l'historique complet de propriété du châssis C53-8-1086."
+    },
+    "de": {
+        "skip_link": "Zum Inhalt springen",
+        "lang_switch_label": "Sprache",
+        "nav_aria_toggle": "Menü öffnen",
+        "nav_aria_main": "Hauptnavigation",
+        "nav_home": "Start",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Geschichten",
+        "nav_data": "Daten",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Neues",
+        "footer_credit": "Website erstellt und betreut von Martin Wildeboer. Aktualisiert im August 2026.",
+        "footer_webmaster": "Webmaster",
+        "cn_eyebrow": "Carrozzeria Vignale · Cunningham",
+        "cn_h1": "1953 Cunningham C-3 Vignale Competition Continental Coupe",
+        "cn_chassis": "Fahrgestellnr. C53-8-1086",
+        "cn_source": "Auszug aus The Great Book of Sports Cars:",
+        "cn_p1": "Hollywood könnte einen Film über Briggs Swift Cunningham drehen, und sollte es auch tun. Als Sohn eines Bankiers aus Cincinnati und Patensohn der Proctor-Hälfte von Proctor & Gamble machte er in der High Society eine gute Figur. Er kannte alle „richtigen“ Leute (viele so reich wie er selbst) und hatte eine Leidenschaft für Sport: Golf, Fliegen, vor allem Segeln – und Sportwagen. Nachdem er sich in den frühen Nachkriegsjahren dem noch jungen Sports Car Club of America angeschlossen hatte, fuhr Briggs 1948 in seinem einzigartigen „Bumerc“, einem umgebauten Mercedes SSK mit Buick-Motor, in Watkins Glen auf den zweiten Platz.",
+        "cn_p2": "Dann wurde Briggs ernsthaft. Nachdem er Phil Walters und Bill Frick am Glen kennengelernt hatte, sicherte er sich ihre Dienste als Fahrer/Ingenieure, indem er ihr kleines Unternehmen kaufte, in der Hoffnung, ihren Hybrid „Fordillac“ 1950 bei den 24 Stunden von Le Mans, dem bedeutendsten Langstreckenrennen der Welt, an den Start zu bringen. Doch der Fordillac qualifizierte sich nicht, also schickte Briggs zwei Wagen mit Cadillacs neuem OHV-V8 ins Rennen. Einer war ein großer Stromlinienwagen mit Sonderkarosserie (von begeisterten französischen Zuschauern „Le Monstre“ getauft). Der andere war ein serienmäßiger Coupe de Ville von 1950. Gegen alle Erwartungen belegte Letzterer den 10. Gesamtrang, während der Spezialwagen 11. wurde.",
+        "cn_p3": "Beflügelt von diesem Erfolg widmete sich Briggs dem Bau eigener Sport-Rennwagen und gründete im selben Jahr ein Unternehmen in West Palm Beach, Florida. „Wir haben nicht vor, zwei Fahrzeugtypen zu bauen, einen für den Rennsport und einen für die Straße“, sagte er. „Unsere Strategie ist es, uns auf ein Modell zu konzentrieren, das sich leicht für beide Zwecke eignet.“ Bevor 1955 alles vorbei war, sollte er mehrere entwickeln.",
+        "cn_p4": "Der erste, folgerichtig C-1 genannt, war ein glatter, tiefliegender Roadster, der wie eine Kreuzung aus den frühen Ferrari Barchetta und einigen späteren, von Ghia karossierten Chrysler-Spezialmodellen aussah. Die Kraft lieferte Chryslers 331-Kubikzoll-Hemi-V8, montiert auf einem stabilen Stahlrohrrahmen mit unabhängiger Schraubenfeder-Vorderradaufhängung, De-Dion-Hinterachse, einem großzügigen Radstand von 105 Zoll und breiten 58-Zoll-Spuren vorn und hinten. Nur ein C-1 wurde fertiggestellt, straßentauglich ausgestattet und nach europäischen Maßstäben recht luxuriös.",
+        "cn_p5": "Als Nächstes kam die weiterentwickelte C-2. Es wurden nur drei gebaut, allesamt Rennwagen mit der Bezeichnung C-2R. Walters und Fitch fuhren 1951 einen davon in Le Mans, mussten sich aber mit dem 18. Gesamtrang begnügen. Ende jenes Jahres beschloss Briggs, aus der C-2 mehr einen Straßenwagen zu machen und ihn in begrenzter Stückzahl zu verkaufen. Die daraus entstehende C-3 sollte neben dem üblichen Roadster auch als Coupé angeboten werden, zu Grundpreisen von 9.000 bzw. 8.000 Dollar. Geplant war zudem ein Rennpaket für 2.915 Dollar mit Vierfachvergaser-Ansaugkrümmer, bearbeiteten und polierten Zylinderköpfen, Ölkühler, Wettbewerbsbremsen sowie Renn-Stoßstangenhörnern und Kühlergrillgitter. Doch als ein Coupé-Prototyp fertiggestellt war, hatte jemand ausgerechnet, dass jede C-3 allein im Bau 15.000 Dollar kosten würde.",
+        "cn_p6": "So konnte es nicht weitergehen, also schloss Cunningham Anfang 1952 einen Vertrag mit Alfredo Vignales Carrozzeria Vignale in Turin, Italien, um C-3-Karosserien nach einem neuen Entwurf von Giovanni Michelotti zu bauen. Damit sank der geplante Grundpreis wieder auf 9.000 Dollar. Das Ergebnis war ein amerikanischer Gran Turismo, so elegant und aufregend wie alles aus Europa.",
+        "cn_p7": "Das leiterrahmenartige Rohrchassis der C-3 (mit modifizierter Ford-Vorderradaufhängung) war fast identisch mit dem der C-2, doch die De-Dion-Hinterachse wich einer deutlich einfacheren und zuverlässigeren, schraubengefederten Chrysler-Starrachse, geführt von parallelen Längslenkern. Die Bremsen waren eine Kombination aus 11-Zoll-Mercury-Trommeln und Delco-Betätigungsmechanismen. Der Radstand blieb zunächst bei 105 Zoll, wurde später jedoch um zwei Zoll für eine passendere 2+2-Bestuhlung verlängert. Der verwendete V8 entsprach im Wesentlichen dem von Chrysler Industrial gelieferten, mit Ausnahme von Cunninghams eigenen Sammelrohr-Krümmern mit vier Zenith-Fallstromvergasern. Mit dem halbautomatischen Chrysler-Getriebe und einem 235-PS-Hemi-Motor schafften die C-3 Continental Competition Coupes den Sprint von 0 auf 60 mph in unter sieben Sekunden. Sie konnten zudem 120 mph erreichen und im Reisetempo halten, was sie zu formidablen Langstreckenrennwagen machte!",
+        "cn_p8": "Innen wie außen wies die C-3 mehr als nur eine flüchtige Ähnlichkeit mit anderen Michelotti-Vignale-Entwürfen jener Zeit auf, insbesondere mit einigen frühen Ferrari-212- und 225-Sport-Rennmodellen, die damals in Produktion waren. Die Karosserie war jedoch unverkennbar Vignale und eine der besseren Arbeiten des Karosseriebauers. Gefaltete Ledersitze zierten das Cockpit, während das Armaturenbrett von einem großen Tachometer und einer dazu passenden Kombianzeige mit Uhr dominiert wurde. Ein kleiner Drehzahlmesser saß dazwischen, leicht erhöht. Gepäck musste im Innenraum mitgeführt werden, da Reserverad und Tank den größten Teil des normalen Kofferraums beanspruchten.",
+        "cn_p9": "Das erste C-3-Coupé, genannt Continental, wurde rechtzeitig fertig, sodass das Cunningham-Team im September 1952 damit zum Glen fahren konnte. Danach tourte es durch US-Automessen, während ein zweiter Wagen im selben Oktober auf dem Pariser Salon ausgestellt wurde.",
+        "cn_p10": "Die „Serienproduktion“ begann Anfang 1953. Leider brauchte Vignale fast zwei Monate, um den Rest des Wagens fertigzustellen, während das Werk in Palm Beach ein Chassis pro Woche bauen konnte. Eine geplante Cabriolet-Version wurde im März in Genf gezeigt, während die Montage in diesem Schneckentempo weiterging. Letztlich wurden nur neun Cabriolets und 18 Competition Coupes gebaut, wobei Ersteres zu einem Auslieferungspreis von genau 11.422,50 Dollar verkauft wurde. Näher an ein Serienmodell kam Briggs nie heran.",
+        "cn_p11": "Der eigentliche Grund für all dies war natürlich, Cunningham einen Wettbewerber im Produktionsklassen-Rennsport zu geben, auch wenn die C-3 nie in ausreichender Stückzahl gebaut wurde, um eine echte Bedrohung darzustellen. Briggs' weitere Renneinsätze erfolgten mit weiteren Varianten seines ursprünglichen Konzepts: dem C-4R und C-4RK, dem C-5R und dem C-6R.",
+        "cn_p12": "Dennoch war die C-3 im Vergleich zu den meisten zeitgenössischen amerikanischen Wagen schlank und kompakt und stellte ein gestalterisches Meisterstück dar. Arthur Drexler, damals Direktor des Museum of Modern Art in New York, setzte das Coupé auf seine Liste der zehn besten Designs der Welt. Für eine kleine, betuchte Käuferschaft mit Geschmack war die C-3 ein hervorragender Kauf, und sie verkaufte sich so schnell, wie Cunningham sie bauen konnte.",
+        "cn_p13": "Die C-3 galt als ebenso gut wie ein zeitgenössischer Ferrari – in mancher Hinsicht vielleicht sogar besser. Und obwohl der Chrysler-Hemi wohl der beste Motor seiner Zeit war, waren in den frühen Fünfzigern nur wenige bereit, fast 12.000 Dollar für ein Auto auszugeben. Schade. Sie haben ein sehr gutes Auto verpasst!",
+        "cn_history_h3": "Die Geschichte dieses Wagens",
+        "cn_p14": "Fahrgestellnummer C53-8-1086 wurde von Doktor Floyd W. McRae aus Atlanta, Georgia, fabrikneu bestellt. Dr. McRae bestellte sein Competition Coupe im Frühjahr 1953 direkt bei Briggs Swift Cunningham und zahlte etwa 11.000 US-Dollar, um einer der ersten Besitzer der neu vorgestellten Serien-Cunninghams zu werden. Fahrgestell C53-8-1086 war die vierte Serien-C-3. Im Herbst 1952 wurden zwei Prototypen gebaut. Drei weitere Serienversionen wurden fertiggestellt, bevor Dr. McRae sein blau-weißes Coupé in Empfang nahm.",
+        "cn_p15": "Dr. McRae ließ den Wagen mit dem Kennzeichen „033 696“ in Fulton County, Georgia, zu. Am 10. Januar 1964 meldete Dr. McRae den Wagen erneut in Fulton County, Georgia, an. Das neue Kennzeichen lautete „2943“. Es ist nicht bekannt, an welchen Rennen, wenn überhaupt, Dr. McRae mit seinem Competition Coupe teilnahm. Es wird gemunkelt, dass der Wagen 1954 bei den SCCA-Rennen in Sowega, Georgia, einen einzigen Klassensieg errang. Dies wurde jedoch nie bestätigt.",
+        "cn_p16": "Am 1. Juli 1970 verkaufte Dr. McRae den Wagen für 3.000 US-Dollar an Bill Harrah aus Reno, Nevada. Der Gesamtkilometerstand zum Zeitpunkt des Verkaufs betrug 21.188 Meilen.",
+        "cn_p17": "Der Wagen wurde später an Doktor Fredrick A. Simione aus Philadelphia, Pennsylvania, verkauft. Doktor Simione verkaufte den Wagen im April 1994 an Mr. Horace Jeffrey aus Orange, Kalifornien, als Teil des Tauschgeschäfts beim Kauf von Mr. Jeffreys 1954er Ferrari 375 Mille Miglia Pinin Farina Competition Spyder, Fahrgestellnr. 0412 AM.",
+        "cn_p18": "Im Jahr 1997 kaufte Doktor Simeone den Wagen von Jeffrey für 183.000 US-Dollar zurück, und im März 1998 wurde der Wagen in Zahlung gegeben an <a href=\"http://www.symbolicmotors.com/\">Symbolic Motor Car Company</a>.",
+        "cn_p19": "Dieser wunderschöne italienisch-amerikanische Hybrid ist eines von nur 16 fertiggestellten Serienexemplaren. Der Wagen wurde gründlich rennfertig gemacht und ist für zahlreiche Historic-Touring- und Rennveranstaltungen weltweit zugelassen.",
+        "cn_contact": "Für weitere Informationen zu diesem und anderen klassischen Automobilen wenden Sie sich bitte an Symbolic Motors in La Jolla, Kalifornien.",
+        "title": "Vignale Cunningham — Vignale Gamine",
+        "meta_description": "Das 1953er Cunningham C-3 Vignale Competition Continental Coupe, seine Entstehungsgeschichte und die vollständige Besitzergeschichte des Fahrgestells C53-8-1086."
+    }
+  };
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>
