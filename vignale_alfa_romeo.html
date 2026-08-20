@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alfa Romeo by Vignale &mdash; Vignale Gamine</title>
+<meta name="description" content="The Alfa Romeo 412 and 1900 by Vignale, plus a first-person restoration story of a 1960 Alfa 2000cc Coupe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EFDA;
+    --surface: #FFFCF3;
+    --ink: #13223F;
+    --ink-soft: #4B5877;
+    --accent: #C1272D;
+    --accent-ink: #FFFFFF;
+    --line: #DED0AC;
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+    --radius: 3px;
+    --nav-height: 64px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1626;
+      --surface: #16223D;
+      --ink: #EDE6D2;
+      --ink-soft: #A6B0C6;
+      --accent: #E2555C;
+      --accent-ink: #14202F;
+      --line: #2A3554;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1626; --surface: #16223D; --ink: #EDE6D2; --ink-soft: #A6B0C6;
+    --accent: #E2555C; --accent-ink: #14202F; --line: #2A3554;
+  }
+  :root[data-theme="light"] {
+    --paper: #F6EFDA; --surface: #FFFCF3; --ink: #13223F; --ink-soft: #4B5877;
+    --accent: #C1272D; --accent-ink: #FFFFFF; --line: #DED0AC;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:hover { opacity: 0.82; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 12px 20px;
+    z-index: 1000;
+    border-radius: 0 0 6px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* Header + nav */
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+  }
+  header.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+  }
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .word {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+  }
+  .brand .word:hover { opacity: 1; }
+  .brand .mark {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle svg { width: 22px; height: 22px; }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .lang-switch {
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  nav.site-nav {
+    position: fixed;
+    inset: 0;
+    top: var(--nav-height);
+    background: var(--paper);
+    padding: 8px 20px 32px;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+  nav.site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+  nav.site-nav li { border-bottom: 1px solid var(--line); }
+  nav.site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 12px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a:focus-visible { color: var(--accent); }
+  nav.site-nav a[aria-current="page"] { color: var(--accent); }
+
+  @media (min-width: 860px) {
+    .nav-toggle { display: none; }
+    nav.site-nav {
+      position: static;
+      inset: auto;
+      background: transparent;
+      padding: 0;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      overflow: visible;
+    }
+    nav.site-nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav.site-nav li {
+      border-bottom: none;
+      border-left: 1px solid var(--line);
+    }
+    nav.site-nav li:first-child { border-left: none; }
+    nav.site-nav a {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .masthead-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .masthead-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .masthead-years {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .masthead-count {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+  .masthead-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .masthead-logo img { width: 130px; height: auto; }
+  .masthead-gamine-word {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .masthead-inner { grid-template-columns: 1fr; gap: 14px; }
+    .masthead-logo { order: -1; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(3rem, 13vw, 5.5rem);
+    line-height: 0.95;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+
+  .plate {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 6px;
+  }
+  .plate img { border-radius: 1px; }
+  figcaption.plate-caption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 6px 4px;
+  }
+
+  /* Spec strip */
+  .spec-strip {
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .spec-strip dl {
+    margin: 0;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-strip div:nth-child(2n) dl,
+  .spec-strip dl:nth-child(2n) { border-right: none; }
+  .spec-strip dt {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .spec-strip dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  @media (min-width: 700px) {
+    .spec-strip { grid-template-columns: repeat(6, 1fr); }
+    .spec-strip dl:nth-last-child(-n+6) { border-bottom: none; }
+    .spec-strip dl:nth-child(6n) { border-right: none; }
+  }
+  @media (max-width: 699px) {
+    .spec-strip dl:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    color: var(--ink);
+    margin: 0 0 20px;
+    text-wrap: balance;
+  }
+
+  .story-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .story-text { max-width: 100%; }
+  .story-text p { font-size: 1.05rem; margin: 0 0 16px; }
+  .dimensions-figure { max-width: 300px; }
+
+  @media (min-width: 760px) {
+    .story-grid { grid-template-columns: 2fr 1fr; align-items: start; }
+  }
+
+  /* Book */
+  .book-text { max-width: 60ch; margin: 0 0 32px; }
+  .book-text p { font-size: 1.05rem; margin: 0 0 20px; }
+
+  .book-spread {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  .book-spread figure.plate { margin: 0; }
+  .book-spread img { width: auto; height: auto; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    width: fit-content;
+  }
+  .btn:hover { opacity: 0.88; }
+
+  /* Community cards */
+  .community-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (min-width: 640px) {
+    .community-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .community-card {
+    background: var(--paper);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .community-card .icon { width: 30px; height: 30px; color: var(--accent); }
+  .community-card h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .community-card p { margin: 0 0 8px; color: var(--ink-soft); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 40px;
+  }
+  footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  footer a:hover { color: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* --- Subpage extensions (shared across the 12 new pages) --- */
+
+  .sub-hero { padding: 40px 0 8px; position: relative; }
+  .sub-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--line) 55%, transparent) 0 1px, transparent 1px 64px);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 92%);
+    mask-image: linear-gradient(to bottom, black, transparent 92%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sub-hero-inner { position: relative; z-index: 1; }
+  .sub-hero h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.3rem, 8vw, 3.6rem);
+    line-height: 1.02;
+    margin: 0 0 14px;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .sub-hero p.lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 8px;
+  }
+  .sub-hero .badge-emblem {
+    display: block;
+    width: min(420px, 70vw);
+    height: auto;
+    margin: 18px 0 4px;
+  }
+
+  .prose { max-width: 100%; }
+  .prose p, .prose ul, .prose ol { max-width: 640px; }
+  .prose p { font-size: 1.02rem; margin: 0 0 16px; }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 28px 0 10px;
+    color: var(--ink);
+  }
+  .prose ul, .prose ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .prose li { margin-bottom: 6px; }
+
+  .note-box {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin: 0 0 32px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); }
+
+  /* Photo-stamp grid: small archival thumbnails */
+  .stamp-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin: 24px 0;
+  }
+  .stamp {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 8px;
+    text-align: center;
+  }
+  .stamp img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    background: #fff;
+  }
+  .stamp span {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Timeline (chronological updates) */
+  ul.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--line);
+  }
+  ul.timeline li {
+    position: relative;
+    padding: 0 0 26px 18px;
+  }
+  ul.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  ul.timeline .t-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  ul.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* Link directory */
+  .directory h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    color: var(--ink);
+  }
+  .directory ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .directory li {
+    border-bottom: 1px solid var(--line);
+    padding: 9px 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .directory .addr {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  /* Classified ads (Market page) */
+  .classified {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .classified .c-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .classified p { margin: 4px 0; font-size: 0.92rem; color: var(--ink-soft); }
+  .classified p strong { color: var(--ink); }
+
+  .btn.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+  }
+
+  /* Data table (production numbers, specs) */
+  .table-scroll { overflow-x: auto; margin: 8px 0 32px; }
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    min-width: 420px;
+  }
+  table.data-table th, table.data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+  table.data-table th {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    white-space: nowrap;
+  }
+  table.data-table td:last-child, table.data-table th:last-child {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  table.data-table tbody tr:hover td { background: var(--surface); }
+
+  .credit-line {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .model-figure { margin: 0 0 32px; }
+  .model-figure figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    padding: 10px 2px 0;
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="word">Gamine</span>
+      <span class="mark">VIGNALE</span>
+    </a>
+    <div class="header-actions">
+      <select id="langSwitch" class="lang-switch" aria-label="Language" data-i18n-aria="lang_switch_label">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="it">IT</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+      </select>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" data-i18n-aria="nav_aria_toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-i18n-aria="nav_aria_main">
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="carrozzeria_vignale.html" data-i18n="nav_vignale">Vignale</a></li>
+          <li><a href="gamine_club_form.html" data-i18n="nav_club">Register</a></li>
+          <li><a href="gamine_stories.html" data-i18n="nav_stories">Stories</a></li>
+          <li><a href="gamine_data.html" data-i18n="nav_data">Data</a></li>
+          <li><a href="gamine_marketing.html" data-i18n="nav_marketing">Marketing</a></li>
+          <li><a href="gamine_links.html" data-i18n="nav_links">Links</a></li>
+          <li><a href="gamine_new.html" data-i18n="nav_new">New</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <div class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <p class="eyebrow" data-i18n="ar_eyebrow">Carrozzeria Vignale &middot; Alfa Romeo</p>
+      <h1>Alfa Romeo by Vignale</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap story-grid">
+      <div class="prose">
+        <h3 data-i18n="ar_412_h3">1951 Alfa Romeo 412 Vignale</h3>
+        <p class="credit-line" data-i18n-html data-i18n="ar_412_credit">Image from <a href="http://www.members.tripod.com/topmodelcollection/">Topmodelcollection</a></p>
+      </div>
+      <figure class="plate" style="max-width:163px;">
+        <img src="index2_bestanden/vignale_alfa_romeo_412.gif" width="163" height="104" alt="1951 Alfa Romeo 412 Vignale">
+      </figure>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap prose">
+      <h3 data-i18n="ar_1900_h3">Vignale Alfa Romeo 1900</h3>
+      <figure class="plate model-figure" style="max-width:512px;">
+        <img src="index2_bestanden/vignale_alfa_romeo_1900.jpg" width="512" height="241" alt="Vignale Alfa Romeo 1900">
+      </figure>
+      <p class="credit-line" data-i18n="ar_1900_credit">Image courtesy of: Mr Peter Marshall, Alfa Romeo 1900 Register.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap prose">
+      <h2 data-i18n="ar_dg_h2">1960 Alfa 2000cc Coupe by DG</h2>
+      <p data-i18n="ar_dg_p1">In 1990, I purchased a 1960 Alfa 2000cc Coupe designed by Michelotti and fabricated by a coachbuilder in Turin, Italy, called Vignale.</p>
+      <p data-i18n="ar_dg_p2">I knew it was a strange Alfa when I first saw it, but I was not quite prepared for what is involved with the total restoration of a coachbuilt vehicle.</p>
+      <p data-i18n="ar_dg_p3">In the late fifties and early sixties, Alfa Romeo and their usual coachbuilders (Bertone Touring, Zagato and Pinin Farina) could hardly keep up with worldwide demand, therefore smaller coachbuilders, such as Vignale and Ghia, would purchase chassis from Alfa Romeo, then have their own designers and fabricators put together the body and interior.</p>
+      <p data-i18n="ar_dg_p4">Very early in 1960, Alfa Romeo built 47 special chassis (AR102.02) for these specialty companies. According to signora &lsquo;Elvira Ruocco&rsquo; at the Alfa archives in Italy, chassis # AR102.02.001 was sold to Ghia and most of the others were sold to Vignale. These chassis were specially designed for coupe bodies, as the structural framework is a bit different from a roadster (102.04).</p>
+      <p data-i18n="ar_dg_p5">The Alfa I took on as a project (AR102.02.0019) was commissioned by a gentleman (probably a USA officer) by the name of Anthony Wilson in March of 1960 and was completed in September of the same year, just in time for the Turin, Italy World Auto Show. By the late sixties, it somehow ended up in Miami, Florida, where it underwent a paint colour change from green and white with red leather to silver with a black interior. I first saw this Vignale Alfa in 1978 when it belonged to Doug Harman in Tampa, Florida, but it wasn&rsquo;t until 1990 that I was able to purchase it.</p>
+      <p data-i18n="ar_dg_p6">Over the years, I have partially restored (paint, interior, mechanicals) a couple of the cast-iron 2000cc roadsters, and accumulated a number of spare parts, as I really enjoy the looks and uniqueness of this series.</p>
+      <p data-i18n="ar_dg_p7">As I began the disassembly process of the Vignale, I noticed that many of the components had the car ID number stamped into the back side of items like the bumpers, chrome trim, seat frames, dashboard, and all the components that are unique to this chassis. In this era, components like doors, hoods and trunk lids were typically custom-fit and leaded to fit the shell. But in this series, each design component was unique to that chassis. Items like the hood and trunk were aluminium, the chrome trim was fabricated from brass C-channel, and the inside surface of the chrome bumpers still shows all the hammer marks and beads of welding left from the hand fabrication process.</p>
+      <p data-i18n="ar_dg_p8">Because of the above process, there are no spare body or trim parts available for these cars. If a part is beyond repair, it must be fabricated, as close to the original as possible, and if a custom part is missing, it may be impossible to determine exactly what the original design was. Vignale&rsquo;s designer, Michelotti, would make design sketches/drawings of each car, and then the sheet-metal fabricators, as well as the trim and interior craftsmen, would go to work, putting the components together as close to the design drawings as reasonably possible &ndash; but they were not always accurate. Therefore, upon close observation, one can find a number of details that do not match from one side of the car to the other. For example, one door is longer than the other, the chrome trim and its connectors are individually fit, and even the windshield opening has an almost uncomfortable geometric misalignment. All this, of course, equates to extra time and money, and certainly requires a considerable amount of ingenuity to solve many problems.</p>
+      <p data-i18n="ar_dg_p9">To take on a project of this magnitude requires a relentless desire for a unique automobile, as well as the finances, time, ability and patience to make it happen. Fortunately, I have been able to manage most of these qualities, but I am short on money and time. Having a supportive wife has helped tremendously, as well as finding a couple of extraordinary craftsmen to do the body work and interior. A fact-finding trip to Italy was an unexpected expense that turned out to be extremely valuable in terms of determining details hidden deeply in the Alfa archives.</p>
+      <p data-i18n="ar_dg_p10">So far I have invested five years of nights and weekends in disassembling, repairing, finding parts, cleaning, polishing, painting, and reassembling components that, when put back together again, will result in a unique car that is as good as &ndash; and in some aspects better than &ndash; new.</p>
+      <p data-i18n="ar_dg_p11">I am now able to turn the key, hear the deep, throaty rumble of the exhaust, and take a short, safe drive. Up until hearing the sound of that engine for the first time, I was beginning to wonder if it was worth it at all&hellip; you bet it was!</p>
+      <p class="credit-line" data-i18n-html data-i18n="ar_dg_credit">Story from <a href="http://members.aol.com/alfanet/articles.htm">Georgi Alfisti On-Line Articles</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p data-i18n="footer_credit">Site built and maintained by Martin Wildeboer. Revised August 2026.</p>
+    <p>
+      <a href="mailto:gamine@vignalegamine.net" data-i18n="footer_webmaster">Webmaster</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('siteNav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 860) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
+
+(function () {
+  var translations = {
+    "en": {
+        "skip_link": "Skip to content",
+        "lang_switch_label": "Language",
+        "nav_aria_toggle": "Open menu",
+        "nav_aria_main": "Main navigation",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Stories",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "New",
+        "footer_credit": "Site built and maintained by Martin Wildeboer. Revised August 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Image from <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Image courtesy of: Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "In 1990, I purchased a 1960 Alfa 2000cc Coupe designed by Michelotti and fabricated by a coachbuilder in Turin, Italy, called Vignale.",
+        "ar_dg_p2": "I knew it was a strange Alfa when I first saw it, but I was not quite prepared for what is involved with the total restoration of a coachbuilt vehicle.",
+        "ar_dg_p3": "In the late fifties and early sixties, Alfa Romeo and their usual coachbuilders (Bertone Touring, Zagato and Pinin Farina) could hardly keep up with worldwide demand, therefore smaller coachbuilders, such as Vignale and Ghia, would purchase chassis from Alfa Romeo, then have their own designers and fabricators put together the body and interior.",
+        "ar_dg_p4": "Very early in 1960, Alfa Romeo built 47 special chassis (AR102.02) for these specialty companies. According to signora ‘Elvira Ruocco’ at the Alfa archives in Italy, chassis # AR102.02.001 was sold to Ghia and most of the others were sold to Vignale. These chassis were specially designed for coupe bodies, as the structural framework is a bit different from a roadster (102.04).",
+        "ar_dg_p5": "The Alfa I took on as a project (AR102.02.0019) was commissioned by a gentleman (probably a USA officer) by the name of Anthony Wilson in March of 1960 and was completed in September of the same year, just in time for the Turin, Italy World Auto Show. By the late sixties, it somehow ended up in Miami, Florida, where it underwent a paint colour change from green and white with red leather to silver with a black interior. I first saw this Vignale Alfa in 1978 when it belonged to Doug Harman in Tampa, Florida, but it wasn't until 1990 that I was able to purchase it.",
+        "ar_dg_p6": "Over the years, I have partially restored (paint, interior, mechanicals) a couple of the cast-iron 2000cc roadsters, and accumulated a number of spare parts, as I really enjoy the looks and uniqueness of this series.",
+        "ar_dg_p7": "As I began the disassembly process of the Vignale, I noticed that many of the components had the car ID number stamped into the back side of items like the bumpers, chrome trim, seat frames, dashboard, and all the components that are unique to this chassis. In this era, components like doors, hoods and trunk lids were typically custom-fit and leaded to fit the shell. But in this series, each design component was unique to that chassis. Items like the hood and trunk were aluminium, the chrome trim was fabricated from brass C-channel, and the inside surface of the chrome bumpers still shows all the hammer marks and beads of welding left from the hand fabrication process.",
+        "ar_dg_p8": "Because of the above process, there are no spare body or trim parts available for these cars. If a part is beyond repair, it must be fabricated, as close to the original as possible, and if a custom part is missing, it may be impossible to determine exactly what the original design was. Vignale's designer, Michelotti, would make design sketches/drawings of each car, and then the sheet-metal fabricators, as well as the trim and interior craftsmen, would go to work, putting the components together as close to the design drawings as reasonably possible – but they were not always accurate. Therefore, upon close observation, one can find a number of details that do not match from one side of the car to the other. For example, one door is longer than the other, the chrome trim and its connectors are individually fit, and even the windshield opening has an almost uncomfortable geometric misalignment. All this, of course, equates to extra time and money, and certainly requires a considerable amount of ingenuity to solve many problems.",
+        "ar_dg_p9": "To take on a project of this magnitude requires a relentless desire for a unique automobile, as well as the finances, time, ability and patience to make it happen. Fortunately, I have been able to manage most of these qualities, but I am short on money and time. Having a supportive wife has helped tremendously, as well as finding a couple of extraordinary craftsmen to do the body work and interior. A fact-finding trip to Italy was an unexpected expense that turned out to be extremely valuable in terms of determining details hidden deeply in the Alfa archives.",
+        "ar_dg_p10": "So far I have invested five years of nights and weekends in disassembling, repairing, finding parts, cleaning, polishing, painting, and reassembling components that, when put back together again, will result in a unique car that is as good as – and in some aspects better than – new.",
+        "ar_dg_p11": "I am now able to turn the key, hear the deep, throaty rumble of the exhaust, and take a short, safe drive. Up until hearing the sound of that engine for the first time, I was beginning to wonder if it was worth it at all… you bet it was!",
+        "ar_dg_credit": "Story from <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "The Alfa Romeo 412 and 1900 by Vignale, plus a first-person restoration story of a 1960 Alfa 2000cc Coupe."
+    },
+    "nl": {
+        "skip_link": "Direct naar inhoud",
+        "lang_switch_label": "Taal",
+        "nav_aria_toggle": "Menu openen",
+        "nav_aria_main": "Hoofdnavigatie",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Verhalen",
+        "nav_data": "Data",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Nieuw",
+        "footer_credit": "Site gebouwd en onderhouden door Martin Wildeboer. Bijgewerkt augustus 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Afbeelding van <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Afbeelding met dank aan: Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "In 1990 kocht ik een Alfa 2000cc Coupe uit 1960, ontworpen door Michelotti en gebouwd door een carrosseriebouwer in Turijn, Italië, genaamd Vignale.",
+        "ar_dg_p2": "Ik wist meteen dat het een vreemde Alfa was toen ik hem voor het eerst zag, maar ik was niet echt voorbereid op wat er allemaal komt kijken bij de volledige restauratie van een auto met een op maat gebouwde carrosserie.",
+        "ar_dg_p3": "Eind jaren vijftig en begin jaren zestig konden Alfa Romeo en hun gebruikelijke carrosseriebouwers (Bertone Touring, Zagato en Pinin Farina) de wereldwijde vraag nauwelijks bijbenen. Daarom kochten kleinere carrosseriebouwers, zoals Vignale en Ghia, chassis in bij Alfa Romeo en lieten ze vervolgens hun eigen ontwerpers en vaklieden de carrosserie en het interieur samenstellen.",
+        "ar_dg_p4": "Heel vroeg in 1960 bouwde Alfa Romeo 47 speciale chassis (AR102.02) voor deze gespecialiseerde bedrijven. Volgens signora 'Elvira Ruocco' van de Alfa-archieven in Italië werd chassis nr. AR102.02.001 verkocht aan Ghia en gingen de meeste andere naar Vignale. Deze chassis waren speciaal ontworpen voor coupé-carrosserieën, omdat het onderstel structureel iets anders is dan bij een roadster (102.04).",
+        "ar_dg_p5": "De Alfa die ik als project op me nam (AR102.02.0019) werd in maart 1960 besteld door een heer (waarschijnlijk een Amerikaanse officier) genaamd Anthony Wilson, en werd datzelfde jaar in september afgerond, net op tijd voor de wereldautoshow van Turijn, Italië. Tegen het einde van de jaren zestig belandde de auto op een of andere manier in Miami, Florida, waar hij van kleur veranderde: van groen-wit met rood leer naar zilver met een zwart interieur. Ik zag deze Vignale Alfa voor het eerst in 1978, toen hij van Doug Harman in Tampa, Florida was, maar het duurde tot 1990 voordat ik hem kon kopen.",
+        "ar_dg_p6": "Door de jaren heen heb ik een paar van de gietijzeren 2000cc-roadsters gedeeltelijk gerestaureerd (lak, interieur, mechaniek) en heb ik een flink aantal onderdelen verzameld, omdat ik echt geniet van het uiterlijk en de uniciteit van deze serie.",
+        "ar_dg_p7": "Bij het uit elkaar halen van de Vignale merkte ik dat veel onderdelen aan de achterkant het ID-nummer van de auto ingestempeld hadden, zoals de bumpers, chromen sierlijsten, stoelframes, het dashboard en alle onderdelen die uniek zijn voor dit chassis. In die tijd werden onderdelen als portieren, motorkappen en kofferdeksels doorgaans op maat gepast en met lood bijgewerkt om op de carrosserie te passen. Maar in deze serie was elk ontworpen onderdeel uniek voor dat specifieke chassis. Zaken als de motorkap en de kofferklep waren van aluminium, de chromen sierlijst was gemaakt van messing C-profiel, en aan de binnenkant van de chromen bumpers zijn nog steeds alle hamerslagen en lasnaden te zien die zijn overgebleven van het met de hand vervaardigen.",
+        "ar_dg_p8": "Door dit proces zijn er geen reserveonderdelen voor carrosserie of sierwerk beschikbaar voor deze auto's. Als een onderdeel niet meer te repareren is, moet het zo dicht mogelijk bij het origineel worden nagemaakt, en als een onderdeel op maat ontbreekt, is het soms onmogelijk om precies te achterhalen hoe het origineel eruitzag. Vignale's ontwerper Michelotti maakte ontwerpschetsen/tekeningen van elke auto, waarna de plaatwerkers en de stoffeer- en interieurvaklieden aan de slag gingen om de onderdelen zo dicht mogelijk bij de ontwerptekeningen in elkaar te zetten – maar dat lukte niet altijd even nauwkeurig. Bij nauwkeurige inspectie vind je dan ook details die van de ene kant van de auto niet overeenkomen met de andere kant. Zo is het ene portier langer dan het andere, zijn de chromen sierlijsten en hun verbindingsstukken individueel aangepast, en heeft zelfs de opening voor de voorruit een bijna oncomfortabele geometrische scheefstand. Dit alles betekent uiteraard extra tijd en geld, en vergt zeker de nodige vindingrijkheid om al die problemen op te lossen.",
+        "ar_dg_p9": "Om een project van deze omvang aan te pakken heb je een onverwoestbaar verlangen naar een unieke auto nodig, plus de financiën, tijd, vaardigheid en het geduld om het waar te maken. Gelukkig heb ik de meeste van die kwaliteiten in huis, maar geld en tijd zijn schaars. Een steunende echtgenote heeft enorm geholpen, net als het vinden van een paar uitzonderlijke vaklui voor het plaatwerk en het interieur. Een oriëntatiereis naar Italië was een onverwachte kostenpost die achteraf ontzettend waardevol bleek om details te achterhalen die diep verscholen lagen in de Alfa-archieven.",
+        "ar_dg_p10": "Tot nu toe heb ik vijf jaar aan avonden en weekenden geïnvesteerd in het uit elkaar halen, repareren, opsporen van onderdelen, schoonmaken, polijsten, spuiten en weer in elkaar zetten van onderdelen, die samen straks een unieke auto opleveren die net zo goed is als – en op sommige punten zelfs beter dan – nieuw.",
+        "ar_dg_p11": "Ik kan nu de sleutel omdraaien, het diepe, doffe gerommel van de uitlaat horen en er een korte, veilige rit mee maken. Tot ik voor het eerst dat motorgeluid hoorde, begon ik me af te vragen of het het allemaal wel waard was geweest… reken maar van yes!",
+        "ar_dg_credit": "Verhaal van <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "De Alfa Romeo 412 en 1900 door Vignale, plus een verhaal uit de eerste hand over de restauratie van een Alfa 2000cc Coupe uit 1960."
+    },
+    "it": {
+        "skip_link": "Vai al contenuto",
+        "lang_switch_label": "Lingua",
+        "nav_aria_toggle": "Apri il menu",
+        "nav_aria_main": "Navigazione principale",
+        "nav_home": "Home",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Storie",
+        "nav_data": "Dati",
+        "nav_marketing": "Marketing",
+        "nav_links": "Link",
+        "nav_new": "Novità",
+        "footer_credit": "Sito realizzato e curato da Martin Wildeboer. Aggiornato ad agosto 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Immagine da <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Immagine per gentile concessione di: Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "Nel 1990 ho acquistato un'Alfa 2000cc Coupé del 1960, disegnata da Michelotti e realizzata da una carrozzeria di Torino chiamata Vignale.",
+        "ar_dg_p2": "Capii subito che era un'Alfa insolita non appena la vidi, ma non ero del tutto preparato a ciò che comporta il restauro completo di una vettura con carrozzeria artigianale.",
+        "ar_dg_p3": "Tra la fine degli anni Cinquanta e l'inizio degli anni Sessanta, Alfa Romeo e i suoi consueti carrozzieri (Bertone Touring, Zagato e Pinin Farina) riuscivano a malapena a tenere il passo con la domanda mondiale; carrozzieri più piccoli, come Vignale e Ghia, acquistavano quindi i telai da Alfa Romeo e vi facevano poi assemblare carrozzeria e interni dai propri designer e artigiani.",
+        "ar_dg_p4": "Nei primi mesi del 1960, Alfa Romeo costruì 47 telai speciali (AR102.02) per queste aziende specializzate. Secondo la signora 'Elvira Ruocco' degli archivi Alfa in Italia, il telaio numero AR102.02.001 fu venduto a Ghia e la maggior parte degli altri a Vignale. Questi telai erano progettati appositamente per carrozzerie coupé, poiché la struttura è leggermente diversa da quella di una roadster (102.04).",
+        "ar_dg_p5": "L'Alfa di cui mi sono occupato come progetto (AR102.02.0019) fu commissionata da un signore (probabilmente un ufficiale statunitense) di nome Anthony Wilson nel marzo del 1960 e completata nel settembre dello stesso anno, giusto in tempo per il Salone Mondiale dell'Auto di Torino. Verso la fine degli anni Sessanta finì, non si sa come, a Miami, in Florida, dove subì un cambio di colore, passando da verde e bianco con interni in pelle rossa ad argento con interni neri. Vidi questa Alfa Vignale per la prima volta nel 1978, quando apparteneva a Doug Harman a Tampa, in Florida, ma solo nel 1990 riuscii ad acquistarla.",
+        "ar_dg_p6": "Nel corso degli anni ho parzialmente restaurato (vernice, interni, meccanica) un paio delle roadster 2000cc a telaio in ghisa, e ho accumulato diversi pezzi di ricambio, perché adoro l'aspetto e l'unicità di questa serie.",
+        "ar_dg_p7": "Iniziando lo smontaggio della Vignale, notai che molti componenti avevano il numero identificativo dell'auto impresso sul retro, su elementi come paraurti, filetti cromati, telai dei sedili, cruscotto e tutti i componenti unici di questo telaio. In quell'epoca, componenti come portiere, cofani e portelloni erano tipicamente adattati su misura e stagnati per aderire alla scocca. Ma in questa serie, ogni componente progettato era unico per quel telaio. Elementi come cofano e baule erano in alluminio, i filetti cromati erano ricavati da profilati a C in ottone, e la superficie interna dei paraurti cromati mostra ancora tutti i segni di martellatura e i cordoni di saldatura lasciati dalla lavorazione artigianale.",
+        "ar_dg_p8": "Proprio per questo processo, non esistono parti di carrozzeria o di finitura di ricambio per queste vetture. Se un pezzo è irreparabile, va ricostruito il più fedelmente possibile all'originale, e se manca un componente su misura, può essere impossibile determinare con esattezza quale fosse il disegno originale. Il designer di Vignale, Michelotti, realizzava schizzi/disegni di progetto per ogni auto, dopodiché i lattonieri, insieme agli artigiani delle finiture e degli interni, si mettevano al lavoro per assemblare i componenti il più fedelmente possibile ai disegni – ma non sempre con precisione. Per questo, osservando attentamente, si notano diversi dettagli che non coincidono da un lato all'altro dell'auto. Per esempio, una portiera è più lunga dell'altra, i filetti cromati e i loro raccordi sono adattati singolarmente, e persino l'apertura del parabrezza presenta un disallineamento geometrico quasi fastidioso. Tutto ciò, naturalmente, si traduce in tempo e denaro extra, e richiede sicuramente non poca ingegnosità per risolvere molti problemi.",
+        "ar_dg_p9": "Intraprendere un progetto di questa portata richiede un desiderio incrollabile per un'automobile unica, oltre alle finanze, al tempo, alle capacità e alla pazienza necessari per realizzarlo. Fortunatamente sono riuscito a mettere insieme la maggior parte di queste qualità, ma scarseggio di denaro e tempo. Avere una moglie che mi ha sostenuto ha aiutato enormemente, così come trovare un paio di artigiani straordinari per la carrozzeria e gli interni. Un viaggio conoscitivo in Italia è stato una spesa imprevista, rivelatasi però preziosissima per scoprire dettagli nascosti in profondità negli archivi Alfa.",
+        "ar_dg_p10": "Finora ho investito cinque anni di sere e weekend a smontare, riparare, cercare pezzi, pulire, lucidare, verniciare e rimontare componenti che, una volta rimessi insieme, daranno vita a un'auto unica, buona quanto – e per certi aspetti migliore di – una nuova.",
+        "ar_dg_p11": "Ora riesco a girare la chiave, sentire il rombo profondo e roco dello scarico e fare un breve giro in tutta sicurezza. Fino a quando non ho sentito per la prima volta il suono di quel motore, iniziavo a chiedermi se ne fosse valsa davvero la pena… e la risposta è sì!",
+        "ar_dg_credit": "Racconto tratto da <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "L'Alfa Romeo 412 e la 1900 firmate Vignale, più un racconto in prima persona sul restauro di un'Alfa 2000cc Coupé del 1960."
+    },
+    "es": {
+        "skip_link": "Ir al contenido",
+        "lang_switch_label": "Idioma",
+        "nav_aria_toggle": "Abrir menú",
+        "nav_aria_main": "Navegación principal",
+        "nav_home": "Inicio",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registro",
+        "nav_stories": "Historias",
+        "nav_data": "Datos",
+        "nav_marketing": "Marketing",
+        "nav_links": "Enlaces",
+        "nav_new": "Novedades",
+        "footer_credit": "Sitio creado y mantenido por Martin Wildeboer. Actualizado en agosto de 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Imagen de <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Imagen cortesía de: Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "En 1990 compré un Alfa 2000cc Coupé de 1960, diseñado por Michelotti y construido por un carrocero de Turín, Italia, llamado Vignale.",
+        "ar_dg_p2": "Supe que era un Alfa poco común en cuanto lo vi, pero no estaba del todo preparado para lo que implica la restauración total de un vehículo con carrocería artesanal.",
+        "ar_dg_p3": "A finales de los cincuenta y principios de los sesenta, Alfa Romeo y sus carroceros habituales (Bertone Touring, Zagato y Pinin Farina) apenas podían seguir el ritmo de la demanda mundial, por lo que carroceros más pequeños, como Vignale y Ghia, compraban chasis a Alfa Romeo y encargaban a sus propios diseñadores y artesanos que montaran la carrocería y el interior.",
+        "ar_dg_p4": "A principios de 1960, Alfa Romeo construyó 47 chasis especiales (AR102.02) para estas empresas especializadas. Según la señora 'Elvira Ruocco', del archivo de Alfa en Italia, el chasis nº AR102.02.001 se vendió a Ghia y la mayoría de los demás a Vignale. Estos chasis estaban diseñados específicamente para carrocerías coupé, ya que la estructura es algo distinta a la de un roadster (102.04).",
+        "ar_dg_p5": "El Alfa que asumí como proyecto (AR102.02.0019) fue encargado por un caballero (probablemente un oficial estadounidense) llamado Anthony Wilson en marzo de 1960, y se terminó en septiembre de ese mismo año, justo a tiempo para el Salón Mundial del Automóvil de Turín, Italia. A finales de los sesenta, de algún modo acabó en Miami, Florida, donde cambió de color, pasando de verde y blanco con piel roja a plata con interior negro. Vi por primera vez este Alfa Vignale en 1978, cuando pertenecía a Doug Harman en Tampa, Florida, pero no fue hasta 1990 cuando pude comprarlo.",
+        "ar_dg_p6": "A lo largo de los años he restaurado parcialmente (pintura, interior, mecánica) un par de los roadster de 2000cc con chasis de hierro fundido, y he acumulado varias piezas de repuesto, ya que disfruto mucho del aspecto y la singularidad de esta serie.",
+        "ar_dg_p7": "Al iniciar el desmontaje del Vignale, noté que muchos componentes tenían el número de identificación del coche estampado en la parte trasera de piezas como los parachoques, las molduras cromadas, los armazones de los asientos, el salpicadero y todos los componentes exclusivos de este chasis. En aquella época, piezas como puertas, capós y maleteros solían ajustarse a medida y emplomarse para encajar en la carrocería. Pero en esta serie, cada componente de diseño era único para ese chasis. Piezas como el capó y el maletero eran de aluminio, la moldura cromada se fabricaba con perfil en C de latón, y la superficie interior de los parachoques cromados aún conserva todas las marcas de martillo y los cordones de soldadura del proceso de fabricación manual.",
+        "ar_dg_p8": "Debido a este proceso, no existen piezas de carrocería o acabados de repuesto disponibles para estos coches. Si una pieza no tiene reparación, hay que fabricarla lo más fiel posible al original, y si falta una pieza a medida, puede resultar imposible determinar con exactitud cuál era el diseño original. El diseñador de Vignale, Michelotti, hacía bocetos/dibujos de diseño de cada coche, y luego los chapistas, junto con los artesanos de acabados e interiores, se ponían a trabajar para ensamblar los componentes lo más fielmente posible a los planos de diseño, aunque no siempre con total precisión. Por eso, al observar de cerca, se pueden encontrar varios detalles que no coinciden de un lado del coche al otro. Por ejemplo, una puerta es más larga que la otra, la moldura cromada y sus conectores están ajustados individualmente, e incluso el hueco del parabrisas presenta un desajuste geométrico casi incómodo. Todo esto, por supuesto, se traduce en más tiempo y dinero, y sin duda requiere una buena dosis de ingenio para resolver muchos problemas.",
+        "ar_dg_p9": "Emprender un proyecto de esta magnitud exige un deseo inquebrantable de tener un automóvil único, además de las finanzas, el tiempo, la capacidad y la paciencia necesarios para lograrlo. Por suerte, he logrado reunir la mayoría de estas cualidades, pero ando escaso de dinero y tiempo. Contar con una esposa que me ha apoyado ha ayudado enormemente, así como encontrar un par de artesanos extraordinarios para la carrocería y el interior. Un viaje de investigación a Italia fue un gasto inesperado que resultó ser extremadamente valioso para determinar detalles ocultos en lo más profundo de los archivos de Alfa.",
+        "ar_dg_p10": "Hasta ahora he invertido cinco años de noches y fines de semana desmontando, reparando, buscando piezas, limpiando, puliendo, pintando y volviendo a montar componentes que, una vez ensamblados de nuevo, darán como resultado un coche único, tan bueno como uno nuevo, y en algunos aspectos mejor.",
+        "ar_dg_p11": "Ahora puedo girar la llave, escuchar el rugido profundo y ronco del escape y dar un paseo corto y seguro. Hasta que no escuché el sonido de ese motor por primera vez, empezaba a preguntarme si de verdad había merecido la pena… ¡y vaya que sí!",
+        "ar_dg_credit": "Historia de <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "El Alfa Romeo 412 y el 1900 de Vignale, junto con un relato en primera persona sobre la restauración de un Alfa 2000cc Coupé de 1960."
+    },
+    "fr": {
+        "skip_link": "Aller au contenu",
+        "lang_switch_label": "Langue",
+        "nav_aria_toggle": "Ouvrir le menu",
+        "nav_aria_main": "Navigation principale",
+        "nav_home": "Accueil",
+        "nav_vignale": "Vignale",
+        "nav_club": "Registre",
+        "nav_stories": "Histoires",
+        "nav_data": "Données",
+        "nav_marketing": "Marketing",
+        "nav_links": "Liens",
+        "nav_new": "Nouveautés",
+        "footer_credit": "Site créé et maintenu par Martin Wildeboer. Mis à jour en août 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Image de <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Image gracieusement fournie par : Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "En 1990, j'ai acheté une Alfa 2000cc Coupé de 1960, dessinée par Michelotti et carrossée par un carrossier de Turin, en Italie, appelé Vignale.",
+        "ar_dg_p2": "J'ai tout de suite compris que c'était une Alfa peu banale, mais je n'étais pas vraiment préparé à ce qu'implique la restauration complète d'un véhicule à carrosserie artisanale.",
+        "ar_dg_p3": "À la fin des années cinquante et au début des années soixante, Alfa Romeo et ses carrossiers habituels (Bertone Touring, Zagato et Pinin Farina) parvenaient à peine à répondre à la demande mondiale ; des carrossiers plus modestes, comme Vignale et Ghia, achetaient donc des châssis à Alfa Romeo, puis faisaient assembler la carrosserie et l'habitacle par leurs propres designers et artisans.",
+        "ar_dg_p4": "Tout début 1960, Alfa Romeo construisit 47 châssis spéciaux (AR102.02) pour ces carrossiers spécialisés. Selon la signora « Elvira Ruocco » des archives Alfa en Italie, le châssis n° AR102.02.001 fut vendu à Ghia et la plupart des autres à Vignale. Ces châssis étaient spécialement conçus pour des carrosseries coupé, la structure étant un peu différente de celle d'un roadster (102.04).",
+        "ar_dg_p5": "L'Alfa dont je me suis occupé comme projet (AR102.02.0019) fut commandée par un homme (probablement un officier américain) du nom d'Anthony Wilson en mars 1960, et achevée en septembre de la même année, juste à temps pour le Salon mondial de l'automobile de Turin. Vers la fin des années soixante, elle finit on ne sait comment à Miami, en Floride, où elle changea de couleur, passant du vert et blanc avec cuir rouge à l'argent avec un intérieur noir. J'ai vu cette Alfa Vignale pour la première fois en 1978, alors qu'elle appartenait à Doug Harman à Tampa, en Floride, mais ce n'est qu'en 1990 que j'ai pu l'acheter.",
+        "ar_dg_p6": "Au fil des années, j'ai partiellement restauré (peinture, intérieur, mécanique) deux ou trois roadsters 2000cc à châssis en fonte, et j'ai accumulé un certain nombre de pièces détachées, tant j'apprécie l'allure et le caractère unique de cette série.",
+        "ar_dg_p7": "En commençant le démontage de la Vignale, j'ai remarqué que de nombreux composants portaient le numéro d'identification de la voiture estampillé au dos, sur des pièces comme les pare-chocs, les baguettes chromées, les armatures de sièges, le tableau de bord et tous les composants propres à ce châssis. À cette époque, des éléments comme les portières, capots et coffres étaient généralement ajustés sur mesure et brasés à l'étain pour épouser la carrosserie. Mais dans cette série, chaque élément conçu était unique à ce châssis. Le capot et le coffre étaient en aluminium, la baguette chromée était réalisée en profilé en C de laiton, et la face intérieure des pare-chocs chromés porte encore toutes les marques de marteau et les cordons de soudure laissés par la fabrication artisanale.",
+        "ar_dg_p8": "En raison de ce procédé, il n'existe aucune pièce de carrosserie ou de garniture de rechange pour ces voitures. Si une pièce est irréparable, elle doit être refabriquée au plus près de l'original, et si une pièce sur mesure manque, il peut être impossible de déterminer exactement quel était le dessin d'origine. Le designer de Vignale, Michelotti, réalisait des croquis/plans de chaque voiture, puis les tôliers, ainsi que les artisans des garnitures et de l'intérieur, se mettaient au travail pour assembler les composants au plus près des plans, sans toujours y parvenir avec précision. Ainsi, en y regardant de près, on trouve plusieurs détails qui ne correspondent pas d'un côté de la voiture à l'autre. Par exemple, une portière est plus longue que l'autre, la baguette chromée et ses raccords sont ajustés individuellement, et même l'ouverture du pare-brise présente un désalignement géométrique presque gênant. Tout cela, bien sûr, se traduit par du temps et de l'argent supplémentaires, et exige assurément beaucoup d'ingéniosité pour résoudre de nombreux problèmes.",
+        "ar_dg_p9": "Entreprendre un projet d'une telle ampleur exige un désir tenace de posséder une automobile unique, ainsi que les moyens financiers, le temps, les compétences et la patience nécessaires pour y parvenir. Heureusement, j'ai pu réunir la plupart de ces qualités, mais je manque d'argent et de temps. Avoir une épouse qui me soutient m'a énormément aidé, tout comme le fait de trouver deux artisans extraordinaires pour la carrosserie et l'intérieur. Un voyage d'investigation en Italie fut une dépense imprévue qui s'est révélée extrêmement précieuse pour déterminer des détails enfouis au fond des archives Alfa.",
+        "ar_dg_p10": "J'ai investi jusqu'à présent cinq années de soirées et de week-ends à démonter, réparer, chercher des pièces, nettoyer, polir, peindre et remonter des éléments qui, une fois réassemblés, donneront une voiture unique, aussi bonne que neuve, et à certains égards meilleure.",
+        "ar_dg_p11": "Je peux désormais tourner la clé, entendre le grondement grave et rauque de l'échappement et faire une courte balade en toute sécurité. Avant d'entendre ce moteur pour la première fois, je commençais à me demander si tout cela en valait vraiment la peine… et la réponse est oui, sans aucun doute !",
+        "ar_dg_credit": "Récit tiré de <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "L'Alfa Romeo 412 et la 1900 signées Vignale, accompagnées d'un récit à la première personne sur la restauration d'une Alfa 2000cc Coupé de 1960."
+    },
+    "de": {
+        "skip_link": "Zum Inhalt springen",
+        "lang_switch_label": "Sprache",
+        "nav_aria_toggle": "Menü öffnen",
+        "nav_aria_main": "Hauptnavigation",
+        "nav_home": "Start",
+        "nav_vignale": "Vignale",
+        "nav_club": "Register",
+        "nav_stories": "Geschichten",
+        "nav_data": "Daten",
+        "nav_marketing": "Marketing",
+        "nav_links": "Links",
+        "nav_new": "Neues",
+        "footer_credit": "Website erstellt und betreut von Martin Wildeboer. Aktualisiert im August 2026.",
+        "footer_webmaster": "Webmaster",
+        "ar_eyebrow": "Carrozzeria Vignale · Alfa Romeo",
+        "ar_412_h3": "1951 Alfa Romeo 412 Vignale",
+        "ar_412_credit": "Bild von <a href=\"http://www.members.tripod.com/topmodelcollection/\">Topmodelcollection</a>",
+        "ar_1900_h3": "Vignale Alfa Romeo 1900",
+        "ar_1900_credit": "Bild mit freundlicher Genehmigung von: Mr Peter Marshall, Alfa Romeo 1900 Register.",
+        "ar_dg_h2": "1960 Alfa 2000cc Coupe by DG",
+        "ar_dg_p1": "1990 kaufte ich ein Alfa 2000cc Coupé von 1960, entworfen von Michelotti und karossiert von einem Karosseriebauer in Turin, Italien, namens Vignale.",
+        "ar_dg_p2": "Mir war sofort klar, dass es sich um einen ungewöhnlichen Alfa handelte, aber auf das, was eine vollständige Restaurierung eines karossierten Fahrzeugs mit sich bringt, war ich nicht ganz vorbereitet.",
+        "ar_dg_p3": "In den späten Fünfzigern und frühen Sechzigern konnten Alfa Romeo und ihre üblichen Karosseriebauer (Bertone Touring, Zagato und Pinin Farina) der weltweiten Nachfrage kaum nachkommen. Kleinere Karosseriebauer wie Vignale und Ghia kauften daher Chassis bei Alfa Romeo und ließen Karosserie und Innenraum von eigenen Designern und Handwerkern fertigen.",
+        "ar_dg_p4": "Ganz zu Beginn des Jahres 1960 baute Alfa Romeo 47 spezielle Chassis (AR102.02) für diese Spezialfirmen. Laut Signora 'Elvira Ruocco' aus dem Alfa-Archiv in Italien wurde Chassis-Nr. AR102.02.001 an Ghia verkauft, die meisten übrigen gingen an Vignale. Diese Chassis waren speziell für Coupé-Karosserien konstruiert, da der strukturelle Aufbau etwas anders ist als bei einem Roadster (102.04).",
+        "ar_dg_p5": "Der Alfa, den ich mir als Projekt vornahm (AR102.02.0019), wurde im März 1960 von einem Herrn (vermutlich einem US-Offizier) namens Anthony Wilson in Auftrag gegeben und im September desselben Jahres fertiggestellt, gerade rechtzeitig für die Turin World Auto Show. Ende der Sechziger landete er irgendwie in Miami, Florida, wo er einen Farbwechsel von Grün-Weiß mit rotem Leder zu Silber mit schwarzem Interieur erhielt. Ich sah diesen Vignale-Alfa erstmals 1978, als er Doug Harman in Tampa, Florida, gehörte, konnte ihn aber erst 1990 kaufen.",
+        "ar_dg_p6": "Im Laufe der Jahre habe ich ein paar der gusseisernen 2000cc-Roadster teilweise restauriert (Lack, Interieur, Mechanik) und eine Reihe von Ersatzteilen gesammelt, da mir Optik und Einzigartigkeit dieser Serie sehr gefallen.",
+        "ar_dg_p7": "Beim Zerlegen des Vignale bemerkte ich, dass viele Bauteile die Fahrgestellnummer auf der Rückseite eingeprägt hatten – etwa auf Stoßstangen, Chromzierleisten, Sitzgestellen, Armaturenbrett und allen für dieses Chassis einzigartigen Teilen. In dieser Zeit wurden Bauteile wie Türen, Hauben und Kofferraumdeckel typischerweise individuell angepasst und mit Blei in die Karosserie eingepasst. In dieser Serie war jedoch jedes Designelement für dieses Chassis einzigartig. Haube und Kofferraumdeckel bestanden aus Aluminium, die Chromzierleiste war aus Messing-C-Profil gefertigt, und die Innenseite der Chromstoßstangen zeigt noch immer alle Hammerspuren und Schweißnähte aus der handwerklichen Fertigung.",
+        "ar_dg_p8": "Wegen dieser Bauweise gibt es für diese Autos keine Karosserie- oder Zierteile von der Stange. Ist ein Teil nicht mehr zu reparieren, muss es so originalgetreu wie möglich nachgefertigt werden, und fehlt ein Sonderteil, lässt sich das ursprüngliche Design mitunter nicht mehr genau bestimmen. Vignales Designer Michelotti fertigte für jedes Auto Entwurfsskizzen an, woraufhin die Blechner sowie die Zier- und Innenraum-Handwerker die Bauteile so nah wie vernünftigerweise möglich an den Entwurfszeichnungen zusammenbauten – allerdings nicht immer ganz präzise. Bei genauer Betrachtung findet man daher etliche Details, die von einer Fahrzeugseite zur anderen nicht übereinstimmen. So ist etwa eine Tür länger als die andere, Chromzierleisten und ihre Verbinder sind individuell angepasst, und selbst die Windschutzscheibenöffnung weist eine fast unangenehme geometrische Schiefstellung auf. All das bedeutet natürlich zusätzlichen Zeit- und Kostenaufwand und erfordert beträchtlichen Einfallsreichtum, um die vielen Probleme zu lösen.",
+        "ar_dg_p9": "Ein Projekt dieser Größenordnung anzugehen erfordert einen unerschütterlichen Wunsch nach einem einzigartigen Automobil sowie die finanziellen Mittel, die Zeit, das Können und die Geduld, es zu verwirklichen. Zum Glück konnte ich die meisten dieser Voraussetzungen aufbringen, doch an Geld und Zeit mangelt es mir. Eine unterstützende Ehefrau hat enorm geholfen, ebenso wie ein paar außergewöhnliche Handwerker für Karosserie- und Innenraumarbeiten. Eine Recherchereise nach Italien war eine unerwartete Ausgabe, die sich als äußerst wertvoll erwies, um tief in den Alfa-Archiven verborgene Details zu klären.",
+        "ar_dg_p10": "Bislang habe ich fünf Jahre voller Abende und Wochenenden investiert – in Zerlegen, Reparieren, Teilesuche, Reinigen, Polieren, Lackieren und Wiederzusammenbauen von Bauteilen, die am Ende ein einzigartiges Auto ergeben werden, das so gut wie – und in mancher Hinsicht besser als – neu ist.",
+        "ar_dg_p11": "Ich kann jetzt den Schlüssel umdrehen, das tiefe, kehlige Grollen des Auspuffs hören und eine kurze, sichere Fahrt machen. Bis ich diesen Motor zum ersten Mal hörte, fragte ich mich langsam, ob es das alles wert gewesen war … und ob es das war!",
+        "ar_dg_credit": "Geschichte aus <a href=\"http://members.aol.com/alfanet/articles.htm\">Georgi Alfisti On-Line Articles</a>",
+        "title": "Alfa Romeo by Vignale — Vignale Gamine",
+        "meta_description": "Der Alfa Romeo 412 und der 1900 von Vignale, dazu ein Bericht aus erster Hand über die Restaurierung eines Alfa 2000cc Coupé von 1960."
+    }
+  };
+
+  function applyLanguage(lang) {
+    var code = translations[lang] ? lang : 'en';
+    var d = translations[code];
+    document.documentElement.setAttribute('lang', code);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val == null) return;
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      var val = d[key] != null ? d[key] : translations.en[key];
+      if (val != null) el.setAttribute('aria-label', val);
+    });
+
+    if (d.title) document.title = d.title;
+    var descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta && d.meta_description) descMeta.setAttribute('content', d.meta_description);
+
+    try { localStorage.setItem('gamineLang', code); } catch (e) {}
+  }
+
+  function detectInitialLanguage() {
+    var saved;
+    try { saved = localStorage.getItem('gamineLang'); } catch (e) {}
+    if (saved && translations[saved]) return saved;
+    var navLang = ((navigator.language || navigator.userLanguage || 'en') + '').slice(0, 2).toLowerCase();
+    if (translations[navLang]) return navLang;
+    return 'en';
+  }
+
+  var langSwitch = document.getElementById('langSwitch');
+  var initialLang = detectInitialLanguage();
+  langSwitch.value = initialLang;
+  applyLanguage(initialLang);
+  langSwitch.addEventListener('change', function () {
+    applyLanguage(this.value);
+  });
+})();
+</script>
+</body>
+</html>
